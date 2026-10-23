@@ -7,8 +7,9 @@ faction with a voice of its own, a chapter of its story at each standing,
 told by someone who trusts you a little more each time. Planned in
 `../ideas/reputation-road.md`, its voices in
 `../ideas/reputation-road-voices.md` (the cards the chapters follow).
-Started 23 October 2026. Local only, not on GitHub yet. Classic Era (11509)
-and Forever (16001), one package. Read the family's CLAUDE.md
+Started 23 October 2026. On GitHub (salty-max/goodwill, public, 23 October
+2026), not yet released. Classic Era (11509) and Forever (16001), one
+package. Read the family's CLAUDE.md
 (`../CLAUDE.md`) first.
 
 ## Where things are

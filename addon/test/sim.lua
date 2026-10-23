@@ -160,6 +160,28 @@ for _, q in ipairs(quests) do
 end
 local target, need = ns.road.target(TIMBERMAW)
 check(target == ns.EXALTED and need == 42000 - 32000, "the road aims at the next standing")
+-- a repeatable that asks no item (Winterfall Intrusion, a kill): its own card, no count
+local intrusion
+for _, t in ipairs(ns.road.turnins(589)) do
+  if t.quest == 5201 then intrusion = t end
+end
+check(intrusion and intrusion.errand and #intrusion.items == 0, "Winterfall Intrusion: an errand, no items")
+-- three turn-ins sharing their Coal and Incendosaur Scales: held from one pool
+s.rep[THORIUM] = 100
+s.done[7722] = true
+s.bags[3356], s.bags[3575], s.bags[4234], s.bags[3857], s.bags[18944] = 40, 40, 100, 1, 2
+local alone = 0
+for _, t in ipairs(ns.road.turnins(THORIUM)) do
+  if t.open then alone = alone + t.times * t.each end
+end
+check(alone == 75 and ns.road.held(THORIUM) == 25, "shared items counted once: one Fiery Flux, not three")
+s.rep[THORIUM] = nil
+-- a quest above the character's level: offered from that level, not now
+local early = false
+for _, q in ipairs(ns.road.quests(DAWN)) do
+  if q.from and not q.open then early = true end
+end
+check(early, "the Dawn's level 55 quests: from level 55, at level 12")
 local unlocks = ns.road.unlocks(DAWN)
 check(#unlocks > 0 and unlocks[1].standing >= ns.FRIENDLY, "what each standing unlocks, Friendly up")
 
@@ -167,7 +189,7 @@ check(#unlocks > 0 and unlocks[1].standing >= ns.FRIENDLY, "what each standing u
 ns.toggle()
 check(GoodwillFrame and GoodwillFrame:IsShown(), "the book opens")
 G.advance(0.5)
-for _, id in ipairs({ TIMBERMAW, DAWN, THORIUM, 72, 21 }) do
+for _, id in ipairs({ TIMBERMAW, DAWN, THORIUM, 72, 21, 589, 47, 730 }) do
   ns.openFaction(id)
   G.advance(0.1)
 end

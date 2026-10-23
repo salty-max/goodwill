@@ -395,7 +395,11 @@ else
   GetItemCount = count
 end
 function GetItemInfo(id) return "Item " .. id, nil, 1 end
-function GetItemIcon() return 134400 end
+-- (an icon asked for no item is an error, as the game's C_ calls make it)
+function GetItemIcon(id)
+  assert(id, "GetItemIcon: no item")
+  return 134400
+end
 
 -- ── the addon ────────────────────────────────────────────────────────────────
 local DIR = "addon/Goodwill/"

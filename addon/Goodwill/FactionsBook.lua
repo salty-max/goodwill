@@ -10,6 +10,7 @@ local book, list, page
 local current
 local rows = {}
 local MAX_QUESTS, MAX_KILLS, MAX_TURNINS = 8, 3, 4
+local QUEST_ICON = "Interface\\GossipFrame\\AvailableQuestIcon"
 
 local function style(row, kind)
   if kind == "section" then
@@ -107,7 +108,11 @@ local function turninCards(id)
     local title = ns.questName(t.quest) or (t.givers[1] and ns.npcName(t.givers[1])) or ""
     local facts = { L["+%d each"]:format(t.each) }
     if not t.open then table.insert(facts, L["not offered yet"]) end
-    if t.times > 0 then table.insert(facts, L["you hold enough for %d"]:format(t.times)) end
+    if t.errand then
+      table.insert(facts, L["again and again"])
+    elseif t.times > 0 then
+      table.insert(facts, L["you hold enough for %d"]:format(t.times))
+    end
     local givers = {}
     for _, g in ipairs(t.givers) do
       table.insert(givers, ui.where(g))
@@ -115,7 +120,7 @@ local function turninCards(id)
     page:card(
       title,
       table.concat(facts, "  -  "),
-      function(p) p.tex:SetTexture(ns.kit.itemIcon(t.items[1] and t.items[1].item)) end
+      function(p) p.tex:SetTexture(t.items[1] and ns.kit.itemIcon(t.items[1].item) or QUEST_ICON) end
     )
     local items = {}
     for _, it in ipairs(t.items) do
@@ -168,13 +173,13 @@ local function questCards(id)
     local facts = { L["+%d"]:format(q.rep), L["level %d"]:format(q.level) }
     local zone = ui.zoneName(q.zone)
     if zone then table.insert(facts, zone) end
-    if not q.open then table.insert(facts, L["opens at %s"]:format(ns.standingName(q.at))) end
+    if q.from then
+      table.insert(facts, L["from level %d"]:format(q.from))
+    elseif not q.open then
+      table.insert(facts, L["opens at %s"]:format(ns.standingName(q.at)))
+    end
     local title = ns.questName(q.quest) or (q.giver and ns.npcName(q.giver)) or ""
-    page:card(
-      title,
-      table.concat(facts, "  -  "),
-      function(p) p.tex:SetTexture("Interface\\GossipFrame\\AvailableQuestIcon") end
-    )
+    page:card(title, table.concat(facts, "  -  "), function(p) p.tex:SetTexture(QUEST_ICON) end)
   end
   if #all > shown then page:paragraph(L["And %d more quests."]:format(#all - shown), T.soft) end
   return shown > 0

@@ -143,7 +143,7 @@ const english = read(join(ROOT, "content"));
 
 const verify = (pieces: Map<string, Piece>, translated: boolean, locale: string) => {
   for (const p of pieces.values()) {
-    const text = plainText(p);
+    const text = `${plainText(p)} ${p.title}`;
     if (tokensOut(text).includes(";")) problems.push(`${p.file}: a semicolon`);
     if (!translated && /[^\x20-\x7e]/.test(text + p.title)) problems.push(`${p.file}: not plain ASCII`);
     if (/\d/.test(tokensOut(text))) problems.push(`${p.file}: a figure in the prose (the road gives them)`);

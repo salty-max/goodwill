@@ -1,6 +1,6 @@
 -- Goodwill: this character's standing with every faction the book follows,
 -- the chapters each standing has opened, the events every file listens to
--- (ns.on, ns.onUnit), and /goodwill. The road (Road.lua) reads the
+-- (ns.on), and /goodwill. The road (Road.lua) reads the
 -- standings; the book shows them (Book.lua and its tabs).
 --
 --   GoodwillChar (SavedVariablesPerCharacter), whose book: guid
@@ -286,10 +286,20 @@ end)
 ns.on("QUEST_TURNED_IN", function()
   if ns.onChange then ns.onChange() end
 end)
+-- (the bank's bags change while it's open: read again; the bags alone, the road)
+local bankOpen = false
 ns.on("BAG_UPDATE_DELAYED", function()
-  if ns.onChange then ns.onChange() end
+  if bankOpen then
+    ns.readBank()
+  elseif ns.onChange then
+    ns.onChange()
+  end
 end)
-ns.on("BANKFRAME_OPENED", function() ns.readBank() end)
+ns.on("BANKFRAME_OPENED", function()
+  bankOpen = true
+  ns.readBank()
+end)
+ns.on("BANKFRAME_CLOSED", function() bankOpen = false end)
 ns.on("PLAYERBANKSLOTS_CHANGED", function() ns.readBank() end)
 
 -- ── /goodwill ────────────────────────────────────────────────────────────────

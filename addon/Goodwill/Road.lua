@@ -28,10 +28,13 @@ end
 -- or closed for good (nil: the character is past its ceiling).
 local function value(faction) return select(2, ns.standingOf(faction)) end
 function R.offered(q)
+  -- (a ceiling passed closes it for good, whichever gate comes first)
+  for faction, gate in pairs(q.gate or {}) do
+    if gate[2] and (value(faction) or 0) >= gate[2] then return nil end
+  end
   for faction, gate in pairs(q.gate or {}) do
     local v = value(faction) or 0
-    local low, high = gate[1], gate[2]
-    if high and v >= high then return nil end
+    local low = gate[1]
     if low and v < low then
       local at = ns.NEUTRAL
       for s = 1, ns.EXALTED do
@@ -88,7 +91,9 @@ function R.turnins(faction)
     local q = D.quests[id]
     local open = q and ns.forMe(q) and R.offered(q)
     if open ~= nil and q and ns.forMe(q) and readyAfter(q) then
-      local key = table.concat(q.items or {}, ":") .. "/" .. (q.rep[faction] or 0)
+      -- (a repeatable that asks no item, a kill or an errand: its own card)
+      local key = q.items and #q.items > 0 and (table.concat(q.items, ":") .. "/" .. (q.rep[faction] or 0))
+        or ("quest " .. id)
       local same = seen[key]
       if same then
         if q.giver then table.insert(same.givers, q.giver) end
@@ -107,6 +112,7 @@ function R.turnins(faction)
           each = q.rep[faction] or 0,
           times = times or 0,
           items = items,
+          errand = #items == 0 or nil,
           open = open,
           givers = { q.giver },
         }
@@ -134,8 +140,12 @@ function R.quests(faction)
     local q = D.quests[id]
     if q and not ns.done(id) and ns.forMe(q) and readyAfter(q) and not groupDone(q) then
       local open, at = R.offered(q)
+      -- (a quest above the character's level: offered from that level)
+      local from = q.min and q.min > (UnitLevel("player") or 0) and q.min or nil
+      if from and open then open = false end
       if open ~= nil then
         table.insert(out, {
+          from = from,
           quest = id,
           rep = q.rep[faction] or 0,
           open = open,
@@ -203,18 +213,37 @@ function R.unlocks(faction)
       table.insert(out, by[s])
     end
     if u.item then table.insert(by[s].items, u) end
-    if u.quest then table.insert(by[s].quests, u.quest) end
+    if u.quest and D.quests[u.quest] and ns.forMe(D.quests[u.quest]) then table.insert(by[s].quests, u.quest) end
   end
   table.sort(out, function(a, b) return a.standing < b.standing end)
   return out
 end
 
 -- How far the bags and the bank alone would take it: the reputation the
--- turn-ins held would give, all of them.
+-- turn-ins held would give, all of them, from one pool of items (the Fiery
+-- Flux's three turn-ins share their Coal and Incendosaur Scales: what one
+-- takes, the others can't), the most reputation a turn-in first.
 function R.held(faction)
-  local total = 0
+  local list, pool, total = {}, {}, 0
   for _, t in ipairs(R.turnins(faction)) do
-    if t.open then total = total + t.times * t.each end
+    if t.open and not t.errand then table.insert(list, t) end
+  end
+  table.sort(list, function(a, b)
+    if a.each ~= b.each then return a.each > b.each end
+    return a.quest < b.quest
+  end)
+  for _, t in ipairs(list) do
+    local n
+    for _, it in ipairs(t.items) do
+      pool[it.item] = pool[it.item] or (it.carried + it.banked)
+      local can = math.floor(pool[it.item] / it.need)
+      n = n and math.min(n, can) or can
+    end
+    n = n or 0
+    for _, it in ipairs(t.items) do
+      pool[it.item] = pool[it.item] - n * it.need
+    end
+    total = total + n * t.each
   end
   return total
 end
