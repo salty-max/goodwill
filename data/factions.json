@@ -7,7 +7,7 @@
     { "id": 59, "group": "endgame", "voice": 12944, "chapters": "thorium-brotherhood" },
     { "id": 609, "group": "endgame", "voice": 15306, "chapters": "cenarion-circle" },
     { "id": 270, "group": "endgame", "voice": 14921, "chapters": "zandalar-tribe" },
-    { "id": 910, "group": "endgame" },
+    { "id": 910, "group": "endgame", "voice": 15180, "chapters": "brood-of-nozdormu" },
     { "id": 749, "group": "endgame" },
     { "id": 809, "group": "endgame" },
     { "id": 589, "group": "endgame", "side": "A" },
