@@ -207,7 +207,11 @@ local function announce(faction, piece)
   print(ns.PREFIX .. L["A new chapter from %s: %s."]:format(name, "|cffffd27f" .. (title or "") .. "|r"))
   banners = banners or ns.kit.banners({ name = "GoodwillBanner", art = ns.ICON })
   banners:show({
-    picture = ns.kit.icon(ns.ICON),
+    -- (the whole medallion, its rim in the ring: K.icon would crop it as a game icon)
+    picture = function(p)
+      p.tex:SetTexture(ns.ICON)
+      p.tex:SetTexCoord(0, 1, 0, 1)
+    end,
     kicker = name,
     title = title or "",
     tip = L["A new chapter of their story. Click to read it."],
