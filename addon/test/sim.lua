@@ -169,6 +169,27 @@ for _, t in ipairs(ns.road.turnins(589)) do
   if t.quest == 5201 then intrusion = t end
 end
 check(intrusion and intrusion.errand and #intrusion.items == 0, "Winterfall Intrusion: an errand, no items")
+-- the spillover: Everlook has no kills of its own, but half of what its
+-- sisters earn comes to it, Gadgetzan's Southsea pirates among them, all the
+-- way to Exalted
+s.rep[577] = 40000
+s.done[1707] = true
+local throughGadgetzan = false
+for _, z in ipairs(ns.road.kills(577)) do
+  if z.via == 369 then throughGadgetzan = true end
+end
+check(throughGadgetzan, "Everlook: Gadgetzan's kills still count, through it, near Exalted")
+local pouches
+for _, t in ipairs(ns.road.turnins(577)) do
+  if t.quest == 1878 then pouches = t end
+end
+check(
+  pouches and pouches.each == 5 and pouches.via == 369,
+  "the Water Pouch Bounty: five for Everlook, through Gadgetzan"
+)
+check(ns.data.factions[577].spill.rate == 0.5, "Everlook takes half of what its sisters earn")
+check(ns.data.factions[72].spill.rate == 0.25, "Stormwind a quarter of what its side's capitals earn")
+s.rep[577], s.done[1707] = nil, nil
 -- three turn-ins sharing their Coal and Incendosaur Scales: held from one pool
 s.rep[THORIUM] = 100
 s.done[7722] = true
@@ -192,7 +213,7 @@ check(#unlocks > 0 and unlocks[1].standing >= ns.FRIENDLY, "what each standing u
 ns.toggle()
 check(GoodwillFrame and GoodwillFrame:IsShown(), "the book opens")
 G.advance(0.5)
-for _, id in ipairs({ TIMBERMAW, DAWN, THORIUM, 72, 21, 589, 47, 730 }) do
+for _, id in ipairs({ TIMBERMAW, DAWN, THORIUM, 72, 21, 577, 589, 47, 730 }) do
   ns.openFaction(id)
   G.advance(0.1)
 end

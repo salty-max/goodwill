@@ -61,9 +61,11 @@ type Quest = {
   excl: number | null;
   items?: [number, number][];
   repeatable?: true;
+  via?: Record<number, number>;
 };
 type Unlock = { item?: number; quest?: number; standing: number; vendors?: number[]; spell?: number; skill?: number };
-type Faction = Listed & { quests: number[]; turnins: number[]; kills: [number, number, number | null][]; unlocks: Unlock[] };
+type Kill = [number, number, number | null] | [number, number, number, number];
+type Faction = Listed & { quests: number[]; turnins: number[]; kills: Kill[]; unlocks: Unlock[]; spill?: { rate: number; from: number[] } };
 type Npc = { area: number | null; x: number | null; y: number | null; side: string | null };
 
 const lua = (v: unknown): string => {
@@ -193,6 +195,41 @@ function gameData(game: Game) {
 
   // each npc's zone and spot: its first spawn with a spot (Questie's map percent)
   const npcs = new Map<number, Npc>();
+  // the spillover: sisters under one parent (the Steamwheedle towns, a
+  // side's capitals) give each other a share of what they earn, counting all
+  // the way to Exalted (client_Faction: ParentFactionMod_1 the share a
+  // faction gives, _0 the share it takes, Cap_0 the last standing it still
+  // counts at). The road lists the sisters' kills and repeatable turn-ins at
+  // that share, with the sister they come through; their one-time quests
+  // only as the book's note.
+  const parentOf = new Map<number, { parent: number; out: number; take: number; cap: number }>();
+  for (const f of factions) {
+    const r = all<{ p: number; o: number; t: number; c: number }>(
+      "SELECT ParentFactionID AS p, ParentFactionMod_1 AS o, ParentFactionMod_0 AS t, ParentFactionCap_0 AS c FROM client_Faction WHERE ID = ?",
+      f.id,
+    )[0];
+    if (r && r.p > 0 && r.o > 0) parentOf.set(f.id, { parent: r.p, out: r.o, take: r.t, cap: r.c });
+  }
+  const own = new Map(factions.map((f) => [f.id, { kills: [...f.kills], turnins: [...f.turnins] }]));
+  for (const f of factions) {
+    const me = parentOf.get(f.id);
+    if (!me) continue;
+    const sisters = factions.filter((s) => s.id !== f.id && parentOf.get(s.id)?.parent === me.parent);
+    if (!sisters.length) continue;
+    f.spill = { rate: parentOf.get(sisters[0].id)!.out * me.take, from: sisters.map((s) => s.id) };
+    for (const s of sisters) {
+      const share = parentOf.get(s.id)!.out * me.take;
+      for (const [c, v] of own.get(s.id)!.kills) f.kills.push([c, Math.round(v * share), me.cap, s.id]);
+      for (const id of own.get(s.id)!.turnins) {
+        const q = quests.get(id)!;
+        if (q.rep[f.id] !== undefined || !q.rep[s.id]) continue;
+        q.rep[f.id] = Math.round(q.rep[s.id] * share);
+        (q.via ??= {})[f.id] = s.id;
+        f.turnins.push(id);
+      }
+    }
+  }
+
   for (const id of [...npcIds].sort((a, b) => a - b)) {
     const s = all<{ area_id: number; ux: number; uy: number }>(
       "SELECT area_id, ux, uy FROM spawn WHERE kind = 'creature' AND entity_id = ? AND area_id IS NOT NULL ORDER BY ux IS NULL, source = 'questie' DESC LIMIT 1",
@@ -271,7 +308,8 @@ function luaFile(game: Game, d: ReturnType<typeof gameData>): string {
     if (f.chapters) lines.push(`      chapters = ${lua(f.chapters)},`);
     lines.push(`      quests = ${lua(f.quests)},`);
     lines.push(`      turnins = ${lua(f.turnins)},`);
-    lines.push(`      kills = ${lua(f.kills.map(([c, v, m]) => (m === null ? [c, v] : [c, v, m])))},`);
+    lines.push(`      kills = ${lua(f.kills.map(([c, v, m, via]) => (via ? [c, v, m, via] : m === null ? [c, v] : [c, v, m])))},`);
+    if (f.spill) lines.push(`      spill = ${lua(f.spill)},`);
     lines.push("      unlocks = {");
     for (const u of f.unlocks) lines.push(`        ${lua(u)},`);
     lines.push("      },");
@@ -293,6 +331,7 @@ function luaFile(game: Game, d: ReturnType<typeof gameData>): string {
       excl: q.excl,
       items: q.items?.length ? q.items.flat() : undefined,
       repeatable: q.repeatable,
+      via: q.via,
     };
     lines.push(`    [${q.id}] = ${lua(row)},`);
   }

@@ -95,9 +95,12 @@ function R.turnins(faction)
       local key = q.items and #q.items > 0 and (table.concat(q.items, ":") .. "/" .. (q.rep[faction] or 0))
         or ("quest " .. id)
       local same = seen[key]
+      local via = q.via and q.via[faction]
       if same then
         if q.giver then table.insert(same.givers, q.giver) end
         same.open = same.open or open
+        -- (the same turn-in through two sisters: through neither in particular)
+        if same.via ~= via then same.via = nil end
       else
         local times, items = nil, {}
         for i = 1, #(q.items or {}), 2 do
@@ -115,6 +118,7 @@ function R.turnins(faction)
           errand = #items == 0 or nil,
           open = open,
           givers = { q.giver },
+          via = via,
         }
         seen[key] = t
         table.insert(out, t)
@@ -171,20 +175,21 @@ end
 -- gives, the standing they stop counting at. The data's cap is the last
 -- standing a kill still counts at (0 Hated to 7 Exalted, the game's one
 -- more): the Brood of Nozdormu's Ahn'Qiraj trash counts at Hated, until
--- Hostile.
+-- Hostile. A sister's kills (the spillover, data/factions.json's note in
+-- docs/data.md) come at its share, through it, in a card of their own.
 function R.kills(faction)
   local f = D.factions[faction]
   local standing = ns.standingOf(faction) or ns.NEUTRAL
   local byZone, out = {}, {}
   for _, k in ipairs(f.kills or {}) do
-    local creature, gives, cap = k[1], k[2], k[3]
+    local creature, gives, cap, via = k[1], k[2], k[3], k[4]
     local stops = cap and cap + 2 or ns.EXALTED + 1
     if standing < stops then
       local n = D.npcs[creature] or {}
-      local key = n.area or 0
+      local key = (n.area or 0) .. ":" .. (via or 0)
       local z = byZone[key]
       if not z then
-        z = { zone = n.area, creatures = {}, each = 0, stops = 0 }
+        z = { zone = n.area, creatures = {}, each = 0, stops = 0, via = via }
         byZone[key] = z
         table.insert(out, z)
       end

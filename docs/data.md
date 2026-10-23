@@ -23,6 +23,18 @@ one has it, the voice once its chapters are written):
   and the quests a standing opens (`quest_standing`'s floor);
 - every giver's, vendor's, voice's and creature's zone and spot (its first
   spawn with one, Questie's map percent), and its friendly sides.
+- the spillover: sisters under one parent share what they earn, counting
+  all the way to Exalted (`client_Faction`: `ParentFactionMod_1` the share
+  a faction gives, `_0` the share it takes, `ParentFactionCap_0` the last
+  standing it still counts at). The four Steamwheedle towns give each other
+  half, a side's capitals a quarter. Each faction gets its sisters' kills
+  and repeatable turn-ins at that share, marked with the sister they come
+  through (a kill's fourth field, a quest's `via`), and `spill` (`rate`,
+  `from`) for the book's note. Their one-time quests stay off the road: the
+  note says a share of them comes too. This follows the Classic guides
+  (Everlook, with no kills of its own, climbs on its sisters' to Exalted).
+  How a capped kill spills, once the town it belongs to stops counting it,
+  is unverified in game.
 - the races whose bit in a quest's race mask isn't their id's
   (`raceBits`, the client's ChrRaces PlayableRaceBit: Forever's Skyborne,
   races 95 and 96, are bits 32 and 33). Without it no Skyborne would be

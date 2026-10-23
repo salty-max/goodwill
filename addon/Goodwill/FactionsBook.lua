@@ -107,6 +107,7 @@ local function turninCards(id)
     any = true
     local title = ns.questName(t.quest) or (t.givers[1] and ns.npcName(t.givers[1])) or ""
     local facts = { L["+%d each"]:format(t.each) }
+    if t.via then table.insert(facts, L["through %s"]:format(ns.factionName(t.via))) end
     if not t.open then table.insert(facts, L["not offered yet"]) end
     if t.errand then
       table.insert(facts, L["again and again"])
@@ -157,7 +158,11 @@ local function killCards(id)
     local until_ = z.stops <= ns.EXALTED and L["until %s"]:format(ns.standingName(z.stops)) or L["to the end"]
     page:card(
       ui.zoneName(z.zone) or L["Somewhere"],
-      table.concat({ L["+%d a kill at most"]:format(z.each), until_, table.concat(names, ", ") }, "  -  "),
+      table.concat({
+        L["+%d a kill at most"]:format(z.each),
+        z.via and L["through %s"]:format(ns.factionName(z.via)) or until_,
+        table.concat(names, ", "),
+      }, "  -  "),
       function(p) p.tex:SetTexture("Interface\\Icons\\Ability_DualWield") end
     )
   end
@@ -243,6 +248,17 @@ local function showFaction(id)
   story(id)
   if target then
     page:section(L["The road to %s"]:format(ns.standingName(target)))
+    -- (sisters share what they earn: the spillover, docs/data.md)
+    local spill = D.factions[id].spill
+    if spill then
+      local names = {}
+      for _, s in ipairs(spill.from) do
+        table.insert(names, ns.factionName(s))
+      end
+      local share = spill.rate >= 0.5 and L["Half of what you earn with %s comes here too."]
+        or L["A quarter of what you earn with %s comes here too."]
+      page:paragraph(share:format(table.concat(names, ", ")), T.soft)
+    end
     local any = turninCards(id)
     any = killCards(id) or any
     any = questCards(id) or any
