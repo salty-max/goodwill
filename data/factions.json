@@ -9,7 +9,7 @@
     { "id": 270, "group": "endgame", "voice": 14921, "chapters": "zandalar-tribe" },
     { "id": 910, "group": "endgame", "voice": 15180, "chapters": "brood-of-nozdormu" },
     { "id": 749, "group": "endgame", "voice": 13278, "chapters": "hydraxian-waterlords" },
-    { "id": 809, "group": "endgame" },
+    { "id": 809, "group": "endgame", "voice": 14368, "chapters": "shendralar" },
     { "id": 589, "group": "endgame", "side": "A" },
     { "id": 72, "group": "capitals", "side": "A" },
     { "id": 47, "group": "capitals", "side": "A" },
