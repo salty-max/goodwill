@@ -5,7 +5,7 @@ piece: friendly
 title: What We Left
 beside: [gnomeregan-exiles, gnomes, gnomeregan]
 ---
-You've been generous. Want to know what it's for, eh?
+Want to know what all this cloth is for, eh?
 
 When we came out of Gnomeregan, we came out in a hurry. Nobody packed. You don't pack when the city's full of troggs and the air's gone bad. Half of us left in whatever we were wearing, and a good many of us were in nightshirts, or so the story goes, and nobody thinks to invent a faster pair of trousers until they need one.
 

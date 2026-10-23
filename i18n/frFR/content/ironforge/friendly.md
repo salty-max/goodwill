@@ -2,7 +2,7 @@
 piece: friendly
 title: Les postes dans la neige
 ---
-Vous m'apportez de l'étoffe, et moi, je l'envoie. Dans les cols, surtout.
+L'étoffe arrive à ce bureau, et moi, je l'envoie. Dans les cols, surtout.
 
 Dun Morogh, c'est rude en hiver, et nous y gardons des nains en faction toute l'année, aux portes, sur les crêtes et sur les routes qui descendent vers les basses terres. Ils écrivent de temps en temps. Pas souvent, les nains ne sont pas des écrivains. Quand ils écrivent, c'est surtout pour réclamer des chaussettes, et je les envoie par caisses, parce que vous seriez $gsurpris:surprise; de ce que des chaussettes font pour un soldat.
 

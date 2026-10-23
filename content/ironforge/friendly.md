@@ -5,7 +5,7 @@ piece: friendly
 title: Posts in the Snow
 beside: [ironforge, dwarves, gnomeregan-exiles]
 ---
-You've been bringing cloth, and I've been sending it out. It went up the passes, mostly.
+Cloth comes to this desk, and I send it out. Up the passes, mostly.
 
 Dun Morogh's a hard place in winter, and we keep dwarves on watch in it all year, at the gates and the ridges and the roads down to the lowlands. They write back now and then. Not often, dwarves aren't writers. When they do, it's mostly to ask for socks, and I send them by the crate, because you'd be surprised what socks do for a soldier.
 

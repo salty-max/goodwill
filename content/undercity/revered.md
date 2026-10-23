@@ -11,4 +11,4 @@ They carry something in with them that they do not notice. Warmth, truly, off th
 
 I used to be warm. I remember it the way you might remember a language you spoke as a child. I could not hold a conversation in it now. But I know it when I hear it.
 
-Your cloth is the only cloth I check twice, whatever it carries. I do not tell the other clerks that I wait, after you leave, before I put it away.
+[after: 7813] Your cloth is the only cloth I check twice, whatever it carries. I do not tell the other clerks that I wait, after you leave, before I put it away.

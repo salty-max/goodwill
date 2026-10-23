@@ -83,7 +83,8 @@ the ring. Export details are in `assets/README.md`.
   `addon/test/sim.lua`: a first login, standings rising (a chapter a
   standing, the aside), a paragraph after a quest and one before it, a
   French reader who is a woman, the road (turn-ins with the bank, the
-  scourgestones once, the kills at Revered, quests, unlocks), the book's
+  scourgestones once, the kills at Revered, the sisters' shares through
+  Everlook, quests, unlocks), the book's
   tabs, the other side's factions, on Classic Era, Forever and a French
   client (`bun run check` runs all).
 

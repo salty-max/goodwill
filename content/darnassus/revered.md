@@ -11,6 +11,6 @@ We grew it in haste, in a hard time, and a hurried home settles slowly. A home m
 
 On windy nights I climb to the high branches and listen to the tree creak, and I hope it is only growing.
 
-Every piece you have brought this desk has gone into the mending, somewhere. A blanket on a sick child in the Craftsmen's Terrace. A bandage on a druid who fell from a branch. Cloth for the dead, too. Our weavers had never made a shroud before. They make them now, and they make them beautifully, because they do not know how to make anything any other way.
+Every piece brought to this desk goes into the mending, somewhere. A blanket on a sick child in the Craftsmen's Terrace. A bandage on a druid who fell from a branch. Cloth for the dead, too. Our weavers had never made a shroud before. They make them now, and they make them beautifully, because they do not know how to make anything any other way.
 
-You did not know you were doing all that. You did it anyway.
+[after: 7792] Some of it was yours. You did not know you were doing all that. You did it anyway.

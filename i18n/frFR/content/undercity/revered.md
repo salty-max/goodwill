@@ -8,4 +8,4 @@ Ils apportent avec eux une chose qu'ils ne remarquent pas. De la chaleur, vraime
 
 J'ai connu la chaleur, autrefois. Je m'en souviens comme on se souvient d'une langue parlée dans l'enfance. Je ne pourrais plus tenir une conversation dans cette langue. Mais je la reconnais quand je l'entends.
 
-Votre étoffe est la seule que je vérifie deux fois, quoi qu'elle porte. Je ne dis pas aux autres commis que j'attends, après votre départ, avant de la ranger.
+[after: 7813] Votre étoffe est la seule que je vérifie deux fois, quoi qu'elle porte. Je ne dis pas aux autres commis que j'attends, après votre départ, avant de la ranger.

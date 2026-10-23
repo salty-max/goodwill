@@ -8,4 +8,4 @@ Chacun d'eux reçoit de moi une vraie cape en quittant la vallée. Rouge, si j'e
 
 C'est la plus belle chose que je connaisse. Un jeune orc qui ne sait pas à quoi sert ce bureau. Les camps ne sont qu'une histoire pour eux. Je veux que ça le reste.
 
-Vous y êtes pour quelque chose. Qui que vous soyez, où que vous soyez $gné:née;, vous avez mis des capes sur le dos d'orcs qui ne sauront jamais votre nom. Quelques jeunes reviennent au bureau, des années plus tard, avec une cicatrice ou deux et une cape devenue brune, et en demandent une autre. Je la leur donne sans un mot.
+[after: 7826] Vous y êtes pour quelque chose. Qui que vous soyez, où que vous soyez $gné:née;, vous avez mis des capes sur le dos d'orcs qui ne sauront jamais votre nom. Quelques jeunes reviennent au bureau, des années plus tard, avec une cicatrice ou deux et une cape devenue brune, et en demandent une autre. Je la leur donne sans un mot.

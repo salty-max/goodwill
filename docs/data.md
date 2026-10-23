@@ -44,8 +44,8 @@ one has it, the voice once its chapters are written):
 English fallback: a name a language lacks is missing, and the book names it
 another way), read by `scripts/locales.ts` into each Text file.
 
-Counted on 23 October 2026: Classic Era 33 factions (2,324 quests, 411
-turn-ins, 452 kills, 524 unlocks), Forever 42.
+Counted on 23 October 2026, the sisters' shares included: Classic Era 33
+factions (2,324 quests, 729 turn-ins, 575 kills, 524 unlocks), Forever 42.
 
 ## The chapters (`scripts/chapters.ts`)
 

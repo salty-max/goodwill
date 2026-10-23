@@ -2,7 +2,7 @@
 piece: friendly
 title: Ce que nous avons laissé
 ---
-Vous avez été $ggénéreux:généreuse;. Vous voulez savoir à quoi ça sert, hein ?
+Vous voulez savoir à quoi sert toute cette étoffe, hein ?
 
 Quand nous sommes sortis de Gnomeregan, nous sommes sortis en vitesse. Personne n'a fait ses bagages. On ne fait pas ses bagages quand la ville est pleine de troggs et que l'air est devenu mauvais. La moitié d'entre nous est partie avec ce qu'elle portait, et beaucoup en chemise de nuit, à ce qu'on raconte, et personne ne pense à inventer un pantalon plus rapide avant d'en avoir besoin.
 

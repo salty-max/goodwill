@@ -5,7 +5,7 @@ piece: friendly
 title: Hides
 beside: [thunder-bluff, tauren, mulgore]
 ---
-You have given, and I thank you. It matters more than you might think.
+Every gift at this desk matters more than you might think.
 
 For as long as the oldest songs remember, we followed the herds. We wore hides, and slept under hides, and carried our lives on our backs and on the kodo. Hide is good on the road. It is strong and it is ours. But you do not weave hide, and you do not wrap a fever in it, and a child outgrows a hide coat in a season when a hide takes a season to cure.
 

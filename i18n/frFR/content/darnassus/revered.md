@@ -8,6 +8,6 @@ Nous l'avons fait pousser à la hâte, en des temps durs, et un foyer hâtivemen
 
 Les nuits de vent, je monte jusqu'aux hautes branches, j'écoute l'arbre craquer, et j'espère qu'il ne fait que grandir.
 
-Chaque morceau que vous avez apporté à ce bureau est allé quelque part dans la réparation. Une couverture sur un enfant malade, à la terrasse des Artisans. Un bandage sur un druide tombé d'une branche. De l'étoffe pour les morts, aussi. Nos tisserands n'avaient jamais fait de linceul. Ils en font, maintenant, et ils les font magnifiques, parce qu'ils ne savent rien faire autrement.
+Chaque morceau apporté à ce bureau va quelque part dans la réparation. Une couverture sur un enfant malade, à la terrasse des Artisans. Un bandage sur un druide tombé d'une branche. De l'étoffe pour les morts, aussi. Nos tisserands n'avaient jamais fait de linceul. Ils en font, maintenant, et ils les font magnifiques, parce qu'ils ne savent rien faire autrement.
 
-Vous ne saviez pas que vous faisiez tout cela. Vous l'avez fait quand même.
+[after: 7792] Une part venait de vous. Vous ne saviez pas que vous faisiez tout cela. Vous l'avez fait quand même.

@@ -255,8 +255,9 @@ local function showFaction(id)
       for _, s in ipairs(spill.from) do
         table.insert(names, ns.factionName(s))
       end
-      local share = spill.rate >= 0.5 and L["Half of what you earn with %s comes here too."]
-        or L["A quarter of what you earn with %s comes here too."]
+      local share = spill.rate == 0.5 and L["Half of what you earn with these comes here too: %s."]
+        or spill.rate == 0.25 and L["A quarter of what you earn with these comes here too: %s."]
+        or L["Part of what you earn with these comes here too: %s."]
       page:paragraph(share:format(table.concat(names, ", ")), T.soft)
     end
     local any = turninCards(id)

@@ -199,7 +199,7 @@ function gameData(game: Game) {
   // side's capitals) give each other a share of what they earn, counting all
   // the way to Exalted (client_Faction: ParentFactionMod_1 the share a
   // faction gives, _0 the share it takes, Cap_0 the last standing it still
-  // counts at). The road lists the sisters' kills and repeatable turn-ins at
+  // counts at; the game truncates a share). The road lists the sisters' kills and repeatable turn-ins at
   // that share, with the sister they come through; their one-time quests
   // only as the book's note.
   const parentOf = new Map<number, { parent: number; out: number; take: number; cap: number }>();
@@ -219,11 +219,11 @@ function gameData(game: Game) {
     f.spill = { rate: parentOf.get(sisters[0].id)!.out * me.take, from: sisters.map((s) => s.id) };
     for (const s of sisters) {
       const share = parentOf.get(s.id)!.out * me.take;
-      for (const [c, v] of own.get(s.id)!.kills) f.kills.push([c, Math.round(v * share), me.cap, s.id]);
+      for (const [c, v] of own.get(s.id)!.kills) f.kills.push([c, Math.floor(v * share), me.cap, s.id]);
       for (const id of own.get(s.id)!.turnins) {
         const q = quests.get(id)!;
         if (q.rep[f.id] !== undefined || !q.rep[s.id]) continue;
-        q.rep[f.id] = Math.round(q.rep[s.id] * share);
+        q.rep[f.id] = Math.floor(q.rep[s.id] * share);
         (q.via ??= {})[f.id] = s.id;
         f.turnins.push(id);
       }
