@@ -120,10 +120,13 @@ local function hasBit(mask, n)
   if not mask or mask == 0 then return true end
   return math.floor(mask / bit(n)) % 2 == 1
 end
+-- (a race's bit is its id's, one less, but where the client says otherwise:
+-- Forever's Skyborne, races 95 and 96, are bits 32 and 33, the data's raceBits)
 function ns.forMe(q)
   local _, _, race = UnitRace("player")
   local _, _, class = UnitClass("player")
-  return hasBit(q.races, race or 0) and hasBit(q.classes, class or 0)
+  local raceBit = race and ((D.raceBits and D.raceBits[race]) or race - 1)
+  return hasBit(q.races, raceBit and raceBit + 1 or 0) and hasBit(q.classes, class or 0)
 end
 
 -- The factions the book follows for this character: its side's and both

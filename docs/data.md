@@ -23,6 +23,10 @@ one has it, the voice once its chapters are written):
   and the quests a standing opens (`quest_standing`'s floor);
 - every giver's, vendor's, voice's and creature's zone and spot (its first
   spawn with one, Questie's map percent), and its friendly sides.
+- the races whose bit in a quest's race mask isn't their id's
+  (`raceBits`, the client's ChrRaces PlayableRaceBit: Forever's Skyborne,
+  races 95 and 96, are bits 32 and 33). Without it no Skyborne would be
+  offered its own order's quests.
 
 `i18n/names.json`: every language's names for them, the client's (no
 English fallback: a name a language lacks is missing, and the book names it

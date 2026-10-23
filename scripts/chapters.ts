@@ -14,7 +14,8 @@
  *   turned in, "[before: <quest id>] ..." until then.
  *
  * The voices' rules (../ideas/reputation-road-voices.md) the build can check:
- *   - every faction data/factions.json gives chapters has all six pieces
+ *   - every faction data/factions.json gives chapters has all six pieces (or
+ *     the ones its "pieces" lists, written so far)
  *   - no semicolons in any language (the gender tokens' own aside); plain
  *     ASCII in the English; no figures in the prose (the road gives them)
  *   - a piece's length (said when outside, refused far outside), a
@@ -104,7 +105,7 @@ const hash = (p: Piece) =>
     .slice(0, 12);
 const q = (s: string) => `"${s.replace(/\\/g, "\\\\").replace(/"/g, '\\"').replace(/\n/g, "\\n")}"`;
 
-type Listed = { id: number; chapters?: string; voice?: number };
+type Listed = { id: number; chapters?: string; voice?: number; pieces?: PieceName[] };
 const LISTED: Listed[] = JSON.parse(readFileSync(join(ROOT, "data", "factions.json"), "utf8")).factions;
 
 function luaFor(locale: string, pieces: Map<string, Piece>, swaps: Record<string, string>): string {
@@ -167,9 +168,15 @@ const verify = (pieces: Map<string, Piece>, translated: boolean, locale: string)
       }
     }
   }
+  // (every piece a faction's chapters have, all six but where data/factions.json
+  // says which are written so far, and none beyond those)
   if (!translated)
-    for (const f of LISTED.filter((x) => x.chapters))
-      for (const piece of PIECES) if (!pieces.has(`${f.chapters}/${piece}`)) problems.push(`${f.chapters}: no ${piece} piece (${locale})`);
+    for (const f of LISTED.filter((x) => x.chapters)) {
+      const want = f.pieces ?? PIECES;
+      for (const piece of want) if (!pieces.has(`${f.chapters}/${piece}`)) problems.push(`${f.chapters}: no ${piece} piece (${locale})`);
+      for (const piece of PIECES)
+        if (!want.includes(piece) && pieces.has(`${f.chapters}/${piece}`)) problems.push(`${f.chapters}: a ${piece} piece data/factions.json doesn't list`);
+    }
 };
 verify(english, false, "enUS");
 

@@ -238,8 +238,15 @@ function gameData(game: Game) {
       skills: pick("skill_line", skillIds),
     };
   }
+  // the races whose bit in a quest's race mask isn't their id's (the client's
+  // PlayableRaceBit: Forever's Skyborne are races 95 and 96, bits 32 and 33)
+  const raceBits = new Map(
+    all<{ ID: number; PlayableRaceBit: number }>(
+      "SELECT ID, PlayableRaceBit FROM client_ChrRaces WHERE PlayableRaceBit >= 0 AND PlayableRaceBit != ID - 1 ORDER BY ID",
+    ).map((r) => [r.ID, r.PlayableRaceBit]),
+  );
   db.close();
-  return { factions, quests, npcs, names };
+  return { factions, quests, npcs, names, raceBits };
 }
 
 function luaFile(game: Game, d: ReturnType<typeof gameData>): string {
@@ -253,6 +260,7 @@ function luaFile(game: Game, d: ReturnType<typeof gameData>): string {
     `  game = ${lua(game)},`,
     `  groups = ${lua(LIST.groups)},`,
     `  order = ${lua(d.factions.map((f) => f.id))},`,
+    `  raceBits = ${lua(Object.fromEntries(d.raceBits))},`,
     "  factions = {",
   ];
   for (const f of d.factions) {

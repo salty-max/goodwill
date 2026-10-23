@@ -39,7 +39,10 @@ for _, id in ipairs(ns.factions()) do
   mine[id] = true
 end
 check(mine[72] and not mine[76], "an Alliance character follows Stormwind, not Orgrimmar")
-check((mine[2778] or false) == G.FOREVER, "Forever's own factions only on Forever")
+check(
+  (mine[2779] or false) == G.FOREVER,
+  "Forever's own factions only on Forever (the High Order, the Alliance's Skyborne)"
+)
 
 -- ── standings rising ─────────────────────────────────────────────────────────
 s.printed = {}
@@ -209,5 +212,24 @@ for _, id in ipairs(ns.factions()) do
 end
 check(horde[76] and not horde[72], "a Horde character follows Orgrimmar, not Stormwind")
 s.faction = nil
+
+-- ── a Skyborne (Forever) ──────────────────────────────────────────────────────
+-- (its race's bit in a quest's mask is the client's, 33 for a Windshaper
+-- Skyborne, not its id's: race 96)
+if G.FOREVER then
+  local windshapers = D.quests[92595]
+  check(windshapers and not ns.forMe(windshapers), "a dwarf isn't offered the Windshapers' own quest")
+  s.race, s.faction = 96, "Horde"
+  s.rep[2778] = 3100 -- (a Windshaper Skyborne starts Friendly)
+  check(ns.forMe(windshapers), "a Windshaper Skyborne is")
+  ns.readAll(true)
+  check(ns.opened(2778, "start") and ns.opened(2778, "friendly"), "both of the Windshapers' chapters at level 1")
+  local follows = {}
+  for _, id in ipairs(ns.factions()) do
+    follows[id] = true
+  end
+  check(follows[2778] and not follows[2779], "the Horde's Skyborne follow the Windshapers, not the High Order")
+  s.race, s.faction = nil, nil
+end
 
 io.write(("Goodwill: %d checks passed (%s, %s).\n"):format(count, G.LOCALE, G.FOREVER and "Forever" or "Classic Era"))

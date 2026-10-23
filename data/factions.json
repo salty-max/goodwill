@@ -1,5 +1,5 @@
 {
-  "//": "The factions Goodwill gives a road, by hand (ideas/reputation-road.md §2, counted by the data-scout on 23 Oct 2026): each one's group in the book, its side when only one side can raise it (A, H), the game it belongs to when only one has it (client), and its voice (an npc id) once its chapters are written. Left out on purpose: the headers (Alliance, Horde, Steamwheedle Cartel, Alliance Forces, Horde Forces, Battleground Neutral), the hidden and unused rows, the trades' hidden markers, Season of Discovery's in Era, the Syndicate (nobody climbs it), Forever's unfinished factions and its test rows.",
+  "//": "The factions Goodwill gives a road, by hand (ideas/reputation-road.md §2, counted by the data-scout on 23 Oct 2026): each one's group in the book, its side when only one side can raise it (A, H), the game it belongs to when only one has it (client), and its voice (an npc id) once its chapters are written, and the pieces written so far when not all six (the Skyborne pair: Friendly is as far as Forever takes them at launch). Left out on purpose: the headers (Alliance, Horde, Steamwheedle Cartel, Alliance Forces, Horde Forces, Battleground Neutral), the hidden and unused rows, the trades' hidden markers, Season of Discovery's in Era, the Syndicate (nobody climbs it), Forever's unfinished factions and its test rows.",
   "groups": ["endgame", "capitals", "steamwheedle", "others", "forever", "battlegrounds"],
   "factions": [
     { "id": 529, "group": "endgame", "voice": 11039, "chapters": "argent-dawn" },
@@ -29,8 +29,8 @@
     { "id": 471, "group": "others", "side": "A" },
     { "id": 92, "group": "others" },
     { "id": 93, "group": "others" },
-    { "id": 2778, "group": "forever", "client": "forever" },
-    { "id": 2779, "group": "forever", "client": "forever" },
+    { "id": 2778, "group": "forever", "client": "forever", "side": "H", "voice": 251968, "chapters": "windshapers", "pieces": ["start", "friendly"] },
+    { "id": 2779, "group": "forever", "client": "forever", "side": "A", "voice": 252475, "chapters": "high-order", "pieces": ["start", "friendly"] },
     { "id": 2586, "group": "forever", "client": "forever", "side": "A" },
     { "id": 2587, "group": "forever", "client": "forever", "side": "H" },
     { "id": 2758, "group": "forever", "client": "forever" },

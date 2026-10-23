@@ -5,6 +5,7 @@ ns.data = {
   game = "classic",
   groups = { "endgame", "capitals", "steamwheedle", "others", "forever", "battlegrounds" },
   order = { 529, 576, 59, 609, 270, 910, 749, 809, 589, 72, 47, 69, 54, 76, 81, 68, 530, 21, 369, 470, 577, 909, 87, 349, 471, 92, 93, 730, 729, 890, 889, 509, 510 },
+  raceBits = {  },
   factions = {
     [529] = {
       group = "endgame",
