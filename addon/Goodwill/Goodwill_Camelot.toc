@@ -1,0 +1,29 @@
+## Interface: 16001
+## Title: Goodwill
+## Notes: Every faction's road to Exalted from where you stand, and a chapter of its story at each standing you reach.
+## Notes-frFR: La route de chaque faction jusqu'à Exalté depuis là où vous en êtes, et un chapitre de son histoire à chaque rang atteint.
+## Category: Quests
+## Author: salty-max
+## Version: 0.1.0
+## SavedVariablesPerCharacter: GoodwillChar
+## SavedVariables: GoodwillSettings
+## IconTexture: Interface\Icons\INV_Misc_Book_09
+## X-Website: https://github.com/salty-max/goodwill
+## X-License: MIT
+
+# Each game loads its own TOC (_Vanilla: Classic Era, _Camelot: Forever), the
+# same but for the interface and its factions, Factions_<game>.lua
+# (scripts/package.ts checks).
+Factions_Forever.lua
+Kit.lua
+Locale.lua
+Text_[TextLocale].lua
+Chapters_[TextLocale].lua
+Core.lua
+Settings.lua
+Road.lua
+Book.lua
+FactionsBook.lua
+StoriesBook.lua
+Welcome.lua
+Minimap.lua

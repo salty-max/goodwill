@@ -1,0 +1,18 @@
+{
+  "name": "goodwill",
+  "private": true,
+  "description": "Goodwill, a World of Warcraft addon: every faction's road to Exalted from where you stand, and a chapter of its story at each standing",
+  "license": "MIT",
+  "scripts": {
+    "kit:sync": "bun scripts/root.ts --run addon-kit/sync.ts addon/Goodwill",
+    "ids": "bun scripts/root.ts --run addon-kit/ids.ts check",
+    "kit:check": "bun scripts/root.ts --run addon-kit/sync.ts --check addon/Goodwill",
+    "factions": "bun scripts/factions.ts",
+    "chapters": "bun scripts/chapters.ts",
+    "locales": "bun scripts/locales.ts",
+    "lint:lua": "stylua --check addon && selene addon/Goodwill",
+    "format:lua": "stylua addon",
+    "check": "bun run kit:check && bun run ids && bun scripts/factions.ts --check && bun scripts/chapters.ts --check && bun scripts/locales.ts --check && bun run lint:lua && luajit addon/test/sim.lua && FOREVER=1 luajit addon/test/sim.lua && LOCALE=frFR luajit addon/test/sim.lua && bun scripts/package.ts --check",
+    "package": "bun scripts/package.ts"
+  }
+}

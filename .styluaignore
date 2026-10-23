@@ -1,0 +1,4 @@
+# Generated (scripts/factions.ts, chapters.ts, locales.ts)
+addon/Goodwill/Factions_*.lua
+addon/Goodwill/Chapters_*.lua
+addon/Goodwill/Text_*.lua

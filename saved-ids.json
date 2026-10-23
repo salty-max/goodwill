@@ -1,0 +1,7 @@
+{
+  "//": "The tables naming the ids a saved book keeps (opened: a faction's id): a regeneration never drops one (bun run ids, in check). An id leaves on purpose only with the user's go: under removed, with why and approved.",
+  "tables": {
+    "factions": { "lua": "addon/Goodwill/Factions_*.lua", "at": "data.factions" }
+  },
+  "removed": []
+}
