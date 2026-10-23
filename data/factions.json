@@ -38,11 +38,11 @@
     { "id": 2740, "group": "forever", "client": "forever" },
     { "id": 2798, "group": "forever", "client": "forever", "side": "H" },
     { "id": 2799, "group": "forever", "client": "forever", "side": "A" },
-    { "id": 730, "group": "battlegrounds", "side": "A" },
-    { "id": 729, "group": "battlegrounds", "side": "H" },
-    { "id": 890, "group": "battlegrounds", "side": "A" },
-    { "id": 889, "group": "battlegrounds", "side": "H" },
-    { "id": 509, "group": "battlegrounds", "side": "A" },
-    { "id": 510, "group": "battlegrounds", "side": "H" }
+    { "id": 730, "group": "battlegrounds", "side": "A", "voice": 13841, "chapters": "stormpike-guard", "pieces": ["start", "friendly", "honored", "revered", "exalted"] },
+    { "id": 729, "group": "battlegrounds", "side": "H", "voice": 13840, "chapters": "frostwolf-clan", "pieces": ["start", "friendly", "honored", "revered", "exalted"] },
+    { "id": 890, "group": "battlegrounds", "side": "A", "voice": 14733, "chapters": "silverwing-sentinels", "pieces": ["start", "friendly", "honored", "revered", "exalted"] },
+    { "id": 889, "group": "battlegrounds", "side": "H", "voice": 14754, "chapters": "warsong-outriders", "pieces": ["start", "friendly", "honored", "revered", "exalted"] },
+    { "id": 509, "group": "battlegrounds", "side": "A", "voice": 14983, "chapters": "league-of-arathor", "pieces": ["start", "friendly", "honored", "revered", "exalted"] },
+    { "id": 510, "group": "battlegrounds", "side": "H", "voice": 15021, "chapters": "defilers", "pieces": ["start", "friendly", "honored", "revered", "exalted"] }
   ]
 }
