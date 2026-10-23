@@ -58,7 +58,10 @@ paragraph's start. A translation in `i18n/<locale>/content/<faction>/`,
 front matter `piece` and `title`, the same marked paragraphs, stamped
 against its English (`i18n/<locale>/content-stamp.json`, `--stamp`).
 Classic Era's place names where its client differs:
-`i18n/<locale>/classic-names.json`, swapped in by the book.
+`i18n/<locale>/classic-names.json`, swapped in by the book in no set
+order, so no name there may hold another (the check refuses one: the
+Forever "Voltigeurs chanteguerres" and "Chanteguerre" are two names, never
+"Chanteguerres" beside them).
 
 The build refuses a semicolon (the gender tokens' own aside), non-ASCII in
 the English, a figure in the prose, a piece missing (all six, or the ones

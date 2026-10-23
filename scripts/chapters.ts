@@ -220,6 +220,10 @@ for (const locale of LOCALES) {
     if (args.includes("--stamp")) writeFileSync(stampFile, `${JSON.stringify(fresh, null, 2)}\n`);
     const swapFile = join(ROOT, "i18n", locale, "classic-names.json");
     swaps = existsSync(swapFile) ? JSON.parse(readFileSync(swapFile, "utf8")) : {};
+    // the book swaps them in no set order (Core.lua's pairs), so no name may hold another
+    for (const a of Object.keys(swaps))
+      for (const b of Object.keys(swaps))
+        if (a !== b && a.includes(b)) problems.push(`${locale}: classic-names.json: "${a}" holds "${b}", swapped in no set order`);
   }
   files[`Chapters_${locale}.lua`] = luaFor(locale, pieces, swaps);
 }
