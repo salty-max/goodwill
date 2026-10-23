@@ -38,7 +38,6 @@ function ns.createMinimapButton()
   icon:SetTexture(ns.ICON)
   icon:SetSize(20, 20)
   icon:SetPoint("TOPLEFT", 7, -6)
-  icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
 
   local border = button:CreateTexture(nil, "OVERLAY")
   border:SetTexture("Interface\\Minimap\\MiniMap-TrackingBorder")

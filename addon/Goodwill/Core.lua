@@ -17,8 +17,13 @@
 local _, ns = ...
 local L, D = ns.kit.L, ns.data
 ns.PREFIX = "|cff9fd0a0Goodwill:|r "
--- The book's mark, also used by the minimap, welcome and banners.
-ns.ICON = "Interface\\AddOns\\Goodwill\\Media\\Logo"
+-- The book's mark: the logo's medallion cut round (Media/Medallion,
+-- assets/README.md) wherever the picture is round (the window's portrait, the
+-- pages' and cards' pictures, the banners, the minimap button, the welcome's
+-- portrait); the whole square logo where a square shows (the addon list, the
+-- welcome page's logo).
+ns.ICON = "Interface\\AddOns\\Goodwill\\Media\\Medallion"
+ns.LOGO = "Interface\\AddOns\\Goodwill\\Media\\Logo"
 
 -- Forever hides some values from addons ("secret values"): never compare one.
 ns.secret = issecretvalue or function() return false end

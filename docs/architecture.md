@@ -68,8 +68,12 @@ chapters' build: `docs/data.md`.
 The emerald-and-gold handshake medallion is kept in `assets/`, with its
 master, 1024px and 512px PNG exports, and exact generation prompt.
 `Media/Logo.tga` is the uncompressed 256px RGBA game texture with rounded
-corners. Both TOCs and `ns.ICON` use it, covering the book, welcome page,
-minimap and banners. Export details are in `assets/README.md`.
+corners: both TOCs and `ns.LOGO` (the welcome page's logo) use it.
+`Media/Medallion.tga` is the medallion alone, cut round on its gold rim:
+`ns.ICON`, every round picture (the book's portrait, the factions' and
+stories' pages and cards, the banners, the minimap button, the welcome's
+portrait), where the square logo showed its navy corners and ribbons inside
+the ring. Export details are in `assets/README.md`.
 
 ## Tests
 
