@@ -7,7 +7,7 @@ beside: [darnassus, night-elves, sentinels, teldrassil]
 ---
 Our oldest weaver has started leaving her hems loose.
 
-She has woven for longer than any of your kingdoms have kept records, and for all that time she made cloth to last forever. Tight hems, hidden seams, threads that would outlive whoever wore them. That was the art. A night elf's cloak was meant never to wear out, because the night elf was meant never to.
+She has woven for longer than any human kingdom has kept records, and for all that time she made cloth to last forever. Tight hems, hidden seams, threads that would outlive whoever wore them. That was the art. A night elf's cloak was meant never to wear out, because the night elf was meant never to.
 
 Then your cloth started coming across my desk. Human wool, dwarven wool, gnomish silk, cloth woven by short-lived hands for short-lived bodies. She took it apart to learn it, the way a weaver will. And she found that mortal peoples hem their cloth loose, so it can be let out as a child grows, and mended when it tears, and patched, and handed on.
 
