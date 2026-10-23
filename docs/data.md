@@ -16,7 +16,8 @@ one has it, the voice once its chapters are written):
 - the turn-ins: a quest the Classic database flags repeatable, with the
   items it asks (`reputation_turnin`);
 - the kills: `kill_reputation`, the creature, the most a kill gives, the
-  standing it stops counting at (the data's 0 to 7, the game's one more);
+  last standing it still counts at (the data's 0 to 7, the game's one more:
+  the road stops it at the standing after);
 - the unlocks: an item `item_reputation` gates and a vendor sells, its
   standing, its vendors, the recipe and trade it teaches (`recipe_source`),
   and the quests a standing opens (`quest_standing`'s floor);

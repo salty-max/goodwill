@@ -120,6 +120,38 @@ for _, z in ipairs(ns.road.kills(TIMBERMAW)) do
   end
 end
 check(not deadwood and chief, "the kills that still count at Revered")
+-- (a kill's cap is the last standing it counts at: the Brood of Nozdormu's
+-- Ahn'Qiraj trash, capped at Hated, counts at Hated, not at Hostile)
+local function broodTrash()
+  for _, z in ipairs(ns.road.kills(910)) do
+    for _, c in ipairs(z.creatures) do
+      if c == 15747 then return true end
+    end
+  end
+  return false
+end
+s.rep[910] = -42000
+check(broodTrash(), "a kill counts at its cap: Hated")
+s.rep[910] = -6000
+check(not broodTrash(), "and stops at the standing after: Hostile")
+s.rep[910] = nil
+s.rep[TIMBERMAW] = 8000
+local honored = false
+for _, z in ipairs(ns.road.kills(TIMBERMAW)) do
+  for _, c in ipairs(z.creatures) do
+    if c == 7153 then honored = true end
+  end
+end
+check(honored, "a Deadwood Warrior still counts at Friendly")
+s.rep[TIMBERMAW] = 15000
+honored = false
+for _, z in ipairs(ns.road.kills(TIMBERMAW)) do
+  for _, c in ipairs(z.creatures) do
+    if c == 7153 then honored = true end
+  end
+end
+check(honored, "and at Honored, its cap")
+s.rep[TIMBERMAW] = 32000
 local quests = ns.road.quests(DAWN)
 check(#quests > 0, "the Dawn's quests still open")
 for _, q in ipairs(quests) do

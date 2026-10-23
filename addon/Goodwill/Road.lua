@@ -6,7 +6,7 @@
 --              class, the quests before it, its exclusive group), offered at
 --              the standing now or opening at a later one
 --   kills      the creatures whose death still raises it, by zone, and the
---              standing each stops counting at
+--              standing each stops counting at (the first past its cap)
 --   unlocks    what each standing opens: its vendors' goods (a trade's recipe
 --              said so), its quests
 local _, ns = ...
@@ -158,15 +158,17 @@ function R.quests(faction)
 end
 
 -- The kills that still raise it, by zone: the creatures, the most a kill
--- gives, the standing they stop counting at (the data's 0 to 7, the game's
--- one more).
+-- gives, the standing they stop counting at. The data's cap is the last
+-- standing a kill still counts at (0 Hated to 7 Exalted, the game's one
+-- more): the Brood of Nozdormu's Ahn'Qiraj trash counts at Hated, until
+-- Hostile.
 function R.kills(faction)
   local f = D.factions[faction]
   local standing = ns.standingOf(faction) or ns.NEUTRAL
   local byZone, out = {}, {}
   for _, k in ipairs(f.kills or {}) do
     local creature, gives, cap = k[1], k[2], k[3]
-    local stops = cap and cap + 1 or ns.EXALTED + 1
+    local stops = cap and cap + 2 or ns.EXALTED + 1
     if standing < stops then
       local n = D.npcs[creature] or {}
       local key = n.area or 0
