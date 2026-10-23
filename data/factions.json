@@ -6,7 +6,7 @@
     { "id": 576, "group": "endgame", "voice": 11555, "chapters": "timbermaw" },
     { "id": 59, "group": "endgame", "voice": 12944, "chapters": "thorium-brotherhood" },
     { "id": 609, "group": "endgame", "voice": 15306, "chapters": "cenarion-circle" },
-    { "id": 270, "group": "endgame" },
+    { "id": 270, "group": "endgame", "voice": 14921, "chapters": "zandalar-tribe" },
     { "id": 910, "group": "endgame" },
     { "id": 749, "group": "endgame" },
     { "id": 809, "group": "endgame" },
