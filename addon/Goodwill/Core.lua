@@ -17,8 +17,8 @@
 local _, ns = ...
 local L, D = ns.kit.L, ns.data
 ns.PREFIX = "|cff9fd0a0Goodwill:|r "
--- (the book's picture: a book of the game's own, until Goodwill has a logo)
-ns.ICON = "Interface\\Icons\\INV_Misc_Book_09"
+-- The book's mark, also used by the minimap, welcome and banners.
+ns.ICON = "Interface\\AddOns\\Goodwill\\Media\\Logo"
 
 -- Forever hides some values from addons ("secret values"): never compare one.
 ns.secret = issecretvalue or function() return false end

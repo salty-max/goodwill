@@ -63,6 +63,14 @@ chapters' build: `docs/data.md`.
   siblings'). `Welcome.lua`: the kit's welcome page, once per character.
   `Minimap.lua`: the book's button, as the siblings'.
 
+## Artwork
+
+The emerald-and-gold handshake medallion is kept in `assets/`, with its
+master, 1024px and 512px PNG exports, and exact generation prompt.
+`Media/Logo.tga` is the uncompressed 256px RGBA game texture with rounded
+corners. Both TOCs and `ns.ICON` use it, covering the book, welcome page,
+minimap and banners. Export details are in `assets/README.md`.
+
 ## Tests
 
 - `addon/test/game.lua` (the addon's files loaded as its TOC lists them;
@@ -84,8 +92,7 @@ chapters' build: `docs/data.md`.
 
 ## Not done yet
 
-- The logo (the book's picture is a game icon, `INV_Misc_Book_09`, to
-  render and check on both clients), the store page, the achievements.
+- The store page and achievements.
 - The capitals' mounts: vanilla sells another race's only at Exalted
   through the vendor's own gossip, which wow-data doesn't load
   (`item_reputation` has no row for them).

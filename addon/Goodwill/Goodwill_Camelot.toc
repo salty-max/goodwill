@@ -7,7 +7,7 @@
 ## Version: 0.1.0
 ## SavedVariablesPerCharacter: GoodwillChar
 ## SavedVariables: GoodwillSettings
-## IconTexture: Interface\Icons\INV_Misc_Book_09
+## IconTexture: Interface\AddOns\Goodwill\Media\Logo
 ## X-Website: https://github.com/salty-max/goodwill
 ## X-License: MIT
 
