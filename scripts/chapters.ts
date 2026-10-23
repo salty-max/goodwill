@@ -22,6 +22,8 @@
  *     translation running a fifth longer
  *   - a translation stamped with its English (i18n/<locale>/content-stamp.json,
  *     --stamp): an English piece changed since is said
+ *   - an [after]/[before] mark on a quest done once (wow-data: a repeatable
+ *     quest is never flagged done)
  * A translation names places as Forever's client does: Classic Era's names
  * where they differ (i18n/<locale>/classic-names.json) go in the file,
  * swapped in on Classic Era by the book.
@@ -33,6 +35,10 @@
 import { createHash } from "node:crypto";
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import type * as WowDb from "../../wow-data/src/db";
+import { familyPath } from "./root";
+
+const { openDb } = (await import(familyPath("wow-data", "src", "db.ts"))) as typeof WowDb;
 
 const ROOT = join(import.meta.dir, "..");
 const ADDON = join(ROOT, "addon", "Goodwill");
@@ -179,6 +185,19 @@ const verify = (pieces: Map<string, Piece>, translated: boolean, locale: string)
     }
 };
 verify(english, false, "enUS");
+// (a repeatable quest is never flagged done, so a paragraph marked with one
+// would never show, or never leave)
+{
+  const marked = new Map<number, string>();
+  for (const p of english.values()) for (const x of p.paragraphs) for (const id of [x.after, x.before]) if (id) marked.set(id, p.file);
+  if (marked.size)
+    for (const game of ["classic", "forever"] as const) {
+      const rows = openDb(game)
+        .query(`SELECT id FROM quest WHERE id IN (${[...marked.keys()].join(",")}) AND COALESCE(special_flags, 0) & 1`)
+        .all() as { id: number }[];
+      for (const { id } of rows) problems.push(`${marked.get(id)}: quest ${id} is repeatable on ${game}, never flagged done: mark a quest done once`);
+    }
+}
 
 const files: Record<string, string> = {};
 for (const locale of LOCALES) {

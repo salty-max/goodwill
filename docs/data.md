@@ -48,6 +48,10 @@ Classic Era's place names where its client differs:
 `i18n/<locale>/classic-names.json`, swapped in by the book.
 
 The build refuses a semicolon (the gender tokens' own aside), non-ASCII in
-the English, a figure in the prose, a piece missing, a translation whose
-marked paragraphs aren't its English's, a length far from its piece's; it
-says a length a little outside and a translation whose English changed.
+the English, a figure in the prose, a piece missing (all six, or the ones
+the faction's `pieces` in `data/factions.json` lists, and none beyond
+them), a translation whose marked paragraphs aren't its English's, a mark
+on a quest either game flags repeatable (wow-data's `special_flags`: the
+client never flags one done, so its paragraph would never show), a length
+far from its piece's; it says a length a little outside and a translation
+whose English changed.
