@@ -162,8 +162,8 @@ end
 -- Classic Era's names swapped in there.
 local function swapped(text)
   if ns.forever or not ns.classicNames then return text end
-  for forever, classic in pairs(ns.classicNames) do
-    text = text:gsub(forever:gsub("%p", "%%%0"), (classic:gsub("%%", "%%%%")))
+  for _, swap in ipairs(ns.classicNames) do -- the longest first
+    text = text:gsub(swap[1]:gsub("%p", "%%%0"), (swap[2]:gsub("%%", "%%%%")))
   end
   return text
 end

@@ -136,9 +136,10 @@ function luaFor(locale: string, pieces: Map<string, Piece>, swaps: Record<string
     lines.push("  },");
   }
   lines.push("}");
-  const pairs = Object.entries(swaps);
-  lines.push("-- (the places Classic Era's client names otherwise, swapped in there)");
-  lines.push(`ns.classicNames = { ${pairs.map(([a, b]) => `[${q(a)}] = ${q(b)}`).join(", ")} }`);
+  // longest first: "Goulet des Chanteguerres" before the "Chanteguerre" it holds
+  const pairs = Object.entries(swaps).sort(([a], [b]) => b.length - a.length || (a < b ? -1 : 1));
+  lines.push("-- (the places Classic Era's client names otherwise, swapped in there, the longest first)");
+  lines.push(`ns.classicNames = { ${pairs.map(([a, b]) => `{ ${q(a)}, ${q(b)} }`).join(", ")} }`);
   return `${lines.join("\n")}\n`;
 }
 
@@ -220,10 +221,6 @@ for (const locale of LOCALES) {
     if (args.includes("--stamp")) writeFileSync(stampFile, `${JSON.stringify(fresh, null, 2)}\n`);
     const swapFile = join(ROOT, "i18n", locale, "classic-names.json");
     swaps = existsSync(swapFile) ? JSON.parse(readFileSync(swapFile, "utf8")) : {};
-    // the book swaps them in no set order (Core.lua's pairs), so no name may hold another
-    for (const a of Object.keys(swaps))
-      for (const b of Object.keys(swaps))
-        if (a !== b && a.includes(b)) problems.push(`${locale}: classic-names.json: "${a}" holds "${b}", swapped in no set order`);
   }
   files[`Chapters_${locale}.lua`] = luaFor(locale, pieces, swaps);
 }

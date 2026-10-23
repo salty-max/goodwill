@@ -5,9 +5,9 @@ piece: exalted
 title: Command
 beside: [stormpike-guard, alterac-valley]
 ---
-I've given out a great many insignias. This is the last of them.
+I've given out a great many insignias. The last of them is the Eye of Command, and you're as near to it as a soldier gets.
 
-The Eye of Command. Wear it, and the soldiers on that field will follow what you tell them, for as long as the battle lasts. They'll ask you where to stand, and you'll have to know, every time.
+[after: 7172] There it is. Wear it, and the soldiers on that field will follow what you tell them, for as long as the battle lasts. They'll ask you where to stand, and you'll have to know, every time.
 
 When you first walked up that road, I signed you up the way I sign up everybody, one more name for the list, one more pin on the map. I didn't think twice about it.
 

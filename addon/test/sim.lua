@@ -86,6 +86,14 @@ if G.LOCALE == "frFR" then
   local _, honoredT = ns.chapter(THORIUM, "honored")
   local lokhtos = table.concat(honoredT, " ")
   check(lokhtos:find(G.FOREVER and "Forgefer" or "Ironforge", 1, true), "the city's name as this client writes it")
+  local _, clan = ns.chapter(889, "revered")
+  local kelm = table.concat(clan, " ")
+  check(kelm:find(G.FOREVER and "clan Chanteguerre" or "clan Warsong", 1, true), "Kelm's clan as this client names it")
+  local at = {}
+  for i, swap in ipairs(ns.classicNames) do
+    at[swap[1]] = i
+  end
+  check(at["Goulet des Chanteguerres"] < at["Chanteguerre"], "a name holding another swapped first")
 end
 
 -- ── the road ─────────────────────────────────────────────────────────────────

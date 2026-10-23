@@ -2,9 +2,9 @@
 piece: exalted
 title: Le commandement
 ---
-J'ai distribué beaucoup d'insignes. Voici le dernier.
+J'ai distribué beaucoup d'insignes. Le dernier, c'est l'Œil du commandement, et vous en êtes aussi près qu'un soldat peut l'être.
 
-L'Œil du commandement. Portez-le, et les soldats de ce champ de bataille suivront ce que vous leur direz, aussi longtemps que durera la bataille. Ils vous demanderont où se placer, et il faudra que vous le sachiez, à chaque fois.
+[after: 7172] Le voilà. Portez-le, et les soldats de ce champ de bataille suivront ce que vous leur direz, aussi longtemps que durera la bataille. Ils vous demanderont où se placer, et il faudra que vous le sachiez, à chaque fois.
 
 Quand vous avez monté cette route la première fois, je vous ai $genrôlé:enrôlée; comme j'enrôle tout le monde, un nom de plus sur la liste, une épingle de plus sur la carte. Je n'y ai pas réfléchi à deux fois.
 

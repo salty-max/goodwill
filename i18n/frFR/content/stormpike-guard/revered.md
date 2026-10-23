@@ -8,4 +8,6 @@ Les trolls Winterax. Des cannibales, là-haut dans les grottes, et des nains fin
 
 Une guerre a plus de deux camps, et ce sont ceux qu'on oublie qui vous ont. J'ai perdu de bons soldats sous une lance venue des grottes pendant qu'ils s'occupaient du fort. Surveillez les Loup-de-Givre, et surveillez les grottes. Les trolls se moquent du drapeau que vous portez. La marmite aussi.
 
-La Garde vous révère, à présent, et vous avez un nouvel insigne pour le montrer. Portez-le dans les grottes aussi fièrement qu'au combat. Il en reste un après celui-ci, et j'aimerais l'épingler sur quelqu'un qui le mérite autant.
+La Garde vous révère, à présent. Il y a encore des grades au-dessus de celui-ci, et j'aimerais les épingler sur quelqu'un qui le mérite.
+
+[after: 7170] Portez le nouvel insigne dans les grottes aussi fièrement qu'au combat.
