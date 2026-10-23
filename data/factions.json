@@ -5,7 +5,7 @@
     { "id": 529, "group": "endgame", "voice": 11039, "chapters": "argent-dawn" },
     { "id": 576, "group": "endgame", "voice": 11555, "chapters": "timbermaw" },
     { "id": 59, "group": "endgame", "voice": 12944, "chapters": "thorium-brotherhood" },
-    { "id": 609, "group": "endgame" },
+    { "id": 609, "group": "endgame", "voice": 15306, "chapters": "cenarion-circle" },
     { "id": 270, "group": "endgame" },
     { "id": 910, "group": "endgame" },
     { "id": 749, "group": "endgame" },
