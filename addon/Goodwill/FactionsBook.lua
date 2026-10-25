@@ -44,7 +44,7 @@ local function refreshList()
     local first = true
     for _, id in ipairs(ns.factions()) do
       local name = ns.factionName(id)
-      if D.factions[id].group == group and (q == "" or name:lower():find(q, 1, true)) then
+      if D.factions[id].group == group and ns.kit.finds(name, q) then
         if first then
           list:gap(6)
           list:add("section", ui.GROUPS[group] or group)

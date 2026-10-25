@@ -1,6 +1,6 @@
 # The addon's Lua, linted by selene (bun run lint:lua): Lua 5.1 and the game's
 # globals the addon uses (wow.yml).
-std = "wow"
+std = "wow+goodwill"
 exclude = ["addon/Goodwill/Text_*.lua", "addon/Goodwill/Factions_*.lua", "addon/Goodwill/Chapters_*.lua"]
 
 [lints]

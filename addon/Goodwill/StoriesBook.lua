@@ -47,7 +47,7 @@ local function refreshList()
   list:begin()
   for _, id in ipairs(voiced()) do
     local name = ns.factionName(id)
-    if q == "" or name:lower():find(q, 1, true) then
+    if ns.kit.finds(name, q) then
       local opened, all = counts(id)
       local row = list:add("story", name, ("%d / %d"):format(opened, all))
       row:SetScript("OnClick", function()

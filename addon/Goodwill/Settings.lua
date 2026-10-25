@@ -11,12 +11,11 @@ local _, ns = ...
 local K = ns.kit
 local L = K.L
 
--- (minimapAngle: the button's place around the minimap, in degrees, 140 on
--- the left above Mealbook's (165) and the siblings' (200 to 250); welcomed:
--- never copied)
+-- (minimapAngle: the button's place around the minimap, in degrees, the
+-- family's own for Goodwill, K.MINIMAP_ANGLES; welcomed: never copied)
 local DEFAULTS = {
   minimapHidden = false,
-  minimapAngle = 140,
+  minimapAngle = K.MINIMAP_ANGLES.Goodwill,
   welcomed = false,
 }
 local SHARED = { "minimapHidden", "minimapAngle" }

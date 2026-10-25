@@ -130,7 +130,7 @@ ns.on("GET_ITEM_INFO_RECEIVED", function(item, success)
 end)
 
 -- ── the parts every tab is made of ───────────────────────────────────────────
-local function query() return strtrim((book.search:GetText() or ""):lower()) end
+local function query() return K.query(book.search) end
 local function day(stamp) return K.day(stamp and stamp.at) end
 local function zoneName(area)
   local name = area and C_Map and C_Map.GetAreaInfo and C_Map.GetAreaInfo(area)
@@ -170,7 +170,7 @@ end
 local function standingColour(standing)
   local c = FACTION_BAR_COLORS and FACTION_BAR_COLORS[standing]
   if not c then return "|cffffffff" end
-  return ("|cff%02x%02x%02x"):format(c.r * 255, c.g * 255, c.b * 255)
+  return K.hex({ c.r, c.g, c.b })
 end
 local function standingWord(standing) return standingColour(standing) .. ns.standingName(standing) .. "|r" end
 

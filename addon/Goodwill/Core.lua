@@ -26,39 +26,17 @@ ns.ICON = "Interface\\AddOns\\Goodwill\\Media\\Medallion"
 ns.LOGO = "Interface\\AddOns\\Goodwill\\Media\\Logo"
 
 -- Forever hides some values from addons ("secret values"): never compare one.
-ns.secret = issecretvalue or function() return false end
+ns.secret = ns.kit.secret
 
 local char
 function ns.book() return char end
 
 -- ── events ───────────────────────────────────────────────────────────────────
--- Every file listens through ns.on (an event a client doesn't know is never
--- heard), unit events through ns.onUnit. Nothing is heard before the login.
-local frame = CreateFrame("Frame")
-local listeners = {}
-
--- (one listener's error is reported, and the others still hear the event)
-local function run(fn, ...)
-  local ok, err = pcall(fn, ...)
-  if not ok then geterrorhandler()(err) end
-end
-
-frame:SetScript("OnEvent", function(_, event, ...)
-  if event == "PLAYER_LOGIN" then run(ns.login) end
-  if not char then return end
-  for _, fn in ipairs(listeners[event] or {}) do
-    run(fn, ...)
-  end
-end)
-frame:RegisterEvent("PLAYER_LOGIN")
-
-function ns.on(event, fn)
-  if not listeners[event] then
-    listeners[event] = {}
-    pcall(frame.RegisterEvent, frame, event)
-  end
-  table.insert(listeners[event], fn)
-end
+-- Every file listens through ns.on (the kit's events: each listener on its
+-- own, an event a client doesn't know never heard), nothing before the login
+-- has opened this character's book.
+local events = ns.kit.events({ login = function() ns.login() end, ready = function() return char ~= nil end })
+ns.on = events.on
 
 -- ── the standings ────────────────────────────────────────────────────────────
 -- The game's standings, 1 Hated to 8 Exalted, and where each begins.
@@ -120,19 +98,9 @@ end
 
 -- The character's side, race and class, as the data's masks read them.
 function ns.side() return UnitFactionGroup("player") == "Horde" and "H" or "A" end
-local function bit(n) return 2 ^ (n - 1) end
-local function hasBit(mask, n)
-  if not mask or mask == 0 then return true end
-  return math.floor(mask / bit(n)) % 2 == 1
-end
--- (a race's bit is its id's, one less, but where the client says otherwise:
--- Forever's Skyborne, races 95 and 96, are bits 32 and 33, the data's raceBits)
-function ns.forMe(q)
-  local _, _, race = UnitRace("player")
-  local _, _, class = UnitClass("player")
-  local raceBit = race and ((D.raceBits and D.raceBits[race]) or race - 1)
-  return hasBit(q.races, raceBit and raceBit + 1 or 0) and hasBit(q.classes, class or 0)
-end
+-- (the kit's: a race's bit is its id's, one less, but where the data's
+-- raceBits say otherwise, Forever's Skyborne)
+function ns.forMe(q) return ns.kit.forMe(q.races, q.classes, D.raceBits) end
 
 -- The factions the book follows for this character: its side's and both
 -- sides', in the data's order.
@@ -149,11 +117,7 @@ function ns.npcName(id) return ns.npcNames and ns.npcNames[id] end
 function ns.questName(id) return ns.questNames and ns.questNames[id] end
 
 -- A quest done, as the game keeps it.
-function ns.done(quest)
-  if C_QuestLog and C_QuestLog.IsQuestFlaggedCompleted then return C_QuestLog.IsQuestFlaggedCompleted(quest) == true end
-  if IsQuestFlaggedCompleted then return IsQuestFlaggedCompleted(quest) == true end
-  return false
-end
+ns.done = ns.kit.questDone
 
 -- ── the chapters ─────────────────────────────────────────────────────────────
 -- A faction's piece, as this client's language writes it (Chapters_<locale>):
@@ -162,10 +126,7 @@ end
 -- Classic Era's names swapped in there.
 local function swapped(text)
   if ns.forever or not ns.classicNames then return text end
-  for _, swap in ipairs(ns.classicNames) do -- the longest first
-    text = text:gsub(swap[1]:gsub("%p", "%%%0"), (swap[2]:gsub("%%", "%%%%")))
-  end
-  return text
+  return ns.kit.swap(text, ns.classicNames) -- (the longest first)
 end
 function ns.chapter(faction, piece)
   local c = ns.chapters and ns.chapters[faction] and ns.chapters[faction][piece]

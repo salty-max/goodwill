@@ -23,12 +23,7 @@ local W = K.welcome({
   profiles = ns.profiles,
   choices = function()
     return {
-      {
-        text = L["The book by the minimap"],
-        hint = L["Click it to open the book, or drag it around the minimap."],
-        get = function() return not ns.option("minimapHidden") end,
-        set = function(v) ns.setOption("minimapHidden", not v) end,
-      },
+      K.minimapChoice(ns.option, ns.setOption),
     }
   end,
   footnote = L["Change it any time: /goodwill settings, or a right-click on the minimap button. /goodwill opens the book."],
