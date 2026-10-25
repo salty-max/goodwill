@@ -10,6 +10,8 @@
 ## IconTexture: Interface\AddOns\Goodwill\Media\Logo
 ## X-Website: https://github.com/salty-max/goodwill
 ## X-License: MIT
+## X-Curse-Project-ID: 1765838
+## X-Wago-ID: ZKbqa961
 
 # Each game loads its own TOC (_Vanilla: Classic Era, _Camelot: Forever), the
 # same but for the interface and its factions, Factions_<game>.lua
