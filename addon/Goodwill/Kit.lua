@@ -1,4 +1,4 @@
--- addon-kit 7e91c25: a copy (kit:sync); edit the addon-kit repository's Kit.lua instead
+-- addon-kit 175357e: a copy (kit:sync); edit the addon-kit repository's Kit.lua instead
 -- The kit every addon of the family carries but Keyring (Hearthtale,
 -- Lorekeeper's Codex, Yonder, Second Wind, Palaver, Mealbook, Goodwill, Yours
 -- Truly): which game this is and the addon's events, its words, the books'
@@ -2012,7 +2012,7 @@ function K.deeds(o)
           id = d.id,
           group = d.group,
           title = d.title,
-          text = d.text,
+          text = type(d.text) == "function" and d.text() or d.text, -- (a line the reader's book words)
           earned = self:earned(d.id),
           progress = d.progress,
         })
