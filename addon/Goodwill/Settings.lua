@@ -6,21 +6,24 @@
 -- button; the welcome page (Welcome.lua) offers them too.
 --
 --   GoodwillSettings.profiles["Name - Realm"] = { minimapHidden,
---     minimapAngle, welcomed }
+--     minimapAngle, chapterBanner, welcomed }
 local _, ns = ...
 local K = ns.kit
 local L = K.L
 
 -- (minimapAngle: the button's place around the minimap, in degrees, the
 -- family's own for Goodwill, K.MINIMAP_ANGLES; welcomed: never copied)
+-- (chapterBanner: a new chapter's banner among the game's alerts, a switch
+-- as every addon's alert has, the user's call of 24 October 2026)
 local DEFAULTS = {
   minimapHidden = false,
   minimapAngle = K.MINIMAP_ANGLES.Goodwill,
+  chapterBanner = true,
   welcomed = false,
 }
-local SHARED = { "minimapHidden", "minimapAngle" }
+local SHARED = { "minimapHidden", "minimapAngle", "chapterBanner" }
 
--- The profiles: a code "GW1:h0:a140".
+-- The profiles: a code "GW1:h0:a140:b1".
 local P = K.profiles({
   saved = function()
     if type(GoodwillSettings) ~= "table" then GoodwillSettings = {} end
@@ -28,7 +31,7 @@ local P = K.profiles({
   end,
   defaults = DEFAULTS,
   shared = SHARED,
-  letters = { minimapHidden = "h", minimapAngle = "a" },
+  letters = { minimapHidden = "h", minimapAngle = "a", chapterBanner = "b" },
   tag = "GW1",
   changed = function(key)
     if key == "minimapHidden" or key == "minimapAngle" then
@@ -42,36 +45,29 @@ function ns.loadProfile() P:load() end
 function ns.option(key) return P:get(key) end
 function ns.setOption(key, value) P:set(key, value) end
 
-local category
+-- The page in the game's Options (the kit's: K.options).
+local O
 
 function ns.createSettingsPanel()
-  if category or not (Settings and Settings.RegisterVerticalLayoutCategory) then return end
-  category = Settings.RegisterVerticalLayoutCategory("Goodwill")
-
-  local setting = Settings.RegisterProxySetting(
-    category,
-    "GOODWILL_MINIMAP",
-    Settings.VarType.Boolean,
-    L["Minimap button"],
-    true,
-    function() return not ns.option("minimapHidden") end,
-    function(value) ns.setOption("minimapHidden", not value) end
+  if O then return end
+  O = K.options({
+    title = "Goodwill",
+    key = "GOODWILL",
+    get = ns.option,
+    set = ns.setOption,
+    defaults = DEFAULTS,
+    profiles = P,
+    slash = "/goodwill",
+    prefix = ns.PREFIX,
+  })
+  O:check(
+    "chapterBanner",
+    L["Banner for a new chapter"],
+    L["Show each new chapter of a faction's story in a banner among the game's alerts. A click on it reads the chapter."]
   )
-  Settings.CreateCheckbox(category, setting, L["The book by the minimap: click to open it, drag to move it."])
-
-  -- Another character's settings (of this game), for this one.
-  K.copySetting(
-    category,
-    "GOODWILL_COPYFROM",
-    P,
-    L["Another character's choices, for this one (of this game: Classic and Forever keep their own). From elsewhere: /goodwill export there, then /goodwill import CODE here."],
-    function(other) print(ns.PREFIX .. L["%s's settings copied."]:format(other)) end
-  )
-
-  Settings.RegisterAddOnCategory(category)
+  O:check("minimapHidden", L["Minimap button"], L["The book by the minimap: click to open it, drag to move it."], true)
+  O:copy()
+  O:done()
 end
 
-function ns.openSettings()
-  if category then Settings.OpenToCategory(category:GetID()) end
-  return category ~= nil
-end
+function ns.openSettings() return O ~= nil and O:open() end

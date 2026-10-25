@@ -51,6 +51,17 @@ fire("UPDATE_FACTION")
 check(ns.opened(TIMBERMAW, "friendly"), "Friendly with the Timbermaw: its chapter opened")
 check(said(NEW_CHAPTER), "said in chat")
 check(GoodwillBanner1 and GoodwillBanner1:IsShown(), "and on a banner among the game's alerts")
+-- (the banner a switch of its own: off, the line in chat alone)
+GoodwillBanner1:Hide()
+ns.setOption("chapterBanner", false)
+s.printed = {}
+s.rep[DAWN] = 3100
+fire("UPDATE_FACTION")
+check(
+  ns.opened(DAWN, "friendly") and said(NEW_CHAPTER) and not GoodwillBanner1:IsShown(),
+  "the banner off: the line alone"
+)
+ns.setOption("chapterBanner", true)
 check(not ns.opened(TIMBERMAW, "honored"), "Honored's still to come")
 s.rep[TIMBERMAW] = 25000
 fire("UPDATE_FACTION")
@@ -260,5 +271,14 @@ if G.FOREVER then
   check(follows[2778] and not follows[2779], "the Horde's Skyborne follow the Windshapers, not the High Order")
   s.race, s.faction = nil, nil
 end
+
+-- ── /goodwill ────────────────────────────────────────────────────────────────
+-- (the family's command: an unknown word prints the usage, the replies capitalised)
+s.printed = {}
+SlashCmdList.GOODWILL("nonsense")
+check(said("/goodwill"), "/goodwill nonsense: the usage")
+s.printed = {}
+SlashCmdList.GOODWILL("import " .. ns.profiles:export())
+check(said(L["Settings imported for this character."]), "/goodwill import CODE: said, capitalised")
 
 io.write(("Goodwill: %d checks passed (%s, %s).\n"):format(count, G.LOCALE, G.FOREVER and "Forever" or "Classic Era"))

@@ -166,6 +166,7 @@ local function announce(faction, piece)
   local title = ns.chapter(faction, piece)
   local name = ns.factionName(faction)
   print(ns.PREFIX .. L["A new chapter from %s: %s."]:format(name, "|cffffd27f" .. (title or "") .. "|r"))
+  if not ns.option("chapterBanner") then return end -- (the player's switch)
   banners = banners or ns.kit.banners({ name = "GoodwillBanner", art = ns.ICON })
   banners:show({
     -- (the whole medallion, its rim in the ring: K.icon would crop it as a game icon)
@@ -276,27 +277,26 @@ ns.on("BANKFRAME_CLOSED", function() bankOpen = false end)
 ns.on("PLAYERBANKSLOTS_CHANGED", function() ns.readBank() end)
 
 -- ── /goodwill ────────────────────────────────────────────────────────────────
-SLASH_GOODWILL1 = "/goodwill"
-SlashCmdList.GOODWILL = function(msg)
-  local raw = strtrim(msg or "") -- (a code's letters as typed)
-  msg = raw:lower()
-  if msg == "stories" then
-    if ns.openStory then ns.openStory() end
-  elseif msg == "minimap" then
-    ns.setOption("minimapHidden", not ns.option("minimapHidden"))
-  elseif msg == "settings" then
-    if not ns.openSettings() then print(ns.PREFIX .. L["The game's Options have no page for addons here."]) end
-  elseif msg == "welcome" then
-    if ns.showWelcome then ns.showWelcome() end
-  elseif msg == "export" then
-    if ns.showWelcome then ns.showWelcome("export") end
-  elseif msg:match("^import%s") then
-    if ns.profiles:import(raw:match("^%a+%s+(.+)$")) then
-      print(ns.PREFIX .. L["Settings imported for this character."])
-    else
-      print(ns.PREFIX .. L["That isn't a Goodwill settings code."])
-    end
-  elseif ns.toggle then
-    ns.toggle()
-  end
-end
+-- The kit's command (K.commands): alone it opens the book, an unknown word
+-- prints the usage.
+ns.kit.commands({
+  names = { "/goodwill" },
+  key = "GOODWILL",
+  name = "Goodwill",
+  prefix = ns.PREFIX,
+  profiles = function() return ns.profiles end, -- (Settings.lua makes them, after this file)
+  open = function()
+    if ns.toggle then ns.toggle() end
+  end,
+  usage = L["/goodwill opens the book, /goodwill stories its stories and /goodwill settings its settings. /goodwill minimap shows or hides the button, /goodwill welcome shows the welcome page again. /goodwill export gives this character's settings as a code, and /goodwill import CODE takes them."],
+  settings = function() return ns.openSettings() end,
+  welcome = function(mode)
+    if ns.showWelcome then ns.showWelcome(mode) end
+  end,
+  minimap = { get = ns.option, set = ns.setOption },
+  commands = {
+    stories = function()
+      if ns.openStory then ns.openStory() end
+    end,
+  },
+})
