@@ -3,7 +3,7 @@
 -- on a banner, the aside halfway to Exalted), a paragraph after a quest and
 -- one before it, the road (turn-ins against the bags and the bank, the kills
 -- that still count, the quests still open, what each standing unlocks), and
--- the book opened on each tab. FOREVER=1, LOCALE=frFR: those clients.
+-- the book opened on each tab. FOREVER=1, LOCALE=frFR, deDE: those clients.
 local G = dofile("addon/test/game.lua")
 local s, fire, ns = G.state, G.fire, G.ns
 local count = 0
@@ -105,6 +105,18 @@ if G.LOCALE == "frFR" then
     at[swap[1]] = i
   end
   check(at["Goulet des Chanteguerres"] < at["Chanteguerre"], "a name holding another swapped first")
+end
+
+-- ── a German reader, a woman ────────────────────────────────────────────────
+if G.LOCALE == "deDE" then
+  s.sex = 3
+  local _, revered = ns.chapter(TIMBERMAW, "revered")
+  local text = table.concat(revered, " ")
+  check(text:find("keine Fremde", 1, true) and text:find("Ehrfürchtig", 1, true), "the reader agreed to: a woman")
+  check(not text:find("$g", 1, true), "no token left")
+  s.sex = 2
+  local _, honoredT = ns.chapter(THORIUM, "honored")
+  check(table.concat(honoredT, " "):find("Ironforge", 1, true), "the city's name as the German clients write it")
 end
 
 -- ── the road ─────────────────────────────────────────────────────────────────

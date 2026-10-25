@@ -2,6 +2,7 @@
 ## Title: Goodwill
 ## Notes: Every faction's road to Exalted from where you stand, and a chapter of its story at each standing you reach.
 ## Notes-frFR: La route de chaque faction jusqu'à Exalté depuis là où vous en êtes, et un chapitre de son histoire à chaque rang atteint.
+## Notes-deDE: Der Weg jeder Fraktion bis Ehrfürchtig von deinem jetzigen Stand aus, und ein Kapitel ihrer Geschichte bei jedem Rang, den du erreichst.
 ## Category: Quests
 ## Author: salty-max
 ## Version: 0.1.0

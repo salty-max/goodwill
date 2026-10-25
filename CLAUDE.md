@@ -19,7 +19,7 @@ package. Read the family's CLAUDE.md
 | The addon file by file: the package, Core, Road, the book's tabs, Settings, Welcome, the tests, languages | `docs/architecture.md` |
 | The factions from wow-data (`scripts/factions.ts`) and the chapters (`scripts/chapters.ts`) | `docs/data.md` |
 | The factions the book follows, their groups, sides and voices, by hand | `data/factions.json` |
-| The chapters themselves | `content/<faction>/<piece>.md`, French in `i18n/frFR/content/<faction>/` |
+| The chapters themselves | `content/<faction>/<piece>.md`, each translation in `i18n/<locale>/content/<faction>/` (French, German) |
 | The logo, its master, exports and exact generation prompt | `assets/README.md` |
 | The plan, the voices, the waves of chapters to come | `../ideas/reputation-road.md`, `../ideas/reputation-road-voices.md` |
 

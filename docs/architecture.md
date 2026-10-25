@@ -94,8 +94,10 @@ the ring. Export details are in `assets/README.md`.
 ## Languages
 
 - Goodwill's own words through `L` (`i18n/<locale>/words.json`, `bun run
-  locales`): English and French (interface and chapters), the other clients
-  English until translated. The factions', npcs', quests' and trades' names
+  locales`): English, French and German (interface and chapters; German
+  flagged, a first translation with no native reader yet, its voices on the
+  game's "Ihr", Gorn, Lokhtos and Bor on "du" where their cards say), the
+  other clients English until translated. The factions', npcs', quests' and trades' names
   are the game's, by id, in the client's language.
 
 ## Not done yet
