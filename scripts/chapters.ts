@@ -154,7 +154,8 @@ function swapOnce(text: string, pairs: [string, string][]): string {
   if (!pairs.length) return text;
   const esc = (x: string) => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const to = new Map(pairs);
-  return text.replace(new RegExp(pairs.map(([a]) => esc(a)).join("|"), "g"), (m) => to.get(m) ?? m);
+  // (whole names only: "el Sindicato" never inside "Del Sindicato")
+  return text.replace(new RegExp(`(?<!\\p{L})(?:${pairs.map(([a]) => esc(a)).join("|")})(?!\\p{L})`, "gu"), (m) => to.get(m) ?? m);
 }
 
 const args = process.argv.slice(2);
@@ -230,6 +231,22 @@ for (const locale of LOCALES) {
         return [k, l ? { ...l, title: swap(l.title), paragraphs: l.paragraphs.map((x) => ({ ...x, text: swap(x.text) })) } : p];
       }),
     );
+    // (the borrowed text checked again with the borrower's names in: a
+    // semicolon or a figure a regional name brought would be caught here)
+    verify(new Map([...pieces].filter(([k]) => lent.has(k))), true, locale);
+    // (a name the lender's client writes otherwise, left in: regional.json lacks it)
+    const borrowed = [...pieces].filter(([k]) => lent.has(k)).map(([, p]) => `${p.title} ${plainText(p)}`).join(" ");
+    for (const game of ["classic", "forever"] as const) {
+      const rows = openDb(game)
+        .query(
+          `SELECT a.name AS lent, b.name AS own FROM name a JOIN name b ON a.kind = b.kind AND a.id = b.id
+           WHERE a.locale = ? AND b.locale = ? AND a.kind IN ('area', 'faction', 'creature') AND a.name <> b.name AND length(a.name) > 4`,
+        )
+        .all(lender, locale) as { lent: string; own: string }[];
+      for (const r of rows)
+        if (borrowed.includes(r.lent) && new RegExp(`(?<!\\p{L})${r.lent.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?!\\p{L})`, "u").test(borrowed))
+          problems.push(`${locale}: "${r.lent}" is ${lender}'s name, ${locale}'s client says "${r.own}" (${game}): i18n/${locale}/regional.json`);
+    }
     const swapFile = join(ROOT, "i18n", locale, "classic-names.json");
     swaps = existsSync(swapFile) ? JSON.parse(readFileSync(swapFile, "utf8")) : {};
   } else if (TRANSLATED.includes(locale)) {

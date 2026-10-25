@@ -112,7 +112,7 @@ if G.LOCALE == "deDE" then
   s.sex = 3
   local _, revered = ns.chapter(TIMBERMAW, "revered")
   local text = table.concat(revered, " ")
-  check(text:find("keine Fremde", 1, true) and text:find("Ehrfürchtig", 1, true), "the reader agreed to: a woman")
+  check(text:find("keine Fremde", 1, true) and text:find("Respektvoll", 1, true), "the reader agreed to: a woman")
   check(not text:find("$g", 1, true), "no token left")
   s.sex = 2
   local _, honoredT = ns.chapter(THORIUM, "honored")

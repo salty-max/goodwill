@@ -2,7 +2,7 @@
 -- the character's standings as each client tells them (Classic Era's
 -- GetFactionInfoByID, Forever's C_Reputation), the quests it has done, its
 -- bags and its bank, its race, class and sex, the standings' names.
--- FOREVER=1 plays Forever's client, LOCALE=frFR a French one.
+-- FOREVER=1 plays Forever's client, LOCALE=frFR a French one (deDE, esES, esMX the same).
 local G = dofile("addon/test/wowmock.lua")
 local state, FOREVER, LOCALE, obj = G.state, G.FOREVER, G.LOCALE, G.obj
 
@@ -42,16 +42,33 @@ else
     return "Faction " .. id, "", s, low, high, v
   end
 end
--- the standings' names, the game's (French: a woman's form too)
-local LABELS = LOCALE == "frFR"
-    and { "Haï", "Hostile", "Inamical", "Neutre", "Amical", "Honoré", "Révéré", "Exalté" }
-  or { "Hated", "Hostile", "Unfriendly", "Neutral", "Friendly", "Honored", "Revered", "Exalted" }
+-- the standings' names, the game's (French and Spanish: a woman's form too)
+local SPANISH = { "Odiado", "Hostil", "Adverso", "Neutral", "Amistoso", "Honorable", "Venerado", "Exaltado" }
+local LABELS = ({
+  frFR = { "Haï", "Hostile", "Inamical", "Neutre", "Amical", "Honoré", "Révéré", "Exalté" },
+  deDE = {
+    "Hasserfüllt",
+    "Feindselig",
+    "Unfreundlich",
+    "Neutral",
+    "Freundlich",
+    "Wohlwollend",
+    "Respektvoll",
+    "Ehrfürchtig",
+  },
+  esES = SPANISH,
+  esMX = SPANISH,
+})[LOCALE] or { "Hated", "Hostile", "Unfriendly", "Neutral", "Friendly", "Honored", "Revered", "Exalted" }
 for i, label in ipairs(LABELS) do
   _G["FACTION_STANDING_LABEL" .. i] = label
 end
 if LOCALE == "frFR" then
   FACTION_STANDING_LABEL6_FEMALE, FACTION_STANDING_LABEL7_FEMALE, FACTION_STANDING_LABEL8_FEMALE =
     "Honorée", "Révérée", "Exaltée"
+elseif LOCALE == "esES" or LOCALE == "esMX" then
+  FACTION_STANDING_LABEL1_FEMALE, FACTION_STANDING_LABEL3_FEMALE, FACTION_STANDING_LABEL5_FEMALE =
+    "Odiada", "Adversa", "Amistosa"
+  FACTION_STANDING_LABEL7_FEMALE, FACTION_STANDING_LABEL8_FEMALE = "Venerada", "Exaltada"
 end
 FACTION_BAR_COLORS = {}
 for i = 1, 8 do

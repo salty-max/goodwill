@@ -60,12 +60,16 @@ against its English (`i18n/<locale>/content-stamp.json`, `--stamp`).
 Classic Era's place names where its client differs:
 `i18n/<locale>/classic-names.json`, swapped in by the book the longest
 first, so a name may hold another ("Goulet des Chanteguerres" goes to
-"Goulet des Warsong" before "Chanteguerre" to "Warsong"). German and Spanish
-need none: their two clients name the chapters' places alike (checked
-against wow-data, 26 October 2026). esMX has no folder of its own: it
+"Goulet des Warsong" before "Chanteguerre" to "Warsong"). German needs one (Forever's "Kapelle des Hoffnungsvollen Lichts" is
+Classic Era's "hoffnungsvollen"), Spanish none: checked against wow-data on
+26 October 2026, every area, faction, npc and item name the translations
+hold. esMX has no folder of its own: it
 borrows esES's chapters with `i18n/esMX/regional.json` (esES name → esMX
 name, the longest first, once) and its own `classic-names.json` if one is
-ever needed.
+ever needed. The borrowed text goes through the same checks, its names
+matched whole (never inside another word), and the build refuses a name
+the lender's client writes otherwise on the borrower's (an area, faction
+or npc of wow-data's), so a new esES name without its esMX one fails.
 
 The build refuses a semicolon (the gender tokens' own aside), non-ASCII in
 the English, a figure in the prose, a piece missing (all six, or the ones
