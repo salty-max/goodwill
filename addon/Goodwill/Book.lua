@@ -30,84 +30,29 @@ local GROUPS = {
 }
 
 -- ── the window ───────────────────────────────────────────────────────────────
-local book
+-- The kit's book (K.book): the window, its two panels, the search, the tabs;
+-- each tab a file of its own, registered with ns.addTab.
 local TAB = { factions = 1, stories = 2 }
 ns.TAB = TAB
-local tabs, TITLES = {}, { L["Factions"], L["Stories"] }
-function ns.addTab(n, tab) tabs[n] = tab end
-
-function ns.refresh()
-  local tab = book and tabs[book.selectedTab]
-  if tab and tab.built then tab.refresh() end
-end
-
-function ns.showTab(n)
-  if not book then return end
-  book.selectedTab = n
-  if PanelTemplates_SetTab then PanelTemplates_SetTab(book, n) end
-  local tab = tabs[n]
-  if not tab.built then
-    tab.build(book)
-    tab.built = true
-  end
-  for _, t in ipairs(tabs) do
-    if t.built then t.show(n) end
-  end
-  ns.refresh()
-end
-
-local function build()
-  local window = K.gameWindow("GoodwillFrame", "Goodwill", ns.ICON)
-  book = window or K.dialog("GoodwillFrame", "Goodwill")
-  K.movable(book, 780, 560)
-  local edge = window and 8 or 14
-  book.count = K.label(book, K.BODY_FONT, 11, T.gold)
-  book.count:SetPoint("TOPLEFT", 64, -36)
-  book.left = K.panel(book, true)
-  book.left:SetPoint("TOPLEFT", edge, -58)
-  book.left:SetPoint("BOTTOMLEFT", edge, edge)
-  book.left:SetWidth(244)
-  book.sheet = K.panel(book)
-  book.sheet:SetPoint("TOPLEFT", book.left, "TOPRIGHT", 4, 32)
-  book.sheet:SetPoint("BOTTOMRIGHT", -edge, edge)
-  book.search = CreateFrame("EditBox", "GoodwillSearch", book, "SearchBoxTemplate")
-  book.search:SetHeight(20)
-  book.search:SetPoint("TOPLEFT", book.left, "TOPLEFT", 18, -10)
-  book.search:SetPoint("TOPRIGHT", book.left, "TOPRIGHT", -12, -10)
-  book.search:HookScript("OnTextChanged", function() ns.refresh() end)
-  book.selectedTab = TAB.factions
-  book:SetScript("OnShow", function() ns.showTab(book.selectedTab) end)
-  K.tabs(book, TITLES, function(n) ns.showTab(n) end)
-end
-
-local function window()
-  if not book then build() end
-  return book
-end
-
-function ns.toggle() window():SetShown(not book:IsShown()) end
-
-function ns.openTab(n)
-  window()
-  book.selectedTab = n
-  if book:IsShown() then
-    ns.showTab(n)
-  else
-    book:Show()
-  end
-end
+local B = K.book({
+  name = "GoodwillFrame",
+  title = "Goodwill",
+  art = ns.ICON,
+  titles = { L["Factions"], L["Stories"] },
+  first = TAB.factions,
+  search = "GoodwillSearch",
+  settle = 0.3,
+})
+ns.kitBook = B -- (for the tests)
+function ns.addTab(n, tab) B:add(n, tab) end
+function ns.refresh() B:refresh() end
+function ns.showTab(n) B:show(n) end
+function ns.toggle() B:toggle() end
+function ns.openTab(n) B:open(n) end
 
 -- What the game tells while the book is open shows at once (a moment later:
 -- a batch of turn-ins comes one reputation gain after another).
-local pending = false
-ns.onChange = function()
-  if not (book and book:IsShown()) or pending then return end
-  pending = true
-  C_Timer.After(0.3, function()
-    pending = false
-    ns.refresh()
-  end)
-end
+ns.onChange = function() B:changed() end
 
 -- (an item's name the game tells late: the page again, its name in; only one
 -- the book shows, a turn-in's or an unlock's)
@@ -130,7 +75,7 @@ ns.on("GET_ITEM_INFO_RECEIVED", function(item, success)
 end)
 
 -- ── the parts every tab is made of ───────────────────────────────────────────
-local function query() return K.query(book.search) end
+local function query() return K.query(B.frame.search) end
 local function day(stamp) return K.day(stamp and stamp.at) end
 local function zoneName(area) return K.areaName(area) end
 -- The zone the character stands in, as the data names zones (by name: the
