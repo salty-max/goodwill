@@ -17,8 +17,8 @@ chapters' build: `docs/data.md`.
 
 ## The files
 
-- `Locale.lua`: the client's words (`ns.translate`, the plural rule), which
-  game this is (`ns.forever`), the game's names by id from the Text file
+- `Locale.lua`: the client's words (`ns.translate`, the plural rule; which
+  game this is, `ns.forever`, the kit says), the game's names by id from the Text file
   (`ns.names`: factions, npcs, quests, trades, this game's), and `ns.agree`:
   the game's own `$gmasc:fem;` tokens, a line agreed to the reader.
 - `Core.lua`: the book (`GoodwillChar`: opened, bank, bankAt; ids only), the
@@ -35,8 +35,9 @@ chapters' build: `docs/data.md`.
   at their standing, the aside halfway from Revered to Exalted, exalted;
   opened quietly at the login, else a line in chat and the kit's banner,
   UPDATE_FACTION), the bank (read while it's open, BANKFRAME_OPENED and
-  PLAYERBANKSLOTS_CHANGED, the turn-ins' items only), `/goodwill`
-  (`stories`, `minimap`, `settings`, `welcome`, `export`, `import CODE`).
+  PLAYERBANKSLOTS_CHANGED, the turn-ins' items only), `/goodwill`, the
+  kit's command (`stories`, `minimap`, `settings`, `welcome`, `export`,
+  `import CODE`; an unknown word prints the usage, the replies capitalised).
 - `Road.lua`: a faction's road (`ns.road`): the standing it aims at (the
   next one up) and how far, the turn-ins open to the character (the items
   against the bags and the bank, how many times they'd go in; the same
@@ -58,9 +59,10 @@ chapters' build: `docs/data.md`.
   story so far in its order, signed, with the day each chapter opened; those
   to come by their title and standing.
 - `Settings.lua`: each character's settings, the kit's profiles (a code
-  `GW1:...`, `/goodwill export`, `/goodwill import CODE`): the minimap
-  button and its place (140 degrees, clear of Mealbook's 165 and the
-  siblings'). `Welcome.lua`: the kit's welcome page, once per character.
+  `GW1:...`, `/goodwill export`, `/goodwill import CODE`): the chapter's
+  banner (`chapterBanner`, on by default), the minimap button and its place
+  (140 degrees, clear of Mealbook's 165 and the siblings'); their page in
+  the game's Options, the kit's `K.options`. `Welcome.lua`: the kit's welcome page, once per character.
   `Minimap.lua`: the book's button, as the siblings'.
 
 ## Artwork
@@ -77,8 +79,9 @@ the ring. Export details are in `assets/README.md`.
 
 ## Tests
 
-- `addon/test/game.lua` (the addon's files loaded as its TOC lists them;
-  Palaver's frames, events and timers; the standings as each client tells
+- `addon/test/game.lua` (the kit's game, `wowmock.lua`: frames, events,
+  timers, the character, the map, the Options panel; then Goodwill's own
+  world and the addon loaded as its TOC lists it: the standings as each client tells
   them, quests done, bags and bank, race, class and sex) and
   `addon/test/sim.lua`: a first login, standings rising (a chapter a
   standing, the aside), a paragraph after a quest and one before it, a

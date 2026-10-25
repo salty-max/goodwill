@@ -27,6 +27,7 @@ package. Read the family's CLAUDE.md
 
 ```bash
 bun run check        # kit, saved ids, factions, chapters, languages, lint, the sim on three clients, TOCs
+bun run check:ci     # what CI and the release gate run: no family folder (the kit, the saved ids and the generators' checks aside)
 bun run ids          # every table saved-ids.json lists keeps the ids it had at the fork point from origin/main
 bun scripts/root.ts --run addon-kit/q.ts check -- bun run check   # the same, quiet, stamping the tree for the push
 bun run package      # dist/Goodwill-<version>.zip for a test in the game
@@ -60,7 +61,7 @@ scripts/release.sh [--version X.Y.Z] [--hold] NOTES.md   # check, tag, push; Act
 - Chapters in plain ASCII in English, no semicolons in any language, no
   figures in the prose (the road gives them), longer at each standing. A
   translation is stamped against its English.
-- `Kit.lua`, `Media/Ring.tga`, `scripts/root.ts`, `scripts/locales-lib.ts`,
+- `Kit.lua`, `Media/Ring.tga`, `scripts/root.ts`, `scripts/locales-lib.ts`, `scripts/package-lib.ts`,
   `i18n/kit/` (the kit's words, translated once), `wow.yml`, `stylua.toml` and
   `addon/test/wowmock.lua` (the tests' game) are the kit's copies: edit addon-kit, then `bun run
   kit:sync`. Goodwill's own globals are `goodwill.yml`.

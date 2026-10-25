@@ -280,5 +280,24 @@ check(said("/goodwill"), "/goodwill nonsense: the usage")
 s.printed = {}
 SlashCmdList.GOODWILL("import " .. ns.profiles:export())
 check(said(L["Settings imported for this character."]), "/goodwill import CODE: said, capitalised")
+s.printed = {}
+local hidden = ns.option("minimapHidden")
+SlashCmdList.GOODWILL("minimap")
+check(
+  ns.option("minimapHidden") == not hidden
+    and said(L["Minimap button hidden (%s minimap shows it again)."]:format("/goodwill")),
+  "/goodwill minimap: the button hidden, said"
+)
+SlashCmdList.GOODWILL("minimap")
+check(ns.option("minimapHidden") == hidden and said(L["Minimap button shown."]), "… and shown again")
+-- The Options page (the game's panel): the chapter's banner a box of its own, the setting itself.
+local banner = G.panel.settings.GOODWILL_CHAPTERBANNER
+check(
+  banner and banner.get() == ns.option("chapterBanner") and banner.default == true,
+  "the Options page: the chapter's banner, on by default"
+)
+banner.set(false)
+check(ns.option("chapterBanner") == false, "… its box turns it off")
+banner.set(true)
 
 io.write(("Goodwill: %d checks passed (%s, %s).\n"):format(count, G.LOCALE, G.FOREVER and "Forever" or "Classic Era"))

@@ -117,7 +117,7 @@ ns.translate({
     ["The book by the minimap: click to open it, drag to move it."] = "Le livre près de la minicarte : cliquez pour l'ouvrir, faites glisser pour le déplacer.",
     ["The capitals"] = "Les capitales",
     ["The code's choices are this character's now."] = "Les choix du code sont désormais ceux de ce personnage.",
-    ["the game's achievement alert could not be set up (%s): the book shows its own banner."] = "l'alerte de haut fait du jeu n'a pas pu être préparée (%s) : le livre affiche sa propre bannière.",
+    ["The game's achievement alert could not be set up (%s): the book shows its own banner."] = "L'alerte de haut fait du jeu n'a pas pu être préparée (%s) : le livre affiche sa propre bannière.",
     ["The game's Options have no page for addons here."] = "Les options du jeu n'ont pas de page pour les addons ici.",
     ["The road to %s"] = "La route jusqu'à %s",
     ["The Steamwheedle towns"] = "Les villes du cartel Gentepression",
