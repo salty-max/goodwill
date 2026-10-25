@@ -61,8 +61,8 @@ scripts/release.sh [--version X.Y.Z] [--hold] NOTES.md   # check, tag, push; Act
   figures in the prose (the road gives them), longer at each standing. A
   translation is stamped against its English.
 - `Kit.lua`, `Media/Ring.tga`, `scripts/root.ts`, `scripts/locales-lib.ts`,
-  `i18n/kit/` (the kit's words, translated once), `wow.yml` and
-  `stylua.toml` are the kit's copies: edit addon-kit, then `bun run
+  `i18n/kit/` (the kit's words, translated once), `wow.yml`, `stylua.toml` and
+  `addon/test/wowmock.lua` (the tests' game) are the kit's copies: edit addon-kit, then `bun run
   kit:sync`. Goodwill's own globals are `goodwill.yml`.
 - No other addon's API, even optional. Stepping aside for a rival is fine.
 - Conventional Commits, lowercase subjects, no AI trailers. Commit locally;
