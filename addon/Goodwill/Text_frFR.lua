@@ -6,6 +6,7 @@ ns.translate({
   words = {
     ["(open)"] = "(ouvert)",
     ["/goodwill opens the book, /goodwill stories its stories and /goodwill settings its settings. /goodwill minimap shows or hides the button, /goodwill welcome shows the welcome page again. /goodwill export gives this character's settings as a code, and /goodwill import CODE takes them."] = "/goodwill ouvre le livre, /goodwill stories ses histoires et /goodwill settings ses réglages. /goodwill minimap affiche ou masque le bouton, /goodwill welcome réaffiche la page d'accueil. /goodwill export donne les réglages de ce personnage sous forme de code, et /goodwill import CODE les reprend.",
+    ["%d %s"] = "%d %s",
     ["%d %s %d"] = "%d %s %d",
     ["%d chapter opened."] = "%d chapitre ouvert.",
     ["%d chapters opened."] = "%d chapitres ouverts.",
@@ -14,6 +15,7 @@ ns.translate({
     ["%d of %d"] = "%d sur %d",
     ["%d of %d achievements"] = "%d hauts faits sur %d",
     ["%d to %s"] = "%d jusqu'à %s",
+    ["%s %02d:%02d"] = "%s %02d:%02d",
     ["%s's choices are this character's now."] = "Les choix de %s sont désormais ceux de ce personnage.",
     ["%s's settings copied."] = "Réglages de %s copiés.",
     ["+%d"] = "+%d",

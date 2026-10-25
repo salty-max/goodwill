@@ -132,10 +132,7 @@ end)
 -- ── the parts every tab is made of ───────────────────────────────────────────
 local function query() return K.query(book.search) end
 local function day(stamp) return K.day(stamp and stamp.at) end
-local function zoneName(area)
-  local name = area and C_Map and C_Map.GetAreaInfo and C_Map.GetAreaInfo(area)
-  return type(name) == "string" and name ~= "" and name or nil
-end
+local function zoneName(area) return K.areaName(area) end
 -- The zone the character stands in, as the data names zones (by name: the
 -- client gives its zone's name, the data its id).
 function ns.zoneHere()
