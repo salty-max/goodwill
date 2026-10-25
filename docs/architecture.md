@@ -94,10 +94,15 @@ the ring. Export details are in `assets/README.md`.
 ## Languages
 
 - Goodwill's own words through `L` (`i18n/<locale>/words.json`, `bun run
-  locales`): English, French and German (interface and chapters; German
-  flagged, a first translation with no native reader yet, its voices on the
-  game's "Ihr", Gorn, Lokhtos and Bor on "du" where their cards say), the
-  other clients English until translated. The factions', npcs', quests' and trades' names
+  locales`): English, French, German and Spanish (interface and chapters).
+  German and Spanish are flagged, first translations with no native reader
+  yet. German voices speak the game's "Ihr", Gorn and Lokhtos dropping to
+  "du" where their cards say, Bor on "du" throughout. Spanish voices speak
+  the game's "tú", Gorn and Lokhtos starting on "usted" (the same scale).
+  esMX borrows esES's words and chapters, its own client's names put in by
+  `i18n/esMX/regional.json` (esES name → esMX name, longest first, once)
+  and its own decimal point (`i18n/esMX/meta.json`). The sim runs on frFR,
+  deDE, esES and esMX. The other clients English until translated. The factions', npcs', quests' and trades' names
   are the game's, by id, in the client's language.
 
 ## Not done yet

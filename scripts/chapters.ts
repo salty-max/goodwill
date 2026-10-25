@@ -46,8 +46,8 @@ const { openDb } = (await import(familyPath("wow-data", "src", "db.ts"))) as typ
 const ROOT = join(import.meta.dir, "..");
 const ADDON = join(ROOT, "addon", "Goodwill");
 const LOCALES = ["enUS", "enGB", "deDE", "frFR", "esES", "esMX", "ruRU", "ptBR", "itIT", "koKR", "zhCN", "zhTW"];
-const TRANSLATED = ["frFR", "deDE"];
-const BORROWS: Record<string, string> = {};
+const TRANSLATED = ["frFR", "deDE", "esES"];
+const BORROWS: Record<string, string> = { esMX: "esES" };
 export const PIECES = ["start", "friendly", "honored", "revered", "aside", "exalted"] as const;
 type PieceName = (typeof PIECES)[number];
 // (each piece's length in English: longer as the faction opens up)

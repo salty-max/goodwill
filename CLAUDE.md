@@ -19,14 +19,14 @@ package. Read the family's CLAUDE.md
 | The addon file by file: the package, Core, Road, the book's tabs, Settings, Welcome, the tests, languages | `docs/architecture.md` |
 | The factions from wow-data (`scripts/factions.ts`) and the chapters (`scripts/chapters.ts`) | `docs/data.md` |
 | The factions the book follows, their groups, sides and voices, by hand | `data/factions.json` |
-| The chapters themselves | `content/<faction>/<piece>.md`, each translation in `i18n/<locale>/content/<faction>/` (French, German) |
+| The chapters themselves | `content/<faction>/<piece>.md`, each translation in `i18n/<locale>/content/<faction>/` (French, German, Spanish: esMX borrows esES through `i18n/esMX/regional.json`) |
 | The logo, its master, exports and exact generation prompt | `assets/README.md` |
 | The plan, the voices, the waves of chapters to come | `../ideas/reputation-road.md`, `../ideas/reputation-road-voices.md` |
 
 ## Commands
 
 ```bash
-bun run check        # kit, saved ids, factions, chapters, languages, lint, the sim on three clients, TOCs
+bun run check        # kit, saved ids, factions, chapters, languages, lint, the sim on six clients, TOCs
 bun run check:ci     # what CI and the release gate run: no family folder (the kit, the saved ids and the generators' checks aside)
 bun run ids          # every table saved-ids.json lists keeps the ids it had at the fork point from origin/main
 bun scripts/root.ts --run addon-kit/q.ts check -- bun run check   # the same, quiet, stamping the tree for the push

@@ -3,7 +3,7 @@
 -- on a banner, the aside halfway to Exalted), a paragraph after a quest and
 -- one before it, the road (turn-ins against the bags and the bank, the kills
 -- that still count, the quests still open, what each standing unlocks), and
--- the book opened on each tab. FOREVER=1, LOCALE=frFR, deDE: those clients.
+-- the book opened on each tab. FOREVER=1, LOCALE=frFR, deDE, esES, esMX: those clients.
 local G = dofile("addon/test/game.lua")
 local s, fire, ns = G.state, G.fire, G.ns
 local count = 0
@@ -117,6 +117,28 @@ if G.LOCALE == "deDE" then
   s.sex = 2
   local _, honoredT = ns.chapter(THORIUM, "honored")
   check(table.concat(honoredT, " "):find("Ironforge", 1, true), "the city's name as the German clients write it")
+end
+
+-- ── a Spanish reader, a woman (esES, and esMX on its words) ─────────────────
+if G.LOCALE == "esES" or G.LOCALE == "esMX" then
+  s.sex = 3
+  local _, revered = ns.chapter(TIMBERMAW, "revered")
+  local text = table.concat(revered, " ")
+  check(text:find("una forastera", 1, true) and text:find("Venerada", 1, true), "the reader agreed to: a woman")
+  check(not text:find("$g", 1, true), "no token left")
+  s.sex = 2
+  local _, honoredT = ns.chapter(THORIUM, "honored")
+  check(table.concat(honoredT, " "):find("Forjaz", 1, true), "the city's name as the Spanish clients write it")
+  local _, ravenholdt = ns.chapter(349, "start")
+  local syndicate = table.concat(ravenholdt, " ")
+  if G.LOCALE == "esMX" then
+    check(
+      syndicate:find("la Hermandad", 1, true) and not syndicate:find("Sindicato", 1, true),
+      "esMX's own name for the Syndicate"
+    )
+  else
+    check(syndicate:find("el Sindicato", 1, true), "esES's name for the Syndicate")
+  end
 end
 
 -- ── the road ─────────────────────────────────────────────────────────────────

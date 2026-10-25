@@ -54,13 +54,18 @@ kills, 524 unlocks), Forever 42.
 revered, aside, exalted), front matter `faction`, `voice`, `piece`,
 `title`, `beside` (the Codex pages it sits beside, for the reading, never
 for the build); paragraphs, `[after: <quest>]` or `[before: <quest>]` at a
-paragraph's start. A translation in `i18n/<locale>/content/<faction>/`,
+paragraph's start. A translation (French, German, Spanish) in `i18n/<locale>/content/<faction>/`,
 front matter `piece` and `title`, the same marked paragraphs, stamped
 against its English (`i18n/<locale>/content-stamp.json`, `--stamp`).
 Classic Era's place names where its client differs:
 `i18n/<locale>/classic-names.json`, swapped in by the book the longest
 first, so a name may hold another ("Goulet des Chanteguerres" goes to
-"Goulet des Warsong" before "Chanteguerre" to "Warsong").
+"Goulet des Warsong" before "Chanteguerre" to "Warsong"). German and Spanish
+need none: their two clients name the chapters' places alike (checked
+against wow-data, 26 October 2026). esMX has no folder of its own: it
+borrows esES's chapters with `i18n/esMX/regional.json` (esES name → esMX
+name, the longest first, once) and its own `classic-names.json` if one is
+ever needed.
 
 The build refuses a semicolon (the gender tokens' own aside), non-ASCII in
 the English, a figure in the prose, a piece missing (all six, or the ones
