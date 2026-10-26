@@ -2,7 +2,7 @@
 piece: friendly
 title: Unter uns
 ---
-Manche kommen zum Hohen Orden, weil sie hineingeboren wurden, manche aus eigener Wahl, und ich habe aufgehört zu fragen, was davon. Was zählt, ist, was Ihr daraus macht.
+Manche kommen zum Hohen Orden, weil sie hineingeboren wurden, manche aus eigener Wahl, und ich habe aufgehört zu fragen, was davon zutrifft. Was zählt, ist, was Ihr daraus macht.
 
 Wir suchen, was unsere Vorfahren wussten, bevor die Winde das Wissen unnötig machten: das Arkane von Eldre'Thalas, eine Stärke, die von niemandes Güte abhängt. Ein Erzmagier der Kirin Tor in Dalaran beantwortet meine Briefe, was mehr ist, als die Winde seit langer Zeit getan haben. Azeroth hat weitergelernt, während wir dahintrieben. Es wird uns lehren, wenn wir demütig genug sind zu fragen.
 

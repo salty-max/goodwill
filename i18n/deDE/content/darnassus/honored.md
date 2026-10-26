@@ -4,7 +4,7 @@ title: Die Kälte
 ---
 Früher spürten wir die Kälte nicht.
 
-Länger, als irgendein Königreich der Menschen bestanden hat, alterten wir nicht, und wir erkrankten nicht, und der Winter berührte uns nur leicht. Unsere Weber fertigten Stoff für die Schönheit und für nichts sonst. Ein Nachtelf mochte denselben Umhang ein Leben lang tragen, und ein Leben war eine lange Sache.
+Länger, als irgendein Königreich der Menschen bestanden hat, alterten wir nicht, und wir erkrankten nicht, und der Winter berührte uns nur leicht. Unsere Weber fertigten Stoff für die Schönheit und für nichts sonst. Ein Nachtelf mochte denselben Umhang ein Leben lang tragen, und ein Leben war lang.
 
 Das endete im Dritten Krieg. Wir gaben auf, was wir waren, um die Welt zu retten, und wir würden es wieder tun. Aber in jenem Jahr wurden wir sterblich, und seitdem finden wir heraus, was das von einem Körper verlangt. Ein Fieber, das nicht weicht. Ein alter Elf, der an einem Feuer zittert, das einst genügt hätte. Eine Wunde, die sich nicht von selbst schließt.
 

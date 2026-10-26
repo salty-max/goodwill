@@ -2,7 +2,7 @@
 piece: exalted
 title: Worin die Apotheker irren
 ---
-Als Ihr das erste Mal kamt, sagte ich, dass nichts, was hier gegeben wird, unbemerkt bleibt. Ich meinte es ebenso als Drohung wie als Versprechen. Heute ist es nur noch ein Versprechen.
+Als Ihr das erste Mal kamt, sagte ich, dass nichts, was hier gegeben wird, unbemerkt bleibt. Es war ebenso eine Drohung wie ein Versprechen. Heute ist es nur noch ein Versprechen.
 
 Die Apotheker werden Euch sagen, dass die Toten nichts fühlen. Sie haben es untersucht. Sie haben Abhandlungen. Sie werden Euch sagen, dass das, was wir Gefühl nennen, eine Gewohnheit des Körpers ist, ein Zucken, das vom Leben übrig ist, und dass es verblasst, und dass ein vernünftiger Verlassener es verblassen lässt.
 

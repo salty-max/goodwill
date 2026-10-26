@@ -1,6 +1,6 @@
 ---
 piece: start
-title: Wer wart Ihr gleich
+title: Wer wart Ihr noch gleich
 ---
 Ah. Ein Besucher. Wie neuartig. Nein, sagt mir nicht Euren Namen. Ich müsste ihn nur wieder vergessen, und das ist so mühsam, und der Katalog führt sich nicht von selbst.
 

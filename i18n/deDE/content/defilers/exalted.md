@@ -2,7 +2,7 @@
 piece: exalted
 title: Die Tür
 ---
-Ich sagte Bosheit, als Ihr neu bei uns wart. Es ist wahr, und es ist die Antwort, die ich am liebsten gebe, weil sie den Lebenden Angst macht und mich nichts kostet.
+Als Ihr neu bei uns wart, sagte ich: Bosheit. Es ist wahr, und es ist die Antwort, die ich am liebsten gebe, weil sie den Lebenden Angst macht und mich nichts kostet.
 
 Darunter gibt es eine andere.
 

@@ -8,4 +8,4 @@ Vor einigen Jahren kam ein Elf aus Quel'Thalas zu uns, Meister Winthalus, auf de
 
 Missversteht meinen Ton nicht. Die Folianten langweilen mich, und ich will jeden einzelnen zurück. Nichts Geschriebenes ist wertlos. Es ist der eine Glaube, den ich in all meinen Jahren unversehrt bewahrt habe, und ich wäre Euch dankbar, ihn nicht auf die Probe zu stellen.
 
-Wer wart Ihr gleich? Es fällt mir gleich ein.
+Wer wart Ihr noch gleich? Es fällt mir gleich ein.

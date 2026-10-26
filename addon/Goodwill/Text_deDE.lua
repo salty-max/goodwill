@@ -65,7 +65,7 @@ ns.translate({
     ["Give a code"] = "Code erzeugen",
     ["Half of what you earn with these comes here too: %s."] = "Die Hälfte dessen, was du bei diesen verdienst, kommt auch hierher: %s.",
     ["halfway to %s"] = "auf halbem Weg bis %s",
-    ["held in turn-ins"] = "in Abgaben dabei",
+    ["held in turn-ins"] = "in Abgaben vorrätig",
     ["Help the addons keep up with Forever: what the game tells you of quests, creatures and NPCs goes to their shared database. Never your name, your character or your chat. It needs Ravenpost, a small app: %s"] = "Hilf den Addons, mit Forever Schritt zu halten: Was dir das Spiel über Quests, Kreaturen und NPCs zeigt, geht an ihre gemeinsame Datenbank. Nie dein Name, dein Charakter oder dein Chat. Dafür braucht es Ravenpost, eine kleine App: %s",
     ["In the bank: %d"] = "In der Bank: %d",
     ["Jan"] = "Jan.",

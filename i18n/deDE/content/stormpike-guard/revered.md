@@ -8,6 +8,6 @@ Die Trolle der Winterax. Menschenfresser, oben in den Höhlen, und Zwerge würde
 
 Ein Krieg hat mehr als zwei Seiten, und die, die man vergisst, sind die, die einen erwischen. Ich habe gute Soldaten an einen Speer aus den Höhlen verloren, während sie mit der Burg beschäftigt waren. Behaltet die Frostwölfe im Auge, und behaltet die Höhlen im Auge. Den Trollen ist gleich, welche Flagge Ihr tragt. Einem Kochtopf auch.
 
-Ihr seid bei der Garde jetzt Respektvoll. Über diesem gibt es noch mehr Rang, und ich würde ihn gern einem Soldaten anstecken, der es wert ist.
+Ihr seid bei der Garde jetzt Respektvoll. Darüber gibt es noch mehr Rang, und ich würde ihn gern einem Soldaten anstecken, der es wert ist.
 
 [after: 7170] Tragt das neue Abzeichen so stolz in die Höhlen wie aufs Feld.

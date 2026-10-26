@@ -8,4 +8,4 @@ Ihr habt die Bucht lange bluten lassen, um hierherzukommen, und Ihr wisst, was e
 
 [after: 9272] Ihr tragt die Farben gut. Der Mann, der sie vor Euch hatte, hat sie nie ausgefüllt, und jetzt hat ihn der Sturm.
 
-Die Bucht hat zwei Kehlen, die zählen. Flottenmeister Seehorn, der ihre Schiffe auf dem Wasser hält, und den Baron, der ihr Gesetz an Land hält. Durchschneidet beide, und die Goblins lernen, dass es auf dieser See eine Flagge gibt, die sie nicht kaufen können.
+Die Bucht hat zwei Kehlen, die zählen. Flottenmeister Seehorn, der ihre Schiffe auf dem Wasser hält, und der Baron, der ihr Gesetz an Land hält. Durchschneidet beide, und die Goblins lernen, dass es auf dieser See eine Flagge gibt, die sie nicht kaufen können.

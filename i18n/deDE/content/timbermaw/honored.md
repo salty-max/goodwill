@@ -2,7 +2,7 @@
 piece: honored
 title: Was wenige gefragt haben
 ---
-Ihr seid so oft durch die Feste gegangen, dass die Wachen nicht mehr nach etwas greifen, wenn Ihr vorbeikommt. Also hier ist etwas, und Ihr könnt damit tun, was Euresgleichen mit Dingen tut, die man ihnen erzählt.
+Ihr seid so oft durch die Feste gegangen, dass die Wachen nicht mehr nach etwas greifen, wenn Ihr vorbeikommt. Also, hier ist etwas, und Ihr könnt damit tun, was Euresgleichen mit Dingen tut, die man ihnen erzählt.
 
 Die Nachtelfen nahmen einst unsere Hilfe an, gegen die Dämonen, und viele von ihnen nahmen sie mit zugehaltener Nase. Manche haben nicht damit aufgehört. Fragt die Schildwachen, an einem Tag, an dem sie ehrlich sind.
 

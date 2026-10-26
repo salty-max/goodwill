@@ -8,4 +8,4 @@ Jeden Abend kommen in einem Hinterzimmer nahe der Kathedrale die Freiwilligen zu
 
 Ich führe ihren Plan. Ich verwahre ihr Garn. Ich halte den Frieden zwischen der Witwe, die von links säumt, und dem Lehrling, der von rechts säumt, und das ist die schwierigste Diplomatie dieser Stadt, was auch immer der Rat denkt.
 
-[after: 7791] Euer Stoff geht durch ihre Hände. Sie reden übrigens über Euch. "$gDer große Spender:Die große Spenderin;", nennt Euch der Sergeant. Ich habe versucht, ihn zu "$gunser geschätzter Beitragender:unsere geschätzte Beitragende;" zu berichtigen. Er weigert sich aus Prinzip. Eure Wolle hat in diesem Raum mehr Streit erlebt als der Rat im ganzen Jahr.
+[after: 7791] Euer Stoff geht durch ihre Hände. Sie reden übrigens über Euch. „$gDer große Spender:Die große Spenderin;“, nennt Euch der Sergeant. Ich habe versucht, ihn zu „$gunser geschätzter Beitragender:unsere geschätzte Beitragende;“ zu berichtigen. Er weigert sich aus Prinzip. Eure Wolle hat in diesem Raum mehr Streit erlebt als der Rat in einem ganzen Jahr.

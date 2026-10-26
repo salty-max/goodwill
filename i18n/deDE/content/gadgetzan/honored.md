@@ -8,4 +8,4 @@ Die Wünschel-mato-Rute. Man geht damit über die Dünen, und wenn tief darunter
 
 Dann bat Sergeant Bly darum, sie sich zu borgen. Borgen! Er nahm sie mit auf Schatzsuche bei den Trollen von Zul'Farrak, mit einer Bande von Abenteurern der übelsten Sorte, und er brachte sie nie zurück. Wer einem Goblin sein Gold stiehlt, ist ein Dieb. Wer einem Goblin in einer Dürre seine Wünschelrute stiehlt, ist etwas, das ich vor Kunden nicht sagen darf.
 
-[after: 2768] Seit sie wieder zu Hause ist, findet sie wieder Wasser. Die Kompanie hat aufgehört, mich zu fragen, woher die neuen Löcher kommen, und ich habe aufgehört, es zu erklären.
+[after: 2768] Seit sie zurück ist, findet sie wieder Wasser. Die Kompanie hat aufgehört, mich zu fragen, woher die neuen Löcher kommen, und ich habe aufgehört, es zu erklären.

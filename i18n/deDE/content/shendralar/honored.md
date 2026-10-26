@@ -10,4 +10,4 @@ Der Prinz ließ ihn häuten. Ich nannte es damals einen Gefallen, und ich hatte 
 
 Dann ist da Azj'Tordin, der vor dem Prinzen floh, und ein Wichtel erleichterte ihn auf dem Weg hinaus um sein Zauberbuch. Er wird nun sterben, wie jeder von Euch. Und wofür? Für etwas frische Luft und sehr viele Bäume.
 
-Ihr seid immer noch hier. Wie seltsam. Die meisten Besucher haben inzwischen den Verstand zu gehen.
+Ihr seid immer noch hier. Wie seltsam. Die meisten Besucher haben inzwischen den Verstand, zu gehen.

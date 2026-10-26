@@ -8,4 +8,4 @@ Ein Hexendoktor da draußen hat sich dem Bösen verschrieben. Zalazane. Er hat d
 
 Ab und zu kommt einer von ihnen zu uns zurück. Wie, könnte ich Euch nicht sagen. Meine Großmutter sagte, der Fluch wird dünn mit der Entfernung, wie ein Seil. Sie kommen mit nichts ins Dorf. Nicht einmal mit ihrem eigenen Verstand, zuerst. Wir wickeln sie ein. Wir bringen sie ans Feuer. Wir sagen ihnen ihre Namen, bis sie sie zurücksagen.
 
-Ein guter Teil dessen, was an diesen Tisch kommt, geht dorthin. Decken für Trolle, die nicht wussten, dass ihnen kalt war. Aus diesem hier lese ich nichts. Ich sage Euch einfach danke, und dabei bleibt es.
+Ein guter Teil dessen, was an diesen Tisch kommt, geht dorthin. Decken für Trolle, die nicht wussten, dass ihnen kalt war. Aus Eurem Stoff lese ich diesmal nichts. Ich sage Euch einfach danke, und dabei bleibt es.

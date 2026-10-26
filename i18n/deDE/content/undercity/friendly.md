@@ -8,4 +8,4 @@ Die Lebenden heilen. Sie schneiden sich, und nach einer Woche ist da eine Narbe,
 
 Ein Soldat der Verlassenen verbraucht Verbände schneller als jeder Lebende, und er braucht sie, um sich selbst zusammenzuhalten.
 
-Die Schreiber finden die Frage, warum die Toten so viel Leinen brauchen, ermüdend. Ich auch. Stellt sie noch einmal, und ich lasse Euch im Hauptbuch unter Plagegeister eintragen.
+Die Schreiber finden die Frage, warum die Toten so viel Leinen brauchen, ermüdend. Ich auch. Stellt sie noch einmal, und ich lasse Euch im Hauptbuch unter „Plagegeister“ eintragen.
