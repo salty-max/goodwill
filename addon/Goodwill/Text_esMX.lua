@@ -99,7 +99,7 @@ ns.translate({
     ["Paste the code (/goodwill export on the other character), then press Enter."] = "Pega el código (/goodwill export en el otro personaje) y pulsa Intro.",
     ["Pick a faction: its page tells you how to raise it from where you stand, and what the next standing unlocks."] = "Elige una facción. Su página te dice cómo subir tu reputación desde donde estás y lo que desbloquea el siguiente rango.",
     ["Quest complete"] = "Misión completada",
-    ["Ready check"] = "Comprobación de preparados",
+    ["Ready check"] = "Control de disponibilidad",
     ["Sep"] = "sep",
     ["Settings imported for this character."] = "Se han importado las opciones de este personaje.",
     ["Share what you see"] = "Compartir lo que ves",
