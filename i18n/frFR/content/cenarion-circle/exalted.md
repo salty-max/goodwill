@@ -2,7 +2,7 @@
 piece: exalted
 title: Le plus gros coffre
 ---
-Tu sais ce que je te donnerais, si je pouvais te donner n'importe quoi ? Mon poste. Rien qu'une seule journée.
+Tu sais ce que je te donnerais, si je pouvais te donner n'importe quoi ? Mon poste. Rien qu'une journée.
 
 [after: 8352] Ce coffre ne valait rien du tout comme merci. Je t'ai $gentendu:entendue; rire en l'ouvrant, et je sais bien que ce n'était pas du coffre que tu riais.
 

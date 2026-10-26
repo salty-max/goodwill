@@ -8,4 +8,4 @@ Nous sommes les Grumegueules, la dernière tribu que la corruption n'a pas prise
 
 Grifleur vous dira comment nous faire changer d'avis. Grifleur dit tout à tout le monde. Faites ce qu'il demande, et puis refaites-le.
 
-Je serai là, à la porte. Je n'ai qu'un oeil. Pour vous, il suffit.
+Je serai là, à la porte. Je n'ai qu'un œil. Pour vous, il suffit.

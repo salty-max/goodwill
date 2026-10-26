@@ -2,7 +2,7 @@
 piece: exalted
 title: La réserve
 ---
-$gMon ami:Mon amie;, j'ai un ruban. Un vrai, bleu, très beau, acheté il y a des années de ma propre bourse.
+$gMon ami:Mon amie;, j'ai un ruban. Un vrai, bleu, très beau, acheté de ma poche il y a des années.
 
 Quand j'ai pris ce poste, je comptais remplir la réserve. Chaque étagère, chaque caisse, chaque recoin de l'entrepôt, plein jusqu'au plafond, et ce ruban noué en travers de la porte. J'avais une date en tête. J'avais un discours. Un excellent discours. Il y avait un passage pour le conseil, un passage pour les bénévoles, et une pause pour les applaudissements.
 

@@ -2,7 +2,7 @@
 piece: friendly
 title: Les gribouillis
 ---
-Ce que je veux le plus, ce sont les papiers du culte. De petits bouts de papier couverts de gribouillis. C'est comme ça que leurs camps se parlent !
+Ce que je veux avant tout, ce sont les papiers du culte. De petits bouts de papier couverts de gribouillis. C'est comme ça que leurs camps se parlent !
 
 Je ne sais pas les lire, et je n'en ai pas besoin. Chaque liasse prise sur un cultiste mort, c'est un message qui n'arrive jamais, un ordre que personne ne reçoit, un camp qui attend des nouvelles et n'entend rien. Ça aussi, c'est un combat. Un combat silencieux, mais un combat.
 

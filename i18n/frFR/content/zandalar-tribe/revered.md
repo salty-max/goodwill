@@ -8,4 +8,4 @@ Avec votre rang viennent mes breuvages les plus puissants, ceux que Zanza a bén
 
 Je dors mal, sur cette île. Un marchand sait ce qui quitte ses étagères, et je ne sais plus mesurer ce qui quitte les dieux. Certains soirs, je marche sur la plage et je parle à la mer dans ma langue, pour que quelque chose, sur cette île, l'entende encore.
 
-Alors quand je vous tends un breuvage béni, ce n'est pas de la générosité. C'est du stock écoulé avant que l'entrepôt ne brûle.
+Alors quand je vous tends un breuvage béni, ce n'est pas de la générosité. C'est de la marchandise écoulée avant que l'entrepôt ne brûle.

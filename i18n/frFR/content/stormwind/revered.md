@@ -6,4 +6,4 @@ Ma mère cousait pour la cathédrale quand j'étais petit. Elle m'emmenait avec 
 
 Elle n'a jamais rien dirigé. Elle travaillait au bout d'une longue table avec un panier, faisait le travail, rentrait chez elle, et revenait le lendemain. Moi, je dirige l'effort. J'écris les formulaires, je tiens les registres, je me lève en réunion. Certains soirs, je me dis que tout ça la ferait beaucoup rire.
 
-Je tiens ce bureau comme elle roulait les bandages. Serré au début, lâche à la fin, ne jamais le laisser vriller. Je ne suis pas sûr que j'aurais pris ce poste sans elle, et je suis très content de l'avoir fait, surtout les jours où quelqu'un comme vous passe cette porte les bras chargés.
+Je tiens ce bureau comme elle roulait les bandages. Serré au début, lâche à la fin, ne jamais le laisser vriller. Je ne sais pas si j'aurais pris ce poste sans elle, et je suis très content de l'avoir fait, surtout les jours où quelqu'un comme vous passe cette porte les bras chargés.

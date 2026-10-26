@@ -4,7 +4,7 @@ title: Demander
 ---
 Mon grand-père n'aurait jamais rien demandé à personne.
 
-C'était un grand chasseur, et un fier, et il croyait qu'un tauren qui a besoin d'aide a échoué quelque part. Il est mort sur la route, comme il le voulait, et il n'a de sa vie tendu la main à un étranger. C'est lui qui m'a donné ce nom, Proudstrider. Je l'aimais. J'étais fier de lui.
+C'était un grand chasseur, et un fier, et il croyait qu'un tauren qui a besoin d'aide a échoué quelque part. Il est mort sur la route, comme il le voulait, et il n'a jamais, de sa vie, tendu la main à un étranger. C'est lui qui m'a donné ce nom, Proudstrider. Je l'aimais. J'étais fier de lui.
 
 Je crois qu'il avait tort.
 

@@ -8,4 +8,4 @@ Je lui ai dit que je n'en aurais plus besoin, pour vous. De tous ceux qui vont e
 
 Le premier jour, je ne vous ai demandé qu'une chose, qu'il ne se passe rien pendant votre séjour. Je la reprends. Vous avez été $gle client le plus mouvementé:la cliente la plus mouvementée; que cette baie ait connu depuis des années, et chaque événement a tourné à mon avantage. Faites tout le remue-ménage qui vous plaira.
 
-Les voiles rouges croisent toujours au-delà de la pointe, KapitalRisk creuse toujours assez près pour que je l'entende, et il y aura toujours quelqu'un dans l'escalier pour se dire que le dernier étage lui irait mieux qu'à moi. C'est la baie, et je ne la changerais pas. Elle est un peu plus facile à tenir avec une personne en qui j'ai confiance sans vérifier.
+Les voiles rouges croisent toujours au-delà de la pointe, la KapitalRisk creuse toujours assez près pour que je l'entende, et il y aura toujours quelqu'un dans l'escalier pour se dire que le dernier étage lui irait mieux qu'à moi. C'est la baie, et je ne la changerais pas. Elle est un peu plus facile à tenir avec une personne en qui j'ai confiance sans vérifier.

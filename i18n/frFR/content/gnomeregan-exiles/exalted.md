@@ -10,4 +10,4 @@ Elle est faite de chutes. Une de chaque don fait à cette table, depuis le premi
 
 Je n'ai pas de blague pour ça. J'ai essayé. Je commence à en faire une et je m'arrête, parce que ce n'est pas drôle, c'est juste vrai. Vous nous avez aidés à rester en vie assez longtemps pour avoir quelque chose à fêter. Quand ce jour viendra, une part de vous sera en tête, dans le vent.
 
-Voilà. C'est la bannière. Maintenant, aidez-moi à enfiler ça, mes mains ne sont plus ce qu'elles étaient.
+Voilà. C'est la bannière. Maintenant, aidez-moi à enfiler l'aiguille, mes mains ne sont plus ce qu'elles étaient.

@@ -10,4 +10,4 @@ J'en perds la tête. Pose un lingot de sulfuron devant moi et je crierai. Je le 
 
 Voici l'autre chose, puisque tu as passé la porte. Une guilde comme la nôtre ne vit pas que de son art. Quand un rival devient trop bon, de temps à autre, sa forge a un accident. Nous ne sommes jamais dans les parages. Tu te souviendras que nous ne sommes jamais dans les parages.
 
-Tu es $garrivé:arrivée; à ma table en insecte. Tu en repars en $gassocié:associée;. Lis tes contrats, tous. Les miens surtout.
+Tu es $garrivé:arrivée; à ma table comme un insecte. Tu en repars en $gassocié:associée;. Lis tes contrats, tous. Les miens surtout.

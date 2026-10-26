@@ -4,7 +4,7 @@ title: Un jeune arbre
 ---
 Teldrassil est très jeune. On l'oublie, parce qu'il est très grand.
 
-Nous l'avons fait pousser à la hâte, en des temps durs, et un foyer hâtivement bâti met du temps à s'installer. Un foyer bâti dans la hâte reste un foyer, et je l'aime. Mais un jeune arbre a des soucis de jeune arbre, et une jeune ville en a plus que sa part. Des choses tournent mal qui ne tourneraient pas mal en un lieu qui aurait eu des siècles pour s'installer. Lesquelles, c'est à nous de les réparer.
+Nous l'avons fait pousser à la hâte, en des temps durs, et un foyer bâti ainsi met du temps à s'installer. Il n'en reste pas moins un foyer, et je l'aime. Mais un jeune arbre a des soucis de jeune arbre, et une jeune ville en a plus que sa part. Des choses tournent mal qui ne tourneraient pas mal en un lieu qui aurait eu des siècles pour s'installer. Ces choses-là, c'est à nous de les réparer.
 
 Les nuits de vent, je monte jusqu'aux hautes branches, j'écoute l'arbre craquer, et j'espère qu'il ne fait que grandir.
 

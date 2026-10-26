@@ -2,7 +2,7 @@
 piece: honored
 title: Le bâtonnet
 ---
-Vous voulez savoir comment un gobelin trouve de l'eau dans une mer de sable ? L'ingénierie ! Et un bâton, aussi.
+Vous voulez savoir comment un gobelin trouve de l'eau dans une mer de sable ? L'ingénierie ! Et un bâtonnet, aussi.
 
 Le bâtonnet divino-matic. On arpente les dunes avec, et quand il y a de l'eau tout au fond, il le sait, et on creuse, et la Compagnie a un nouveau puits. Chaque nouveau trou que j'ai creusé a commencé avec ce bâtonnet entre mes mains. Je préférerais perdre une main.
 

@@ -8,6 +8,6 @@ C'est la partie qu'aucun bon n'achète, et c'est le meilleur spectacle que j'aie
 
 Chaque soir, je leur dis que rien ne vaut mon spectacle, et chaque soir je parle des tentes et des lumières. Voici l'autre. La famille qui se range, fatiguée, silencieuse et contente.
 
-Je parle trop. Vous l'aurez remarqué. Tous ces « entrez, entrez », ces merveilles et ces prodiges, c'est ma façon de dire merci. Je n'en ai jamais trouvé d'autre, et je vous le dis depuis longtemps. Alors, une fois, sans les tambours ni les trompettes : merci du fond du cœur.
+Je parle trop. Vous l'aurez remarqué. Tous ces « entrez, entrez », ces merveilles et ces prodiges, c'est ma façon de dire merci. Je n'en ai jamais trouvé d'autre, et c'est ce que je vous dis depuis le début. Alors, une fois, sans les tambours ni les trompettes : merci du fond du cœur.
 
 Maintenant. Il y a une caisse de piquets de tente près du chariot, et personne ici ne reste éternellement un invité.

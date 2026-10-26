@@ -6,7 +6,7 @@ Tendez les mains.
 
 C'est une tasse d'eau. Fraîche et claire, du puits profond, le bon. Elle est gratuite. Je me suis entraîné à le dire. Ça sonne toujours aussi bizarre.
 
-Ne faites pas cette tête. Je sais ce que j'ai dit le premier jour, je le pensais, et je le pense toujours pour tous les autres. À Gadgetzan, tout se paie. Mais la Compagnie vous doit quelque chose, et la Compagnie paie ce qu'elle doit, et aujourd'hui la Compagnie, c'est moi, et je dis que celle-ci, c'est la maison qui l'offre.
+Ne faites pas cette tête. Je sais ce que j'ai dit le premier jour, je le pensais, et je le pense toujours pour tous les autres. À Gadgetzan, tout se paie. Mais la Compagnie vous doit quelque chose, et la Compagnie paie ce qu'elle doit. Aujourd'hui, la Compagnie, c'est moi, et je dis que cette tasse-là, c'est la maison qui l'offre.
 
 Tout ce que vous avez fait pour cette ville, vous l'avez fait pour un endroit qui vous faisait payer chaque gorgée, et vous avez continué. Vous m'avez supporté. Mes propres ingénieurs vous diraient que c'est le plus dur.
 
