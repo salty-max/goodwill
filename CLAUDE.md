@@ -36,7 +36,7 @@ bun run factions     # the factions again, after wow-data's databases change
 bun run chapters     # the chapters again, after a content/ edit (--stamp once a translation is read)
 bun run kit:sync     # after a change to the kit (Kit.lua, Media, scripts/root.ts)
 bun run locales      # after a new L["..."] (then --keys for i18n/words.json)
-scripts/release.sh [--version X.Y.Z] [--hold] NOTES.md   # check, tag, push; Actions publish
+scripts/release.sh --version X.Y.Z [--hold] NOTES.md   # check, tag, push; Actions publish
 ```
 
 ## Hard rules
