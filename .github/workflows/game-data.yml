@@ -25,9 +25,9 @@ jobs:
       kit: true
       generate: |
         bun scripts/factions.ts
-        bun scripts/chapters.ts
-        # (esMX's game names from wow-data, the hand file's words beside them)
+        # (esMX's game names from wow-data, the hand file's words beside them: before the chapters swap them in)
         bun scripts/root.ts --run addon-kit/regional.ts
+        bun scripts/chapters.ts
         bun scripts/locales.ts
       paths: |
         i18n

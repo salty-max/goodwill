@@ -64,7 +64,7 @@ first, so a name may hold another ("Goulet des Chanteguerres" goes to
 Classic Era's "hoffnungsvollen"), Spanish none: checked against wow-data on
 26 October 2026, every area, faction, npc and item name the translations
 hold. esMX has no folder of its own: it
-borrows esES's chapters with `i18n/esMX/regional.json` (game names from wow-data through addon-kit/regional.ts, `regional.resolved.json`; the hand file keeps words) (esES name → esMX
+borrows esES's chapters with `i18n/esMX/regional.json` (`names`: esES game names whose esMX comes from wow-data, `words`: what is no game name; addon-kit's regional.ts writes `regional.resolved.json`, the esES name → esMX
 name, the longest first, once) and its own `classic-names.json` if one is
 ever needed. The borrowed text goes through the same checks, its names
 matched whole (never inside another word), and the build refuses a name

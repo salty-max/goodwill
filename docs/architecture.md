@@ -100,7 +100,7 @@ the ring. Export details are in `assets/README.md`.
   "du" where their cards say, Bor on "du" throughout. Spanish voices speak
   the game's "tú", Gorn and Lokhtos starting on "usted" (the same scale).
   esMX borrows esES's words and chapters, its own client's names put in by
-  `i18n/esMX/regional.json` (game names from wow-data through addon-kit/regional.ts, `regional.resolved.json`; the hand file keeps words) (esES name → esMX name, longest first, once)
+  `i18n/esMX/regional.json` (game names from wow-data through addon-kit/regional.ts, `regional.resolved.json`; the hand file keeps words) (`names`: esES game names, esMX's from wow-data; `words`: what is no game name; the swap is the resolved esES → esMX map, longest first, once)
   and its own decimal point (`i18n/esMX/meta.json`). The sim runs on frFR,
   deDE, esES and esMX. The other clients English until translated. The factions', npcs', quests' and trades' names
   are the game's, by id, in the client's language.
