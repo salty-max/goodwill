@@ -12,4 +12,4 @@ On me demande ce qu'un gobelin peut bien vouloir aux étoiles. Il n'y a pas un s
 
 Pareil pour l'équipe de course de Pozzik. Je lui trouve des pièces dans chaque port que j'ai, et une fois, je me suis noirci les mains sur un de leurs engins, et je n'ai jamais été aussi heureux sur un quai. Aucun profit là-dedans. Aucun. Les gnomes réduisent toujours l'écart, et moi, je continue d'envoyer des pièces.
 
-Tout le reste de ce que je possède rapporte de l'argent. Ces deux-là me donnent juste envie de me lever le matin. Terremine voudrait sa part de ça aussi.
+Tout le reste de ce que je possède rapporte de l'argent. Ces deux-là me donnent juste envie de me lever le matin. Undermine voudrait sa part de ça aussi.

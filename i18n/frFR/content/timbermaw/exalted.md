@@ -10,4 +10,4 @@ Tu vas me poser la question de l'œil. Tous ceux qui arrivent jusqu'ici posent l
 
 J'ai été le dernier de ce repaire à te faire confiance, et je tiens à ce qu'on s'en souvienne, parce que j'avais raison d'être lent. La confiance qui vient facilement repart de même. La mienne est venue lentement, et elle ne partira pas.
 
-[after: 8481] Il y a encore une chose, et nous ne la donnons pas à beaucoup. À l'heure la plus sombre, loin d'ici, un de nos ancêtres viendra se tenir à tes côtés, et te soignera tout en se battant. Pas pour les petites misères. Nos ancêtres sont vieux, ils sont à nous, et ils viennent par égard pour moi.
+[after: 8481] Il y a encore une chose, et nous ne la donnons pas à beaucoup. À une heure difficile, loin d'ici, un de nos ancêtres viendra se tenir à tes côtés, et te soignera tout en se battant. Pas pour les petites misères. Nos ancêtres sont vieux, ils sont à nous, et ils viennent par égard pour moi.
