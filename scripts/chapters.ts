@@ -28,7 +28,7 @@
  * where they differ (i18n/<locale>/classic-names.json) go in the file,
  * swapped in on Classic Era by the book. A language with no folder of its own
  * borrows another's (esMX: esES), its own client's names put in place of the
- * lender's (i18n/<locale>/regional.json, the longest first, once) and its own
+ * lender's (i18n/<locale>/regional.resolved.json, written by addon-kit/regional.ts from wow-data's names and regional.json's words, the longest first, once) and its own
  * classic-names.json.
  *
  *   bun scripts/chapters.ts           write the Chapters files
@@ -221,7 +221,7 @@ for (const locale of LOCALES) {
   let swaps: Record<string, string> = {};
   const lender = BORROWS[locale];
   if (lender) {
-    const regional: Record<string, string> = JSON.parse(readFileSync(join(ROOT, "i18n", locale, "regional.json"), "utf8"));
+    const regional: Record<string, string> = JSON.parse(readFileSync(join(ROOT, "i18n", locale, "regional.resolved.json"), "utf8"));
     const lent = read(join(ROOT, "i18n", lender, "content"));
     const pairs = Object.entries(regional).sort(([a], [b]) => b.length - a.length || (a < b ? -1 : 1));
     const swap = (t: string) => swapOnce(t, pairs);
