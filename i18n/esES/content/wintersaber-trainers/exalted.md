@@ -4,7 +4,7 @@ title: Tu sable
 ---
 Hay un sable para ti.
 
-Es una hembra, y la crié desde cachorra. De todos, fue la que más tardó en comer de mi mano, y después fue la más testaruda en todo. Pensé que os entenderíais, tú y ella. Me mordió más de una vez antes de confiar en mí. A ti no te ha mordido ni una sola vez. Lo tomo como una señal.
+Es una hembra, y la crié desde cachorra. De todos, fue la que más tardó en comer de mi mano, y después fue la más testaruda en todo. Pensé que ella te entendería, y tú a ella. Me mordió más de una vez antes de confiar en mí. A ti no te ha mordido ni una sola vez. Lo tomo como una señal.
 
 Te llevará adonde le pidas, haga el tiempo que haga. Se apaga si se la aparta demasiado tiempo del frío. Dale nieve de vez en cuando.
 

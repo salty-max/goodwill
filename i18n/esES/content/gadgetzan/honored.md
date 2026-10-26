@@ -8,4 +8,4 @@ La Vara Divinomática. Recorres las dunas con ella, y cuando hay agua muy abajo,
 
 Entonces el sargento Bly me la pidió prestada. ¡Prestada! Se la llevó a buscar tesoros entre los trols de Zul'Farrak, con una banda de aventureros de la peor calaña, y nunca la devolvió. Quien le roba el oro a un goblin es un ladrón. Para quien le roba a un goblin su vara de zahorí en plena sequía hay un nombre que no me dejan decir delante de los clientes.
 
-[after: 2768] Desde que volvió a casa, vuelve a encontrar agua. La Compañía ha dejado de preguntarme de dónde salen los agujeros nuevos, y yo he dejado de explicarlo.
+[after: 2768] Desde que está en casa, vuelve a encontrar agua. La Compañía ha dejado de preguntarme de dónde salen los agujeros nuevos, y yo he dejado de explicarlo.

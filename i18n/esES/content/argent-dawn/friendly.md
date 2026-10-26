@@ -2,7 +2,7 @@
 piece: friendly
 title: Piedras de la Plaga
 ---
-Llevas ya bastante tiempo recorriendo las Tierras de la Peste como para que hablemos de colega a colega.
+Llevas ya bastante tiempo recorriendo las Tierras de la Peste como para que hablemos de igual a igual.
 
 ¿Sabes qué llevan encima los muertos? Piedras. La Plaga es un ejército, y un ejército tiene rangos, aunque sus soldados estén muertos. Las piedras comunes marcan a la tropa. Las más raras, a su élite. Las más raras de todas pertenecen a sus amos, las criaturas que dan las órdenes, y valen mucho más que el resto. Yo llevo la cuenta. Algunas noches es la única prueba que tengo de que estamos ganando.
 

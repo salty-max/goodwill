@@ -2,7 +2,7 @@
 piece: exalted
 title: Tú primero
 ---
-Tengo una idea nueva. Una buena. Está dibujada en el banco, y es lo más listo que se me ha ocurrido nunca, y nadie en el mundo entero lo sabe aparte de mí. Y ahora tú.
+Tengo una idea nueva. Una buena. Está dibujada en el banco, y es lo más listo que se me ha ocurrido nunca, y nadie en el mundo entero la conoce aparte de mí. Y ahora tú.
 
 La sorpresa es que te la enseño a ti antes que a mis amigos. Antes siempre corría primero hacia ellos, sin aliento, esperando a ver si se reían. Ya no quiero hacer eso. Quiero enseñársela a alguien que pregunte cómo funciona.
 

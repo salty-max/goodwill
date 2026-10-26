@@ -8,7 +8,7 @@ El que llevaba en el campo. Lo que quedaba de él. Lo había guardado todos esto
 
 No lo quemé. Lo pensé, casi toda la noche. Quemar es lo que haces con algo que te da miedo, y a mí ya no me da miedo. Así que lo corté en tiras y las cosí en el dobladillo de la siguiente capa roja, por dentro, donde nadie las encontrará a menos que lo descosa, y nadie descose una buena capa.
 
-Alguna orca joven llevará los campos contra la parte de atrás de las rodillas y nunca lo sabrá. Ese es su sitio. Debajo. Detrás. Llevando a una orca libre a su primera pelea.
+Alguna orca joven llevará los campos pegados a la parte de atrás de las rodillas y nunca lo sabrá. Ese es su sitio. Debajo. Detrás. Llevando a una orca libre a su primera pelea.
 
 Con un almacén vacío no habría podido hacerlo. Uno no corta el último retal de nada. El almacén está lleno porque unos extraños lo mantuvieron lleno, y buena parte de eso fuiste tú. Cuando hay suficiente, puedes soltar algo.
 

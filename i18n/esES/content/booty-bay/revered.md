@@ -6,4 +6,4 @@ Krazek escucha por mí. Se queda en la taberna y oye cada rumor que llega a tier
 
 Así es como un barón sigue siendo barón. Quienes se cruzan conmigo no llegan a comentarlo después, porque yo me entero primero. Los visitantes se imaginan que es algo solitario. Casi siempre es cuestión de saber qué sube por la escalera.
 
-Tu nombre ha subido mucho por esa escalera, desde esta bahía y desde las otras ciudades del Cártel, que me cuentan más de lo que admiten. Lo escuché todo. He hecho vigilar a gente por menos, y recompensado por menos, y nunca he dudado de qué merecía cada cual. Contigo, durante un tiempo, dudé.
+Tu nombre ha subido mucho por esa escalera, desde esta bahía y desde las otras ciudades del Cártel, que me cuentan más de lo que admiten. Lo escuché todo. He hecho vigilar a gente por menos, y recompensado por menos, y nunca he dudado de lo que merecía cada cual. Contigo, durante un tiempo, dudé.

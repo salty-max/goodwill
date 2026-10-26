@@ -8,4 +8,4 @@ Así funciona el Cártel. Hay cuatro pueblos goblin, la bahía, Gadgetzan, Trinq
 
 No me importa. Bueno, un poco. Pero es agradable ser amiga de alguien a quien todo el pueblo aprecia. Legacki me preguntó por ti ayer mismo. Le dije que eras muy $gsimpático:simpática; y muy valiente y que se te daba de maravilla guardar secretos.
 
-Lo que me recuerda. ¿Sabes guardar un secreto?
+Ahora que lo pienso. ¿Sabes guardar un secreto?

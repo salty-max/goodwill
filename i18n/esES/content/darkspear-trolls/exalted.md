@@ -4,7 +4,7 @@ title: El truco
 ---
 No sé leer la tela.
 
-Nunca supe. Ni un hilo. Ningún loa me dio ese don, y eso que lo pedí. Es un truco. Tomas la tela, notas el peso, la hueles, estudias al extraño que te la tiende, y dices algo de un largo camino y un sitio frío y peleas. Todo el mundo ha hecho un largo camino. Todo el mundo ha pasado frío. Todo el mundo ha peleado. Asienten, y se sorprenden, y luego hablan, y eso era lo que yo quería. La gente que habla da más.
+Nunca supe hacerlo. Ni un hilo. Ningún loa me dio ese don, y eso que lo pedí. Es un truco. Tomas la tela, notas el peso, la hueles, estudias al extraño que te la tiende, y dices algo de un largo camino y un sitio frío y peleas. Todo el mundo ha hecho un largo camino. Todo el mundo ha pasado frío. Todo el mundo ha peleado. Asienten, y se sorprenden, y luego hablan, y eso era lo que yo quería. La gente que habla da más.
 
 Llevo tanto tiempo haciéndolo que medio me lo creía. Algunas noches todavía me lo creo.
 

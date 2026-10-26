@@ -8,7 +8,7 @@ Tu pueblo vino a Desolace para aprender cómo se vence a los centauros. Elegiste
 
 La tierra no miente, pero no elige. Yo elijo.
 
-No hace mucho llegó a nuestra tierra un cristal rojo, de una tierra rota mucho más allá de este cielo, una tierra de demonios. Es nuevo, y extraño, y fuerte, y la tierra todavía no sabe qué hará. Tú eres como ese cristal.
+No hace mucho llegó a nuestra tierra un cristal rojo, de un mundo roto mucho más allá de este cielo, un mundo de demonios. Es nuevo, y extraño, y fuerte, y la tierra todavía no sabe qué hará. Tú eres como ese cristal.
 
 [after: 1374] Khan Jehn se apoyaba en su fuerza como en un muro, y la tierra es paciente con los muros. Tus manos lo derribaron, por nosotros.
 

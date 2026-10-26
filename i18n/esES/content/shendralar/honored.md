@@ -8,6 +8,6 @@ El maestro Winthalus sollozó por un libro perdido. Sollozó. Por un conjuro de 
 
 El Príncipe lo hizo desollar. En su momento lo llamé un favor, y he tenido mucho tiempo para preguntarme si lo decía en serio. Eso te dice algo de esta casa, o de mí, y preferiría no indagar.
 
-Luego está Azj'Tordin, que huyó del Príncipe, y un diablillo le quitó su libro de hechizos al salir. Ahora morirá, como cualquiera de vosotros. ¿Y para qué? Un poco de aire fresco y muchos árboles.
+Luego está Azj'Tordin, que huyó del Príncipe, y un diablillo le quitó el libro de hechizos al salir. Ahora morirá, como cualquier mortal. ¿Y para qué? Un poco de aire fresco y muchos árboles.
 
 Sigues aquí. Qué raro. La mayoría de las visitas ya han tenido el sentido común de irse.

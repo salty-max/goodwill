@@ -4,7 +4,7 @@ title: Los árboles
 ---
 Has estado en la garganta.
 
-Cada talismán que me llega de la garganta es una pelea a la que alguien sobrevivió. Lo sostengo un momento antes de que vaya con los demás. Mis hermanas lo llaman un ritual. Me gusta saber cuánto pesa una cosa antes de fiarme de ella, y un talismán pesa exactamente lo que costó.
+Cada talismán que me llega de la garganta es una pelea a la que alguien sobrevivió. Lo sostengo un momento antes de que vaya con los demás. Mis hermanas lo llaman ritual. Me gusta saber cuánto pesa una cosa antes de fiarme de ella, y un talismán pesa exactamente lo que costó.
 
 Los orcos son ruidosos, y les gusta así. Nunca he necesitado igualarlos.
 

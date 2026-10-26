@@ -10,4 +10,4 @@ Las noches de viento subo a las ramas altas y escucho crujir el árbol, y espero
 
 Cada pieza que traen a este mostrador va a algún remiendo, en alguna parte. Una manta sobre un niño enfermo en el Bancal del Artesano. Una venda para un druida que se cayó de una rama. Tela para los muertos, también. Nuestros tejedores nunca habían hecho un sudario. Ahora los hacen, y los hacen preciosos, porque no saben hacer nada de otra manera.
 
-[after: 7792] Parte de eso era tuyo. No sabías que estabas haciendo todo eso. Lo hiciste de todos modos.
+[after: 7792] Parte de eso era tuyo. No sabías que hacías todo eso. Lo hiciste de todos modos.

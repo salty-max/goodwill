@@ -10,4 +10,4 @@ Quiere ese valle. Nos lo ha dejado claro a todos, en cartas con mucho sello. Cad
 
 Tú vuelves a casa $gentero:entera;, batalla tras batalla, y vuelves a entrar. Así es como un nombre sube una montaña.
 
-[after: 7169] Toma la nueva insignia. Ahora el rey sabe tu nombre, así que llévala donde le lleguen noticias de ella.
+[after: 7169] Toma la nueva insignia. Ahora el rey sabe tu nombre, así que llévala donde le lleguen noticias tuyas.

@@ -2,7 +2,7 @@
 piece: exalted
 title: En qué se equivocan los boticarios
 ---
-La primera vez que viniste, dije que nada de lo que se da aquí pasa desapercibido. Lo dije como amenaza y como promesa. Hoy en día, es solo una promesa.
+La primera vez que viniste, dije que nada de lo que se da aquí pasa desapercibido. Lo dije como amenaza y como promesa. Hoy en día es solo una promesa.
 
 Los boticarios te dirán que los muertos no sienten nada. Lo han estudiado. Tienen tratados. Te dirán que lo que llamamos sentir es un hábito del cuerpo, un tic que queda de la vida, y que se desvanece, y que un renegado sensato deja que se desvanezca.
 

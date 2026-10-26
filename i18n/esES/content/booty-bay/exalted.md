@@ -8,4 +8,4 @@ Le he dicho que contigo ya no lo necesitaré. De toda la gente que va y viene po
 
 Aquel primer día te pedí una sola cosa, que no pasara nada mientras estuvieras aquí. La retiro. Has sido $gel huésped más movido:la huésped más movida; que ha tenido esta bahía en años, y cada movimiento me ha salido a favor. Arma todo el lío que quieras.
 
-Las velas rojas siguen más allá del cabo, Ventura y Cía. sigue cavando donde puedo oírla, y siempre habrá alguien en la escalera que piense que el último piso le sentaría mejor. Así es la bahía, y no la cambiaría. Es un poco más fácil de llevar con una persona dentro en quien confío sin comprobar.
+Las velas rojas siguen más allá del cabo, Ventura y Cía. sigue cavando donde puedo oírla, y siempre habrá alguien en la escalera que piense que el último piso le sentaría mejor. Así es la bahía, y no la cambiaría. Es un poco más fácil de llevar con alguien dentro en quien confío sin comprobar.

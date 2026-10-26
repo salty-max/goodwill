@@ -4,7 +4,7 @@ title: La cabeza fría
 ---
 Drek'Thar habla de ti. En voz alta, ante los ancianos, donde todos pueden oírlo. Uno de los ancianos me preguntó después si de verdad eras tan $gfrío:fría; en la batalla como dicen los soldados. Le dije que más.
 
-El Ojo del orden será tuyo pronto, y los soldados del valle seguirán tu palabra.
+El Ojo del orden será tuyo pronto, y los soldados del valle obedecerán tu palabra.
 
 [after: 7167] Ahí está. El Ojo es tuyo. Irán adonde los mandes, y confiarán en que querías mandarlos allí.
 

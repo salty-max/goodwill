@@ -2,7 +2,7 @@
 piece: honored
 title: Quedarse
 ---
-Mi abuela tuvo su hatillo junto a la puerta de la tienda hasta el día en que murió.
+Mi abuela tuvo el hatillo junto a la puerta de la tienda hasta el día en que murió.
 
 Vino a las cimas con todos nosotros, y aceptó quedarse, y lo decía en serio. Pero cada noche, antes de dormir, revisaba el hatillo. Cada mañana se ponía al borde de la loma y miraba al horizonte, como si las manadas pudieran llamarla y tuviera que estar preparada.
 

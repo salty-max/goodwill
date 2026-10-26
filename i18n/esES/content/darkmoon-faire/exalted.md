@@ -8,6 +8,6 @@ Esta es la parte que ninguna entrada compra, y es el mejor espectáculo que teng
 
 Cada noche les digo que este es el mejor espectáculo que existe, y cada noche me refiero a las carpas y las luces. Este es el otro. La familia, recogiéndose, cansada, callada y contenta.
 
-Hablo demasiado. Lo habrás notado. Todo eso de pasen y vean y la maravilla y el asombro, es mi forma de dar las gracias. Nunca he encontrado otra, y llevo mucho tiempo dándotelas. Así que, una vez, sin tambores: gracias.
+Hablo demasiado. Lo habrás notado. Todo eso de «pasen y vean», la maravilla y el asombro, es mi forma de dar las gracias. Nunca he encontrado otra, y llevo mucho tiempo dándotelas. Así que, una vez, sin tambores: gracias.
 
 Y ahora. Hay una caja de estacas junto al carro, y aquí nadie es visita para siempre.

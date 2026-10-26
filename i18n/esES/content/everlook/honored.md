@@ -4,7 +4,7 @@ title: El plan
 ---
 Prométeme que no se lo contarás a nadie. ¡Prométemelo!
 
-Voy a construir un yeti. Uno mecánico, con piel auténtica de yeti Cardo Nevado y los cuernos más grandes, los bonitos que no están rotos, y engranajes dentro, y va a acercarse a mis amigos y a darles un susto de muerte. Legacki, aquí, Roxio, allá en el desierto, y Quixxil, en el cráter. A los tres. Y luego, cuando hayan dejado de gritar, lo mirarán bien y verán lo bien hecho que está, y se quedarán impresionados.
+Voy a construir un yeti. Uno mecánico, con piel auténtica de yeti Cardo Nevado y los cuernos más grandes, los bonitos que no están rotos, y engranajes dentro. Va a acercarse a mis amigos y a darles un susto de muerte. Legacki, aquí, Roxio, allá en el desierto, y Quixxil, en el cráter. A los tres. Y luego, cuando hayan dejado de gritar, lo mirarán de cerca y verán lo bien hecho que está, y se quedarán impresionados.
 
 Esa es la parte importante. Los gritos son solo para divertirse. Lo de impresionarlos es lo que quiero.
 

@@ -10,4 +10,4 @@ Me preguntarás por el ojo. Todos los que llegan hasta aquí preguntan por el oj
 
 Fui el último de este bastión en confiar en ti, y me gustaría que se recordara, porque hice bien en ser lento. La confianza que llega con facilidad se va por el mismo camino. La mía llegó por el camino lento, y no se va a ninguna parte.
 
-[after: 8481] Hay una cosa más, y no se la damos a muchos. En una mala hora, lejos de aquí, uno de nuestros ancestros vendrá a ponerse a tu lado, y te curará mientras lucha. No para las horas pequeñas. Son viejos, y son nuestros, y vienen como un favor hacia mí.
+[after: 8481] Hay una cosa más, y no se la damos a muchos. En una mala hora, lejos de aquí, uno de nuestros ancestros vendrá a ponerse a tu lado, y te curará mientras lucha. No para las horas pequeñas. Son viejos, y son nuestros, y vienen como un favor que me hacen a mí.

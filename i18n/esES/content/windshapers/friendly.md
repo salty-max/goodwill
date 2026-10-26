@@ -2,7 +2,7 @@
 piece: friendly
 title: Lo que debemos
 ---
-Te has quedado. Entonces te debo la verdad de estar al lado de los Formavientos.
+Te has quedado. Entonces te debo la verdad de lo que es estar junto a los Formavientos.
 
 Los espíritus nos dieron sus dones, instrumentos y ensamblajes, y todavía los cuidamos. Leemos el viento, porque el viento es lo último de ellos que aún se mueve. Y vigilamos la tierra. Se está abriendo, las líneas ley suben a través de ella, y nuestra palabra para esas heridas es cicatrices. Los magísteres de la Orden Eminente prefieren estudiar una cicatriz antes que preguntar qué la hizo.
 

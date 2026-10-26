@@ -2,7 +2,7 @@
 piece: revered
 title: Ahí no hay dinero
 ---
-Ese de la colina es mi observatorio. No preguntes cuánto da.
+Ese de la colina es mi observatorio. No preguntes cuánto rinde.
 
 Una caravana me trajo la primera lente desde Durotar. Un barco iba a traerme la segunda, y los piratas se quedaron con el barco. Casi lo dejo todo.
 
