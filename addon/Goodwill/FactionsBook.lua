@@ -12,21 +12,7 @@ local rows = {}
 local MAX_QUESTS, MAX_KILLS, MAX_TURNINS = 8, 3, 4
 local QUEST_ICON = "Interface\\GossipFrame\\AvailableQuestIcon"
 
-local function style(row, kind)
-  if kind == "section" then
-    row.text:SetPoint("LEFT", 4, 0)
-    row.text:SetPoint("RIGHT", -4, 0)
-    row.text:SetFont(ns.kit.TITLE_FONT, 14, "")
-    row.text:SetTextColor(unpack(T.gold))
-    return 22
-  end
-  row.count:SetPoint("RIGHT", -4, 0)
-  row.text:SetPoint("LEFT", kind == "overview" and 4 or 14, 0)
-  row.text:SetPoint("RIGHT", row.count, "LEFT", -4, 0)
-  row.text:SetFont(ns.kit.BODY_FONT, 12, "")
-  row.text:SetTextColor(unpack(kind == "overview" and T.gold or T.text))
-  return 18
-end
+local style = ns.kit.listStyle -- (the kinds every book shares)
 
 local function refreshList()
   local q = ui.query()
@@ -65,7 +51,7 @@ local function refreshList()
   list:finish()
 end
 
--- The voice's newest chapter, signed (the kit's aside), and the next one's
+-- The voice's newest chapter, signed (the kit's voice), and the next one's
 -- title and standing.
 local function story(id)
   local f = D.factions[id]
@@ -85,7 +71,7 @@ local function story(id)
   if newest then
     local title, paragraphs = ns.chapter(id, newest[1])
     page:section(title)
-    page:text({ { table.concat(paragraphs, "\n\n"), aside = true, sign = voice } })
+    page:text({ { table.concat(paragraphs, "\n\n"), voice = true, sign = voice } })
   end
   if nextPiece then
     local title = ns.chapter(id, nextPiece[1])

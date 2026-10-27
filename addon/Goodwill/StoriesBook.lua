@@ -1,6 +1,6 @@
 -- The Stories tab: the factions with a voice of their own, and each one's
 -- story so far, every chapter opened in its order, signed by its voice (the
--- kit's aside), with the date it opened; those still to come by their title
+-- kit's voice), with the date it opened; those still to come by their title
 -- and the standing that opens them.
 local _, ns = ...
 local L, D, ui = ns.kit.L, ns.data, ns.ui
@@ -76,7 +76,7 @@ local function showStory(id)
       page:section(title)
       local when = ns.opened(id, piece[1])
       if when then
-        page:text({ { table.concat(paragraphs, "\n\n"), aside = true, sign = voice } })
+        page:text({ { table.concat(paragraphs, "\n\n"), voice = true, sign = voice } })
         page:row(L["Opened"], ("%s, %s"):format(ui.day(when), piece[2] > 1 and at or L["from the start"]))
       else
         page:paragraph(L["Opens at %s."]:format(at), T.soft)
