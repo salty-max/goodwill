@@ -7,16 +7,7 @@ local _, ns = ...
 local K, L = ns.kit, ns.kit.L
 
 -- ── look ─────────────────────────────────────────────────────────────────────
--- The kit's (Kit.lua), in Goodwill's theme: a quiet green, the colour the
--- game gives a friendly standing, over panels a shade cooler than parchment.
-K.theme({
-  accent = { 0.62, 0.85, 0.60 },
-  ring = { 0.42, 0.62, 0.40 },
-  bar = { 0.35, 0.72, 0.35 },
-  tint = { 0.92, 1.00, 0.92 },
-  shade = { 0.01, 0.03, 0.01, 0.55 },
-  highlight = { 0.80, 1.00, 0.80 },
-})
+-- The kit's (Kit.lua), its theme (Goodwill's: a quiet green) set first thing in Core.lua.
 local T = K.T
 
 -- The book's groups, in its order (data/factions.json's).
@@ -37,6 +28,11 @@ ns.TAB = TAB
 local B = K.book({
   name = "GoodwillFrame",
   title = "Goodwill",
+  -- (where it was left, kept with the account's settings)
+  place = function()
+    GoodwillSettings = GoodwillSettings or {}
+    return K.place(GoodwillSettings, "book")
+  end,
   art = ns.ICON,
   titles = { L["Factions"], L["Stories"] },
   first = TAB.factions,

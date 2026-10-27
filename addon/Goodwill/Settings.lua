@@ -19,11 +19,12 @@ local DEFAULTS = {
   minimapHidden = false,
   minimapAngle = K.MINIMAP_ANGLES.Goodwill,
   chapterBanner = true,
+  bannerSeconds = K.BANNER_SECONDS,
   welcomed = false,
 }
-local SHARED = { "minimapHidden", "minimapAngle", "chapterBanner" }
+local SHARED = { "minimapHidden", "minimapAngle", "chapterBanner", "bannerSeconds" }
 
--- The profiles: a code "GW1:h0:a140:b1".
+-- The profiles: a code "GW1:h0:a140:b1:n10".
 local P = K.profiles({
   saved = function()
     if type(GoodwillSettings) ~= "table" then GoodwillSettings = {} end
@@ -31,7 +32,7 @@ local P = K.profiles({
   end,
   defaults = DEFAULTS,
   shared = SHARED,
-  letters = { minimapHidden = "h", minimapAngle = "a", chapterBanner = "b" },
+  letters = { minimapHidden = "h", minimapAngle = "a", chapterBanner = "b", bannerSeconds = "n" },
   tag = "GW1",
   changed = function(key)
     if key == "minimapHidden" or key == "minimapAngle" then
@@ -65,6 +66,7 @@ function ns.createSettingsPanel()
     L["Banner for a new chapter"],
     L["Show each new chapter of a faction's story in a banner among the game's alerts. A click on it reads the chapter."]
   )
+  O:bannerSeconds("bannerSeconds")
   O:check("minimapHidden", L["Minimap button"], L["The book by the minimap: click to open it, drag to move it."], true)
   O:copy()
   O:done()

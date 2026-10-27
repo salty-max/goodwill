@@ -16,7 +16,18 @@
 -- the game's, in the client's language, when shown.
 local _, ns = ...
 local L, D = ns.kit.L, ns.data
-ns.PREFIX = "|cff9fd0a0Goodwill:|r "
+-- The kit's look (Kit.lua), in Goodwill's theme: a quiet green, the colour the
+-- game gives a friendly standing, over panels a shade cooler than parchment.
+ns.kit.theme({
+  accent = { 0.62, 0.85, 0.60 },
+  ring = { 0.42, 0.62, 0.40 },
+  bar = { 0.35, 0.72, 0.35 },
+  tint = { 0.92, 1.00, 0.92 },
+  shade = { 0.01, 0.03, 0.01, 0.55 },
+  highlight = { 0.80, 1.00, 0.80 },
+})
+
+ns.PREFIX = ns.kit.prefix("Goodwill")
 -- The book's mark: the logo's medallion cut round (Media/Medallion,
 -- assets/README.md) wherever the picture is round (the window's portrait, the
 -- pages' and cards' pictures, the banners, the minimap button, the welcome's
@@ -162,12 +173,23 @@ ns.reached = reached
 -- Every piece a faction's standing has reached joins the book: quietly at
 -- the login, else with a line in chat and a banner.
 local banners
+-- (a story's link in chat, |Hgoodwill:story:<faction>|h, the kit's: a click
+-- opens it, as the Codex's and Yonder's links open theirs)
+local link = ns.kit.links("goodwill", function(target)
+  local faction = tonumber(target:match("^story:(%d+)$") or "")
+  if faction and ns.openStory then ns.openStory(faction) end
+end)
 local function announce(faction, piece)
   local title = ns.chapter(faction, piece)
   local name = ns.factionName(faction)
-  print(ns.PREFIX .. L["A new chapter from %s: %s."]:format(name, "|cffffd27f" .. (title or "") .. "|r"))
+  print(ns.PREFIX .. L["A new chapter from %s: %s."]:format(name, link("story:" .. faction, title or "")))
   if not ns.option("chapterBanner") then return end -- (the player's switch)
-  banners = banners or ns.kit.banners({ name = "GoodwillBanner", art = ns.ICON })
+  banners = banners
+    or ns.kit.banners({
+      name = "GoodwillBanner",
+      art = ns.ICON,
+      seconds = function() return ns.option("bannerSeconds") end,
+    })
   banners:show({
     -- (the whole medallion, its rim in the ring: K.icon would crop it as a game icon)
     picture = function(p)

@@ -50,6 +50,7 @@ s.rep[TIMBERMAW] = 3100
 fire("UPDATE_FACTION")
 check(ns.opened(TIMBERMAW, "friendly"), "Friendly with the Timbermaw: its chapter opened")
 check(said(NEW_CHAPTER), "said in chat")
+check(said("|Hgoodwill:story:"), "the new chapter a link in chat, to its story")
 check(GoodwillBanner1 and GoodwillBanner1:IsShown(), "and on a banner among the game's alerts")
 -- (the banner a switch of its own: off, the line in chat alone)
 GoodwillBanner1:Hide()
