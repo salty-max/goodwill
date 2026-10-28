@@ -38,6 +38,18 @@ end
 check(ns.startRep(TIMBERMAW) == -3500, "the Timbermaw start Hostile, the data's figure")
 check(listed(72), "a fresh character follows its own capital")
 check(not listed(21) and not listed(76), "and no other faction yet")
+-- where a race and class start, the data's own figures (not the mock's)
+if G.FOREVER then
+  s.race = 95 -- (an Alliance Skyborne: bit 32, the mask's high half)
+  check(ns.startRep(72) == 3100, "a Skyborne starts Friendly with Stormwind")
+  check(ns.startRep(DAWN) == 200 and ns.startRep(TIMBERMAW) == -3500, "and at the all-races starts of the others")
+else
+  s.race, s.class = 4, 11 -- (a Night Elf druid)
+  check(ns.startRep(609) == 2000, "a druid starts Friendly with the Cenarion Circle")
+  s.class = 1
+  check(ns.startRep(609) == 0, "a warrior of the same race doesn't")
+end
+s.race, s.class = nil, nil
 for _, id in ipairs({ TIMBERMAW, DAWN, THORIUM }) do
   check(not listed(id) and not ns.opened(id, "start"), "no gain yet, no chapter yet: " .. id)
 end

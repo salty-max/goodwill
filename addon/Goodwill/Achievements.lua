@@ -79,7 +79,8 @@ local function pieces(id)
   local have, all = 0, 0
   for piece in pairs(ns.chapters and ns.chapters[id] or {}) do
     all = all + 1
-    if ns.opened(id, piece) then have = have + 1 end
+    -- (a chapter of a faction not listed yet counts for nothing: an old book's)
+    if ns.opened(id, piece) and ns.doable(id) then have = have + 1 end
   end
   return have, all
 end

@@ -131,8 +131,15 @@ local FRIENDLY_AT = 3000 -- (the game's figure where Friendly begins)
 -- Where this character's race starts with a faction, the game's figure (the
 -- data's, client_Faction's ReputationBase per race; Neutral's 0 where none).
 function ns.startRep(id)
+  local race = select(3, UnitRace("player"))
+  local class = select(3, UnitClass("player"))
+  local bit = race and ((D.raceBits and D.raceBits[race]) or race - 1)
   for _, slot in ipairs(D.factions[id].start or {}) do
-    if ns.kit.forMe(slot[1], nil, D.raceBits) then return slot[2] end
+    -- (a race's bit lies in the mask's low half below 32, the high half from 32)
+    local half = bit and (bit < 32 and slot[1] or slot[2])
+    local race_ok = half and math.floor(half / 2 ^ (bit % 32)) % 2 == 1
+    local class_ok = slot[3] == 0 or (class and math.floor(slot[3] / 2 ^ (class - 1)) % 2 == 1)
+    if race_ok and class_ok then return slot[4] end
   end
   return 0
 end
