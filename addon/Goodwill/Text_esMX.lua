@@ -127,7 +127,7 @@ ns.translate({
     ["Quest complete"] = "Misión completada",
     ["Reach %s with %d factions."] = "Alcanza el rango %s con %d facciones.",
     ["Reach %s with a faction."] = "Alcanza el rango %s con una facción.",
-    ["Reach %s with all the Steamwheedle towns."] = "Alcanza el rango %s con todas las ciudades del cártel.",
+    ["Reach %s with all the Steamwheedle towns."] = "Alcanza el rango %s con todas las ciudades del Cártel Bonvapor.",
     ["Reach %s with every battleground faction of your side."] = "Alcanza el rango %s con cada facción de campo de batalla de tu bando.",
     ["Reach %s with every capital of your side."] = "Alcanza el rango %s con cada capital de tu bando.",
     ["Reach %s with every one of Azeroth's factions."] = "Alcanza el rango %s con todas las facciones de Azeroth.",
