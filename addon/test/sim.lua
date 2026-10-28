@@ -431,6 +431,9 @@ local all = 0
 for id, pieces in pairs(ns.chapters) do
   if
     id ~= 349
+    and id ~= 92
+    and id ~= 93
+    and id ~= 87
     and D.factions[id]
     and ns.hasChapters(id)
     and (not D.factions[id].side or D.factions[id].side == ns.side())
@@ -440,7 +443,7 @@ for id, pieces in pairs(ns.chapters) do
     end
   end
 end
-check(storyNeed == all, "the stories' last leaves out the one only the Rogues finish (Ravenholdt)")
+check(storyNeed == all, "the stories' last leaves out the stories two opposed factions or one class would hold")
 
 -- ── /goodwill ────────────────────────────────────────────────────────────────
 -- (the family's command: an unknown word prints the usage, the replies capitalised)

@@ -139,7 +139,7 @@ function gameData(game: Game) {
     const f: Faction = { ...listed, quests: [], turnins: [], kills: [], unlocks: [] };
     // where a race and class start (client_Faction's ReputationBase per race
     // and class mask, the game's figure): each slot as the mask's two unsigned
-    // 32-bit halves (Forever's races reach bit 33), its class mask and its
+    // 32-bit halves (Forever's races reach bit 33; a 0 mask names every race), its class mask and its
     // base, in the client's order, the first that fits the character winning;
     // a character no slot names starts at 0, Neutral's start
     const row = all<Record<string, number>>("SELECT * FROM client_Faction WHERE ID = ?", listed.id)[0];
@@ -148,7 +148,7 @@ function gameData(game: Game) {
       const lo = (row?.[`ReputationRaceMasks${i}_0`] ?? 0) >>> 0;
       const hi = (row?.[`ReputationRaceMasks${i}_1`] ?? 0) >>> 0;
       const classes = (row?.[`ReputationClassMask_${i}`] ?? 0) >>> 0;
-      if (lo || hi) start.push([lo, hi, classes, row?.[`ReputationBase_${i}`] ?? 0]);
+      if (lo || hi || classes) start.push([lo, hi, classes, row?.[`ReputationBase_${i}`] ?? 0]);
     }
     // (slots that all start at 0 say nothing)
     if (start.some((x) => x[3] !== 0)) f.start = start;

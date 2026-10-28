@@ -137,7 +137,7 @@ function ns.startRep(id)
   for _, slot in ipairs(D.factions[id].start or {}) do
     -- (a race's bit lies in the mask's low half below 32, the high half from 32)
     local half = bit and (bit < 32 and slot[1] or slot[2])
-    local race_ok = half and math.floor(half / 2 ^ (bit % 32)) % 2 == 1
+    local race_ok = (slot[1] == 0 and slot[2] == 0) or (half and math.floor(half / 2 ^ (bit % 32)) % 2 == 1)
     local class_ok = slot[3] == 0 or (class and math.floor(slot[3] / 2 ^ (class - 1)) % 2 == 1)
     if race_ok and class_ok then return slot[4] end
   end

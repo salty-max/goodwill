@@ -84,9 +84,10 @@ local function pieces(id)
   end
   return have, all
 end
--- (a story whose standings only one class can reach: Ravenholdt's past the
--- kills is the Rogues' alone, so it counts for no achievement)
-local CLASS_LOCKED = { [349] = true }
+-- (stories no achievement asks for: Ravenholdt's past the kills is the
+-- Rogues' alone, and Gelkis and Magram, Bloodsail and the Steamwheedle
+-- towns oppose each other, so a character can't climb both)
+local CLASS_LOCKED = { [349] = true, [92] = true, [93] = true, [87] = true }
 local function voiced()
   local out = {}
   for _, id in ipairs(side()) do

@@ -66,7 +66,8 @@ chapters' build: `docs/data.md`.
   factions, a group at Exalted (the Azeroth factions, the capitals, the
   Steamwheedle towns, the battlegrounds: counted over this side's only), a
   chapter after the first, one whole story, every story. None asks Exalted
-  with every faction: Bloodsail and Booty Bay, Gelkis and Magram oppose.
+  with every faction, and no story counts that two opposed factions or one
+  class would hold (Bloodsail, Gelkis, Magram, Ravenholdt).
   `GoodwillChar.achievements[id] = { at, level, retro }`.
   `AchievementsBook.lua`: their tab (`K.deedsTab`), `/goodwill achievements`.
 - `Settings.lua`: each character's settings, the kit's profiles (a code
