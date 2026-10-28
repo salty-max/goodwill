@@ -7,7 +7,7 @@
 ## Notes-esMX: El camino de cada facción hasta Exaltado desde donde estás, y un capítulo de su historia en cada rango que alcanzas.
 ## Category: Quests
 ## Author: salty-max
-## Version: 0.1.0
+## Version: 0.2.0
 ## SavedVariablesPerCharacter: GoodwillChar
 ## SavedVariables: GoodwillSettings
 ## IconTexture: Interface\AddOns\Goodwill\Media\Logo
