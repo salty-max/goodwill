@@ -23,7 +23,7 @@ local GROUPS = {
 -- ── the window ───────────────────────────────────────────────────────────────
 -- The kit's book (K.book): the window, its two panels, the search, the tabs;
 -- each tab a file of its own, registered with ns.addTab.
-local TAB = { factions = 1, stories = 2 }
+local TAB = { factions = 1, stories = 2, achievements = 3 }
 ns.TAB = TAB
 local B = K.book({
   name = "GoodwillFrame",
@@ -34,7 +34,7 @@ local B = K.book({
     return K.place(GoodwillSettings, "book")
   end,
   art = ns.ICON,
-  titles = { L["Factions"], L["Stories"] },
+  titles = { L["Factions"], L["Stories"], L["Achievements"] },
   first = TAB.factions,
   search = "GoodwillSearch",
   settle = 0.3,

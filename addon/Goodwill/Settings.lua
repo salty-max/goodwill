@@ -6,7 +6,8 @@
 -- button; the welcome page (Welcome.lua) offers them too.
 --
 --   GoodwillSettings.profiles["Name - Realm"] = { minimapHidden,
---     minimapAngle, chapterBanner, welcomed }
+--     minimapAngle, chapterBanner, achievementToast, achievementSound,
+--     bannerSeconds, welcomed }
 local _, ns = ...
 local K = ns.kit
 local L = K.L
@@ -19,12 +20,15 @@ local DEFAULTS = {
   minimapHidden = false,
   minimapAngle = K.MINIMAP_ANGLES.Goodwill,
   chapterBanner = true,
+  achievementToast = true,
+  achievementSound = K.ACHIEVEMENT_SOUND,
   bannerSeconds = K.BANNER_SECONDS,
   welcomed = false,
 }
-local SHARED = { "minimapHidden", "minimapAngle", "chapterBanner", "bannerSeconds" }
+local SHARED =
+  { "minimapHidden", "minimapAngle", "chapterBanner", "achievementToast", "achievementSound", "bannerSeconds" }
 
--- The profiles: a code "GW1:h0:a140:b1:n10".
+-- The profiles: a code "GW1:h0:a140:b1:v1:f12891:n10".
 local P = K.profiles({
   saved = function()
     if type(GoodwillSettings) ~= "table" then GoodwillSettings = {} end
@@ -32,7 +36,14 @@ local P = K.profiles({
   end,
   defaults = DEFAULTS,
   shared = SHARED,
-  letters = { minimapHidden = "h", minimapAngle = "a", chapterBanner = "b", bannerSeconds = "n" },
+  letters = {
+    minimapHidden = "h",
+    minimapAngle = "a",
+    chapterBanner = "b",
+    achievementToast = "v",
+    achievementSound = "f",
+    bannerSeconds = "n",
+  },
   tag = "GW1",
   changed = function(key)
     if key == "minimapHidden" or key == "minimapAngle" then
@@ -66,6 +77,12 @@ function ns.createSettingsPanel()
     L["Banner for a new chapter"],
     L["Show each new chapter of a faction's story in a banner among the game's alerts. A click on it reads the chapter."]
   )
+  O:check(
+    "achievementToast",
+    L["Alert for achievements"],
+    L["Show each achievement earned in the game's achievement alert. A click on it opens the achievements."]
+  )
+  O:achievementSound("achievementSound")
   O:bannerSeconds("bannerSeconds")
   O:check("minimapHidden", L["Minimap button"], L["The book by the minimap: click to open it, drag to move it."], true)
   O:copy()

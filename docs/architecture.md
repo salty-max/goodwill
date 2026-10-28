@@ -12,7 +12,8 @@ chapters' build: `docs/data.md`.
   `Kit.lua` (the kit's copy, `bun run kit:sync`; never edit it),
   `Locale.lua`, `Text_[TextLocale].lua`, `Chapters_[TextLocale].lua`,
   `Core.lua`, `Settings.lua`, `Road.lua`, `Book.lua`, `FactionsBook.lua`,
-  `StoriesBook.lua`, `Welcome.lua`, `Minimap.lua` (the test game loads them
+  `StoriesBook.lua`, `Achievements.lua`,
+  `AchievementsBook.lua`, `Welcome.lua`, `Minimap.lua` (the test game loads them
   from the TOC).
 
 ## The files
@@ -58,9 +59,19 @@ chapters' build: `docs/data.md`.
   standing unlocks). `StoriesBook.lua`: the voiced factions, each one's
   story so far in its order, signed, with the day each chapter opened; those
   to come by their title and standing.
+- `Achievements.lua`: the achievements (the kit's `K.deeds`, as Mealbook's
+  milestones: the game's alert behind `achievementToast`, the fanfare, a line
+  in chat; those deserved at the login recorded quietly, `retro`): a first
+  gain, Honored, Revered and Exalted once, Exalted with 3, 5, 10 and 20
+  factions, a group at Exalted (the Azeroth factions, the capitals, the
+  Steamwheedle towns, the battlegrounds: counted over this side's only), a
+  chapter after the first, one whole story, every story. None asks Exalted
+  with every faction: Bloodsail and Booty Bay, Gelkis and Magram oppose.
+  `GoodwillChar.achievements[id] = { at, level, retro }`.
+  `AchievementsBook.lua`: their tab (`K.deedsTab`), `/goodwill achievements`.
 - `Settings.lua`: each character's settings, the kit's profiles (a code
   `GW1:...`, `/goodwill export`, `/goodwill import CODE`): the chapter's
-  banner (`chapterBanner`, on by default), the minimap button and its place
+  banner (`chapterBanner`, on by default; `achievementToast` and `achievementSound`, profile letters v and f, as the siblings'), the minimap button and its place
   (140 degrees, clear of Mealbook's 165 and the siblings'); their page in
   the game's Options, the kit's `K.options`. `Welcome.lua`: the kit's welcome page, once per character.
   `Minimap.lua`: the book's button, as the siblings'.
@@ -107,7 +118,7 @@ the ring. Export details are in `assets/README.md`.
 
 ## Not done yet
 
-- The store page and achievements.
+- The store page.
 - The capitals' mounts: vanilla sells another race's only at Exalted
   through the vendor's own gossip, which wow-data doesn't load
   (`item_reputation` has no row for them).

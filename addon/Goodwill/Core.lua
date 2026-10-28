@@ -9,6 +9,8 @@
 --                                              aside, exalted)
 --     base[faction] = reputation              where each standing first stood
 --                                              here, to tell what was earned
+--     achievements[id] = { at, level, retro } each achievement earned
+--                                              (Achievements.lua)
 --     unlocked[faction] = true                a faction listed once stays listed
 --     bank[item] = n, bankAt                   the turn-ins' items in the bank,
 --                                              as last seen there
@@ -67,9 +69,9 @@ ns.PIECES = {
   { "exalted", 8 },
 }
 -- The standing's name, the game's (FACTION_STANDING_LABEL1..8, its female
--- form where the language has one).
-function ns.standingName(standing)
-  local female = UnitSex and UnitSex("player") == 3
+-- form where the language has one; plain: the masculine, a noun's after "rank").
+function ns.standingName(standing, plain)
+  local female = not plain and UnitSex and UnitSex("player") == 3
   local his = {
     FACTION_STANDING_LABEL1,
     FACTION_STANDING_LABEL2,
@@ -128,6 +130,15 @@ function ns.sideFactions()
 end
 
 local FRIENDLY_AT = 3000 -- (the game's figure where Friendly begins)
+-- Has the character gained reputation with a faction since this book first saw
+-- it (a book from before the figures: any above Neutral's start)?
+function ns.gained(id)
+  local _, value = ns.standingOf(id)
+  if not value or not char then return false end
+  local base = char.base and char.base[id]
+  if base then return value > base end
+  return char.legacy and value > 0 or false
+end
 -- Is a faction doable by this character now: it unlocks on its first gain of
 -- reputation (the standing moved up off the figure this book first saw), as
 -- the game's own panel lists it, and the character's own factions are there
@@ -265,6 +276,8 @@ function ns.readAll(quietly)
     char.unlocked[id] = true
     ns.readStanding(id, quietly)
   end
+  -- (the achievements: the login's quietly, those already deserved)
+  if ns.deeds then ns.deeds:check(quietly) end
   if ns.onChange then ns.onChange() end
 end
 
@@ -355,7 +368,7 @@ ns.kit.commands({
   open = function()
     if ns.toggle then ns.toggle() end
   end,
-  usage = L["/goodwill opens the book, /goodwill stories its stories and /goodwill settings its settings. /goodwill minimap shows or hides the button, /goodwill welcome shows the welcome page again. /goodwill export gives this character's settings as a code, and /goodwill import CODE takes them."],
+  usage = L["/goodwill opens the book, /goodwill stories its stories, /goodwill achievements its achievements and /goodwill settings its settings. /goodwill minimap shows or hides the button, /goodwill welcome shows the welcome page again. /goodwill export gives this character's settings as a code, and /goodwill import CODE takes them."],
   settings = function() return ns.openSettings() end,
   welcome = function(mode)
     if ns.showWelcome then ns.showWelcome(mode) end
@@ -363,6 +376,9 @@ ns.kit.commands({
   -- (looked up when used: Settings.lua makes them, after this file)
   minimap = { get = function(k) return ns.option(k) end, set = function(k, v) ns.setOption(k, v) end },
   commands = {
+    achievements = function()
+      if ns.openAchievements then ns.openAchievements() end
+    end,
     stories = function()
       if ns.openStory then ns.openStory() end
     end,

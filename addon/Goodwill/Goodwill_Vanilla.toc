@@ -30,5 +30,7 @@ Road.lua
 Book.lua
 FactionsBook.lua
 StoriesBook.lua
+Achievements.lua
+AchievementsBook.lua
 Welcome.lua
 Minimap.lua

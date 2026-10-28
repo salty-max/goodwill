@@ -355,6 +355,79 @@ if G.FOREVER then
   s.race, s.faction = nil, nil
 end
 
+-- ── the achievements ─────────────────────────────────────────────────────────
+-- (counted over this side's factions: an Alliance character's capitals are four
+-- of the eight, and a first gain, a standing reached and the stories are earned
+-- as the sections above played them)
+local earned = GoodwillChar.achievements or {}
+check(earned["gain-1"] and earned["gain-1"].level == s.level, "the first gain earned, with its level")
+check(earned["honored-1"] and earned["revered-1"], "the standings reached, earned")
+local ACH = L["Achievement earned: %s."]:match("^(.-)%%s")
+check(said(ACH), "said in chat")
+local capitals = ns.achievementById["group-capitals"]
+local done, need = capitals.progress()
+local mineCapitals = 0
+for _, id in ipairs(ns.sideFactions()) do
+  if D.factions[id].group == "capitals" then mineCapitals = mineCapitals + 1 end
+end
+check(need == mineCapitals and need < 8, "the capitals' achievement asks this side's capitals only")
+check(ns.deeds:visible(capitals), "listed where the side has them")
+check(ns.achievementById["story-1"].progress() ~= nil, "the stories' counts")
+-- the book at its tab, one of them picked out
+ns.openAchievements("gain-1")
+G.advance(0.3)
+check(
+  GoodwillFrame.selectedTab == ns.TAB.achievements and #ns.achievementRows > 0,
+  "the achievements' board, one picked out"
+)
+-- the alert behind its switch
+ns.setOption("achievementToast", false)
+for _, name in ipairs({ "GoodwillAchievementBanner1", "AchievementAlertFrame1" }) do
+  if _G[name] then _G[name]:Hide() end
+end
+s.printed = {}
+s.rep[TIMBERMAW] = 42500
+fire("UPDATE_FACTION")
+check(GoodwillChar.achievements["exalted-1"] and said(ACH), "with the alert off the line in chat alone")
+check(
+  not (GoodwillAchievementBanner1 and GoodwillAchievementBanner1:IsShown())
+    and not (AchievementAlertFrame1 and AchievementAlertFrame1:IsShown()),
+  "and no alert shown"
+)
+ns.setOption("achievementToast", true)
+-- an old character at the login: all it deserves recorded quietly
+GoodwillChar.achievements = {}
+s.printed = {}
+ns.readAll(true)
+check(GoodwillChar.achievements["gain-1"].retro and not said(ACH), "already deserved: recorded quietly at the login")
+-- the gates: a step past what the side has, a group of fewer than two
+local sideN = #ns.sideFactions()
+check(
+  not ns.deeds:visible(ns.achievementById["exalted-20"]) or sideN > 20,
+  "an Exalted count past the side's factions isn't listed"
+)
+local d = ns.achievementById["group-battlegrounds"]
+local battle = 0
+for _, id in ipairs(ns.sideFactions()) do
+  if D.factions[id].group == "battlegrounds" then battle = battle + 1 end
+end
+check(ns.deeds:visible(d) == (battle >= 2), "a group is listed where the side has two or more")
+local _, storyNeed = ns.achievementById["story-all"].progress()
+local all = 0
+for id, pieces in pairs(ns.chapters) do
+  if
+    id ~= 349
+    and D.factions[id]
+    and ns.hasChapters(id)
+    and (not D.factions[id].side or D.factions[id].side == ns.side())
+  then
+    for _ in pairs(pieces) do
+      all = all + 1
+    end
+  end
+end
+check(storyNeed == all, "the stories' last leaves out the one only the Rogues finish (Ravenholdt)")
+
 -- ── /goodwill ────────────────────────────────────────────────────────────────
 -- (the family's command: an unknown word prints the usage, the replies capitalised)
 s.printed = {}
