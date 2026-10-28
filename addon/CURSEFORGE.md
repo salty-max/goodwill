@@ -3,12 +3,10 @@
 <!-- Project description for curseforge.com and Wago (bun addon-kit/store.ts).
 The project's title on the stores: "Goodwill: Reputation Road & Faction
 Stories" (the addon's own name stays Goodwill: the words players search for
-in the title, ../ideas/reputation-road.md §9). A draft, 25 October 2026:
-Goodwill is not released yet. Read it again against what ships (42 factions,
-35 with a voice, 180 chapters on 25 October, Forever's own factions' stories
-still to come) before the first release. The siblings' "Other addons" lists
-take Goodwill in once it's on the stores, and this one takes Yours Truly in
-once it is. -->
+in the title, ../ideas/reputation-road.md §9). Read against what ships on
+29 October 2026 for its first store release (33 factions on Classic Era, 42
+on Forever, 35 with a voice, 180 chapters, the achievements, Forever's own
+factions' stories still to come). -->
 
 <!-- Summary (the project's summary on CurseForge and Wago, and the TOCs' Notes):
 Every faction's road to Exalted from where you stand, and a chapter of its story at each standing you reach. -->
@@ -28,7 +26,7 @@ Open a faction and its page starts from your standing now and shows the next one
 - **kills** that still count, zone by zone, with the standing at which each one stops giving reputation,
 - **what each standing unlocks**: the items its quartermasters sell, recipes, mounts and tabards among them, and the quests it opens.
 
-The road follows you as you play: finish a quest, loot an item or reach a standing, and Goodwill shows it a moment later.
+The road follows you as you play: finish a quest, loot an item or reach a standing, and Goodwill shows it a moment later. It lists only the factions your character can earn: a faction of the other side, or one that is closed to your race, stays out, and a faction you haven't met appears with your first gain of reputation with it.
 
 ## The stories
 
@@ -40,9 +38,13 @@ There is a chapter when you first meet them, one at each standing from Friendly 
 
 ## The book
 
-The **Factions** tab lists the factions by group: your side's capitals, the Argent Dawn, the Timbermaw and the other endgame factions, the Steamwheedle ports, the battleground factions, the Darkmoon Faire, Ravenholdt and more, each in its standing's colour. Its front page counts the factions at Exalted, the chapters opened and the factions with a voice.
+The **Factions** tab lists the factions by group: your side's capitals, the Argent Dawn, the Timbermaw and the other endgame factions, the Steamwheedle ports, the battleground factions, the Darkmoon Faire, Ravenholdt and more, each in its standing's colour. Its front page counts the factions at Exalted, the chapters opened and the factions with a voice, out of what your side can raise.
 
 The **Stories** tab keeps each voiced faction's story so far, in order, with the day each chapter opened, and lists the chapters still to come by title and standing.
+
+## Achievements
+
+The book keeps its own achievements: your first gain with a faction, the standings you reach, how many factions stand at Exalted, whole groups of them at Exalted and the stories you open. Each one earned comes with the game's fanfare and its own achievement alert (a switch in the settings turns the alert off), and the book remembers when and at what level. None asks Exalted with two factions that oppose each other. Those you had already deserved when you installed Goodwill are recorded quietly. The **Achievements** tab lists them all, or open it with `/goodwill achievements`.
 
 ## Games and languages
 
@@ -54,9 +56,10 @@ Goodwill is in English, French, German and Spanish: on those clients every chapt
 
 Open the book with `/goodwill` or the minimap button. The welcome page appears once per character and can be reopened with `/goodwill welcome`.
 
-Settings are under **Options > AddOns > Goodwill**, through `/goodwill settings` or a right-click on the minimap button: the banner for a new chapter and the minimap button. Each character has its own. Copy another character's settings within the same game, or use `/goodwill export` and `/goodwill import CODE`.
+Settings are under **Options > AddOns > Goodwill**, through `/goodwill settings` or a right-click on the minimap button: the banner for a new chapter, the achievements' alert and sound, how long banners stay and the minimap button. Each character has its own. Copy another character's settings within the same game, or use `/goodwill export` and `/goodwill import CODE`.
 
 - `/goodwill stories` opens the book at its stories.
+- `/goodwill achievements` opens the book at its achievements.
 - `/goodwill minimap` shows or hides the minimap button.
 
 ## Other addons
@@ -69,6 +72,7 @@ These share Goodwill's look and work independently:
 - **[Second Wind](https://www.curseforge.com/wow/addons/second-wind)** ([Wago](https://addons.wago.io/addons/XKqEjbKy)) gives you a debrief after a close call or death.
 - **[Mealbook](https://www.curseforge.com/wow/addons/mealbook)** ([Wago](https://addons.wago.io/addons/YK9xja6L)) keeps a chef's cookbook that fills in as you learn to cook, and plans your road to 300.
 - **[Palaver](https://www.curseforge.com/wow/addons/palaver)** ([Wago](https://addons.wago.io/addons/ZKbqbO61)) puts quests and NPC conversations in a large panel beside the one you speak to, read and answered from the keyboard.
+- **[Yours Truly](https://www.curseforge.com/wow/addons/yours-truly)** ([Wago](https://addons.wago.io/addons/j6jAx1NR)) brings letters from the people whose quest chains you finished, waiting at the next mailbox.
 
 ## Support
 
