@@ -36,6 +36,7 @@ ns.translate({
     ["A Story Told"] = "Eine erzählte Geschichte",
     ["A Word from a Friend"] = "Ein Wort von einem Freund",
     ["Achievement earned: %s."] = "Erfolg errungen: %s.",
+    ["Achievement fanfare"] = "Erfolgsfanfare",
     ["Achievement sound"] = "Erfolgsklang",
     ["Achievements"] = "Erfolge",
     ["again and again"] = "immer wieder",
