@@ -273,10 +273,7 @@ local function showOverview()
     L["Pick a faction: its page tells you how to raise it from where you stand, and what the next standing unlocks."],
     T.soft
   )
-  page:paragraph(
-    L["More factions appear here as you grow into them, or as you earn a first bit of their reputation."],
-    T.soft
-  )
+  page:paragraph(L["A faction appears here once you earn your first bit of its reputation."], T.soft)
   page:section(L["Their stories"])
   for _, id in ipairs(ns.factions()) do
     if ns.hasChapters(id) then

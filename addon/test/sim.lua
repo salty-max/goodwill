@@ -25,11 +25,12 @@ local TIMBERMAW, DAWN, THORIUM = 576, 529, 59
 
 -- ── a first login ────────────────────────────────────────────────────────────
 s.rep[TIMBERMAW] = -3500 -- (Hostile: the Timbermaw's start)
+s.rep[72], s.rep[76] = 3000, 3000 -- (a human starts Friendly with Stormwind, an orc with Orgrimmar)
 G.login()
 local char = GoodwillChar
 check(char.guid == s.guid, "the book is this character's")
--- (a level 12 character sees only the factions it can earn now: the capitals
--- yes, the level 45 and 50 ones not yet, and their chapters wait with them)
+-- (a faction is listed from its first gain of reputation, and a character's
+-- own capital from the start; the rest wait, their chapters with them)
 local function listed(id)
   for _, f in ipairs(ns.factions()) do
     if f == id then return true end
@@ -37,29 +38,28 @@ local function listed(id)
   return false
 end
 check(listed(72), "a fresh character follows its own capital")
+check(not listed(21) and not listed(47), "and no other faction yet")
 for _, id in ipairs({ TIMBERMAW, DAWN, THORIUM }) do
-  check(not listed(id) and not ns.opened(id, "start"), "not yet doable at level 12, no chapter yet: " .. id)
+  check(not listed(id) and not ns.opened(id, "start"), "no gain yet, no chapter yet: " .. id)
 end
-check(ns.startLevel(DAWN) > 40, "the Dawn's road begins at its real level, not at its early outliers")
-s.level = 60
+check(char.base[TIMBERMAW] == -3500, "each standing's first figure kept, ids only")
+-- a first gain unlocks a faction, its first chapter quietly with it
+s.rep[DAWN], s.rep[TIMBERMAW], s.rep[THORIUM] = 250, -3400, 10
 ns.readAll(true)
 for _, id in ipairs({ TIMBERMAW, DAWN, THORIUM }) do
-  check(listed(id), "doable at level 60: " .. id)
-  check(ns.opened(id, "start"), "a voiced faction's first page, open from the start: " .. id)
+  check(listed(id), "a first gain unlocks it: " .. id)
+  check(ns.opened(id, "start"), "a voiced faction's first page, open from the first gain: " .. id)
   check(not ns.opened(id, "friendly"), "and nothing more yet: " .. id)
 end
-check(not said(NEW_CHAPTER), "quietly at the first login")
-s.level = 12
-check(char.base[TIMBERMAW] == -3500, "each standing's first figure kept, ids only")
--- earning some brings a faction in before its level (a standing off the first one seen)
-s.rep[DAWN] = 250
-check(listed(DAWN), "a faction it has earned some of is doable at any level")
-s.rep[DAWN] = nil
-check(not listed(DAWN), "and not before it has")
+check(not said(NEW_CHAPTER), "quietly")
+s.rep[DAWN] = 0
+check(not listed(DAWN) or char.base[DAWN] == 0, "a standing back at its first figure")
 s.rep[DAWN] = -100
-check(not listed(DAWN), "a loss isn't earning")
-s.rep[DAWN] = nil
--- the chapters counted are the listed factions' (the Stories list's)
+check(listed(DAWN), "a faction once unlocked stays: its book has chapters")
+s.rep[DAWN], s.rep[TIMBERMAW], s.rep[THORIUM] = nil, -3500, nil
+char.unlocked, char.opened[DAWN] = {}, nil
+check(not listed(DAWN) and not listed(THORIUM), "a loss or no gain isn't unlocking")
+-- the chapters counted are the listed factions'
 local opened = 0
 for _, id in ipairs(ns.factions()) do
   for _ in pairs(char.opened[id] or {}) do
@@ -67,18 +67,12 @@ for _, id in ipairs(ns.factions()) do
   end
 end
 check(ns.chaptersOpened() == opened, "the overview counts the chapters of the factions it lists")
--- a level-up brings a faction whose road begins there in, its first chapter with it
-char.opened[DAWN] = nil
-s.level = 12
-fire("PLAYER_LEVEL_UP", ns.startLevel(DAWN))
-check(listed(DAWN) and ns.opened(DAWN, "start"), "a level-up opens the Dawn's road and its first chapter")
--- a book from before the first figures were kept: what stood past the start counts
+-- a book from before the first figures were kept: a standing off the start counts
 GoodwillChar.base, GoodwillChar.legacy = nil, true
-ns.levelUp = nil
 s.rep[DAWN] = 3100
 check(listed(DAWN), "an old book's earned standing keeps its faction")
 s.rep[DAWN] = nil
-check(not listed(DAWN), "and one it never had stays out until its level")
+check(not listed(DAWN), "and one never gained stays out")
 GoodwillChar.legacy = nil
 GoodwillChar.base = {}
 ns.readAll(true)
@@ -88,8 +82,12 @@ for _, id in ipairs(ns.factions()) do
   mine[id] = true
 end
 check(mine[72] and not mine[76], "an Alliance character follows Stormwind, not Orgrimmar")
+local side = {}
+for _, id in ipairs(ns.sideFactions()) do
+  side[id] = true
+end
 check(
-  (mine[2779] or false) == G.FOREVER,
+  (side[2779] or false) == G.FOREVER,
   "Forever's own factions only on Forever (the High Order, the Alliance's Skyborne)"
 )
 
@@ -331,7 +329,7 @@ check(ns.chaptersOpened() >= 7, "every chapter opened, counted")
 -- ── the other side ───────────────────────────────────────────────────────────
 s.faction = "Horde"
 local horde = {}
-for _, id in ipairs(ns.factions()) do
+for _, id in ipairs(ns.sideFactions()) do
   horde[id] = true
 end
 check(horde[76] and not horde[72], "a Horde character follows Orgrimmar, not Stormwind")
@@ -349,7 +347,7 @@ if G.FOREVER then
   ns.readAll(true)
   check(ns.opened(2778, "start") and ns.opened(2778, "friendly"), "both of the Windshapers' chapters at level 1")
   local follows = {}
-  for _, id in ipairs(ns.factions()) do
+  for _, id in ipairs(ns.sideFactions()) do
     follows[id] = true
   end
   check(follows[2778] and not follows[2779], "the Horde's Skyborne follow the Windshapers, not the High Order")

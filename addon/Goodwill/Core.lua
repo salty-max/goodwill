@@ -9,6 +9,7 @@
 --                                              aside, exalted)
 --     base[faction] = reputation              where each standing first stood
 --                                              here, to tell what was earned
+--     unlocked[faction] = true                a faction listed once stays listed
 --     bank[item] = n, bankAt                   the turn-ins' items in the bank,
 --                                              as last seen there
 --   GoodwillSettings (SavedVariables): each character's settings, the kit's
@@ -126,55 +127,24 @@ function ns.sideFactions()
   return out
 end
 
--- The level a faction's road begins at for this character: the tenth
--- percentile of the levels its quests and turn-ins open to the race and
--- class ask (a few early quests would keep a level 50 faction open at level
--- 1). Nil: nothing in the data is open to it.
-local startLevels = {}
-function ns.startLevel(id)
-  local key = id .. ":" .. tostring(select(3, UnitRace("player"))) .. ":" .. tostring(select(3, UnitClass("player")))
-  if startLevels[key] ~= nil then return startLevels[key] or nil end
-  local f, levels = D.factions[id], {}
-  for _, list in ipairs({ f.quests or {}, f.turnins or {} }) do
-    for _, qid in ipairs(list) do
-      local q = D.quests[qid]
-      if q and ns.forMe(q) then table.insert(levels, q.min or q.level or 0) end
-    end
-  end
-  if #levels == 0 then
-    startLevels[key] = false
-    return nil
-  end
-  table.sort(levels)
-  startLevels[key] = levels[math.max(1, math.ceil(#levels / 10))]
-  return startLevels[key]
-end
-
--- Is a faction doable by this character now: it has earned some of it (its
--- standing moved off where this book first saw it), or its road has begun
--- at the character's level.
--- (the level the game announced at a level-up: UnitLevel may still say the old one then)
-local function myLevel() return math.max(UnitLevel("player") or 0, ns.levelUp or 0) end
+local FRIENDLY_AT = 3000 -- (the game's figure where Friendly begins)
+-- Is a faction doable by this character now: it unlocks on its first gain of
+-- reputation (the standing moved up off the figure this book first saw), as
+-- the game's own panel lists it, and the character's own factions are there
+-- from the start (a standing that begins at Friendly or better).
 function ns.doable(id)
-  local standing, value = ns.standingOf(id)
+  local _, value = ns.standingOf(id)
+  if char and char.unlocked and char.unlocked[id] then return true end -- (once unlocked, kept)
+  if not value then return false end
   local base = char and char.base and char.base[id]
-  if value and base and value > base then return true end
-  -- (a book from before the first figures were kept: a standing past Neutral's
-  -- first step, or a chapter beyond the first, was earned)
-  if
-    char
-    and char.legacy
-    and standing
-    and (standing >= ns.FRIENDLY or (char.opened[id] and char.opened[id].friendly))
-  then
-    return true
-  end
-  local from = ns.startLevel(id)
-  return from ~= nil and myLevel() >= from
+  if base then return value > base or base >= FRIENDLY_AT end
+  -- (a book from before the first figures were kept: a standing off Neutral's
+  -- start, or a chapter beyond the first, was earned)
+  return char and char.legacy and (value ~= 0 or (char.opened[id] and char.opened[id].friendly)) or false
 end
 
 -- The factions the book follows for this character: its side's that it can
--- earn now (the others appear as it grows into them), in the data's order.
+-- earn now (the others appear at their first gain), in the data's order.
 function ns.factions()
   local out = {}
   for _, id in ipairs(ns.sideFactions()) do
@@ -292,6 +262,7 @@ function ns.readAll(quietly)
     end
   end
   for _, id in ipairs(ns.factions()) do
+    char.unlocked[id] = true
     ns.readStanding(id, quietly)
   end
   if ns.onChange then ns.onChange() end
@@ -331,7 +302,7 @@ function ns.carried(item) return countOf(item, false) end
 function ns.banked(item) return char and char.bank and char.bank[item] or 0 end
 
 -- ── the login ────────────────────────────────────────────────────────────────
-local function newBook(guid) return { guid = guid, opened = {}, bank = {}, base = {} } end
+local function newBook(guid) return { guid = guid, opened = {}, bank = {}, base = {}, unlocked = {} } end
 
 function ns.login()
   local guid = UnitGUID("player")
@@ -339,6 +310,7 @@ function ns.login()
   char = GoodwillChar
   char.legacy = char.base == nil and next(char.opened or {}) ~= nil -- (a book from before the figures were kept)
   char.opened, char.bank, char.base = char.opened or {}, char.bank or {}, char.base or {}
+  char.unlocked = char.unlocked or {}
   ns.loadProfile()
   if ns.createMinimapButton then ns.createMinimapButton() end
   if ns.createSettingsPanel then ns.createSettingsPanel() end
@@ -349,12 +321,6 @@ end
 -- A standing changed: the chapters it reached (the game tells it for any
 -- faction at once, so every one followed is read again).
 ns.on("UPDATE_FACTION", function()
-  if ns.loggedIn then ns.readAll(false) end
-end)
--- A level gained: a faction whose road begins here joins the book (and its
--- first chapter opens).
-ns.on("PLAYER_LEVEL_UP", function(level)
-  ns.levelUp = tonumber(level)
   if ns.loggedIn then ns.readAll(false) end
 end)
 -- A quest turned in: a paragraph after it may show now, the road shortens.
