@@ -24,8 +24,6 @@ local NEW_CHAPTER = L["A new chapter from %s: %s."]:match("^(.-)%%s")
 local TIMBERMAW, DAWN, THORIUM = 576, 529, 59
 
 -- ── a first login ────────────────────────────────────────────────────────────
-s.rep[TIMBERMAW] = -3500 -- (Hostile: the Timbermaw's start)
-s.rep[72], s.rep[76] = 3000, 3000 -- (a human starts Friendly with Stormwind, an orc with Orgrimmar)
 G.login()
 local char = GoodwillChar
 check(char.guid == s.guid, "the book is this character's")
@@ -37,27 +35,28 @@ local function listed(id)
   end
   return false
 end
+check(ns.startRep(TIMBERMAW) == -3500, "the Timbermaw start Hostile, the data's figure")
 check(listed(72), "a fresh character follows its own capital")
-check(not listed(21) and not listed(47), "and no other faction yet")
+check(not listed(21) and not listed(76), "and no other faction yet")
 for _, id in ipairs({ TIMBERMAW, DAWN, THORIUM }) do
   check(not listed(id) and not ns.opened(id, "start"), "no gain yet, no chapter yet: " .. id)
 end
-check(char.base[TIMBERMAW] == -3500, "each standing's first figure kept, ids only")
--- a first gain unlocks a faction, its first chapter quietly with it
-s.rep[DAWN], s.rep[TIMBERMAW], s.rep[THORIUM] = 250, -3400, 10
-ns.readAll(true)
+-- a first gain in the game (UPDATE_FACTION) unlocks a faction, its first chapter announced
+s.printed = {}
+s.rep[DAWN], s.rep[TIMBERMAW], s.rep[THORIUM] = ns.startRep(DAWN) + 250, -3400, ns.startRep(THORIUM) + 10
+fire("UPDATE_FACTION")
 for _, id in ipairs({ TIMBERMAW, DAWN, THORIUM }) do
   check(listed(id), "a first gain unlocks it: " .. id)
   check(ns.opened(id, "start"), "a voiced faction's first page, open from the first gain: " .. id)
   check(not ns.opened(id, "friendly"), "and nothing more yet: " .. id)
 end
-check(not said(NEW_CHAPTER), "quietly")
+check(said(NEW_CHAPTER), "the first chapter said in chat, as the game's UPDATE_FACTION plays it")
+-- a loss is no unlocking
 s.rep[DAWN], s.rep[TIMBERMAW], s.rep[THORIUM] = nil, -3600, nil
-char.unlocked, char.opened[DAWN], char.opened[TIMBERMAW] = {}, nil, nil
+char.unlocked, char.opened[DAWN], char.opened[TIMBERMAW], char.opened[THORIUM] = {}, nil, nil, nil
 check(not listed(DAWN) and not listed(THORIUM), "no gain isn't unlocking")
 check(not listed(TIMBERMAW), "nor is a loss")
-s.rep[TIMBERMAW] = -3500
-ns.readAll(true)
+s.rep[TIMBERMAW] = nil
 -- the chapters counted are the listed factions'
 local opened = 0
 for _, id in ipairs(ns.factions()) do
@@ -66,17 +65,20 @@ for _, id in ipairs(ns.factions()) do
   end
 end
 check(ns.chaptersOpened() == opened, "the overview counts the chapters of the factions it lists")
--- a book from before the first figures were kept, at the next login: a standing
--- above the start counts, an untouched Hostile one does not
-GoodwillChar.base, GoodwillChar.unlocked = nil, nil
-s.rep[DAWN] = 3100
+-- Goodwill installed on a character who has raised factions already: they list
+-- at the login, their chapters opened quietly
+GoodwillChar = nil
+s.printed = {}
+s.rep[609], s.rep[TIMBERMAW] = ns.startRep(609) + 2400, ns.startRep(TIMBERMAW) + 4300 -- (Neutral at 800)
 G.login()
 char = GoodwillChar
-check(char.legacy and listed(DAWN), "an old book's earned standing keeps its faction")
-check(not listed(TIMBERMAW), "and an untouched Hostile one stays out")
-s.rep[DAWN] = nil
-char.legacy, char.base, char.unlocked, char.opened[DAWN] = nil, {}, {}, nil
-ns.readAll(true)
+check(listed(609) and listed(TIMBERMAW), "factions already raised list at the first login")
+check(ns.opened(TIMBERMAW, "start") and not ns.opened(TIMBERMAW, "friendly"), "their chapters opened with them")
+check(not said(NEW_CHAPTER), "quietly at the login")
+s.rep[609], s.rep[TIMBERMAW] = nil, nil
+GoodwillChar = nil
+G.login()
+char = GoodwillChar
 check(D.factions[72] and D.factions[76], "both sides' capitals in the data")
 local mine = {}
 for _, id in ipairs(ns.factions()) do

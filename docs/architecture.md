@@ -28,7 +28,7 @@ chapters' build: `docs/data.md`.
   game's standing 1 to 8, its figure, the standing's bounds; the standings'
   names the game's, a woman's form where the language has one), the
   character's side, race and class against a quest's masks (`ns.forMe`), the
-  factions it follows (`ns.factions`: its side's and both sides', the ones it has unlocked: `ns.doable`, a first gain of reputation (its standing moved up off the figure `char.base` first saw), or its own, which begin at Friendly or better; once unlocked, kept in `char.unlocked`; a book from before the figures (`char.legacy`) counts a standing off Neutral's start. `ns.sideFactions` is all of them), a quest
+  factions it follows (`ns.factions`: its side's and both sides', the ones it has unlocked: `ns.doable`, a first gain of reputation (the standing above `ns.startRep`, the figure its race starts at, from the data), or a faction its race starts at Friendly or better (its own); once unlocked, kept in `char.unlocked`. `ns.sideFactions` is all of them), a quest
   done (C_QuestLog.IsQuestFlaggedCompleted), the chapters (`ns.chapter`: a
   piece's title and the paragraphs the reader may see now, `[after]` once
   its quest is done, `[before]` until then, agreed and Classic Era's names

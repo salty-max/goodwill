@@ -65,7 +65,7 @@ type Quest = {
 };
 type Unlock = { item?: number; quest?: number; standing: number; vendors?: number[]; spell?: number; skill?: number };
 type Kill = [number, number, number | null] | [number, number, number, number];
-type Faction = Listed & { quests: number[]; turnins: number[]; kills: Kill[]; unlocks: Unlock[]; spill?: { rate: number; from: number[] } };
+type Faction = Listed & { quests: number[]; turnins: number[]; kills: Kill[]; unlocks: Unlock[]; start?: [number, number][]; spill?: { rate: number; from: number[] } };
 type Npc = { area: number | null; x: number | null; y: number | null; side: string | null };
 
 const lua = (v: unknown): string => {
@@ -137,6 +137,16 @@ function gameData(game: Game) {
     if (listed.client && listed.client !== game) continue;
     if (!exists(listed.id)) continue;
     const f: Faction = { ...listed, quests: [], turnins: [], kills: [], unlocks: [] };
+    // where a race starts (client_Faction's ReputationBase per race mask, the
+    // game's figure): a race no slot names starts at 0, Neutral's start
+    const row = all<Record<string, number>>("SELECT * FROM client_Faction WHERE ID = ?", listed.id)[0];
+    const start: [number, number][] = [];
+    for (let i = 0; i < 4; i++) {
+      const mask = (row?.[`ReputationRaceMasks${i}_0`] ?? 0) + (row?.[`ReputationRaceMasks${i}_1`] ?? 0) * 2 ** 32;
+      const base = row?.[`ReputationBase_${i}`] ?? 0;
+      if (mask && base !== 0) start.push([mask, base]);
+    }
+    if (start.length) f.start = start;
     // what raises it: the quests (once, or again and again: a turn-in)
     const raising = all<{ quest_id: number; repeatable: number }>(
       `SELECT DISTINCT r.quest_id, COALESCE(q.special_flags, 0) & 1 AS repeatable
@@ -309,6 +319,7 @@ function luaFile(game: Game, d: ReturnType<typeof gameData>): string {
     lines.push(`      quests = ${lua(f.quests)},`);
     lines.push(`      turnins = ${lua(f.turnins)},`);
     lines.push(`      kills = ${lua(f.kills.map(([c, v, m, via]) => (via ? [c, v, m, via] : m === null ? [c, v] : [c, v, m])))},`);
+    if (f.start) lines.push(`      start = ${lua(f.start)},`);
     if (f.spill) lines.push(`      spill = ${lua(f.spill)},`);
     lines.push("      unlocks = {");
     for (const u of f.unlocks) lines.push(`        ${lua(u)},`);

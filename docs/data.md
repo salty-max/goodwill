@@ -35,6 +35,9 @@ one has it, the voice once its chapters are written):
   (Everlook, with no kills of its own, climbs on its sisters' to Exalted).
   How a capped kill spills, once the town it belongs to stops counting it,
   is unverified in game.
+- where each race starts (`start`, pairs of a race mask and the game's figure,
+  client_Faction's `ReputationBase` per `ReputationRaceMasks`; a race no pair
+  names starts at 0): the book unlocks a faction on a gain above it;
 - the races whose bit in a quest's race mask isn't their id's
   (`raceBits`, the client's ChrRaces PlayableRaceBit: Forever's Skyborne,
   races 95 and 96, are bits 32 and 33). Without it no Skyborne would be

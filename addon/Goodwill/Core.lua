@@ -7,8 +7,6 @@
 --     opened[faction][piece] = { at, level }   each chapter opened (start,
 --                                              friendly, honored, revered,
 --                                              aside, exalted)
---     base[faction] = reputation              where each standing first stood
---                                              here, to tell what was earned
 --     achievements[id] = { at, level, retro } each achievement earned
 --                                              (Achievements.lua)
 --     unlocked[faction] = true                a faction listed once stays listed
@@ -130,28 +128,29 @@ function ns.sideFactions()
 end
 
 local FRIENDLY_AT = 3000 -- (the game's figure where Friendly begins)
--- Has the character gained reputation with a faction since this book first saw
--- it (a book from before the figures: any above Neutral's start)?
+-- Where this character's race starts with a faction, the game's figure (the
+-- data's, client_Faction's ReputationBase per race; Neutral's 0 where none).
+function ns.startRep(id)
+  for _, slot in ipairs(D.factions[id].start or {}) do
+    if ns.kit.forMe(slot[1], nil, D.raceBits) then return slot[2] end
+  end
+  return 0
+end
+-- Has the character gained reputation with a faction since its start?
 function ns.gained(id)
   local _, value = ns.standingOf(id)
-  if not value or not char then return false end
-  local base = char.base and char.base[id]
-  if base then return value > base end
-  return char.legacy and value > 0 or false
+  return value ~= nil and value > ns.startRep(id)
 end
 -- Is a faction doable by this character now: it unlocks on its first gain of
--- reputation (the standing moved up off the figure this book first saw), as
--- the game's own panel lists it, and the character's own factions are there
--- from the start (a standing that begins at Friendly or better).
+-- reputation (the standing above the figure its race starts at), as the
+-- game's own panel lists it, and the character's own factions are there from
+-- the start (a start at Friendly or better).
 function ns.doable(id)
-  local _, value = ns.standingOf(id)
   if char and char.unlocked and char.unlocked[id] then return true end -- (once unlocked, kept)
+  local _, value = ns.standingOf(id)
   if not value then return false end
-  local base = char and char.base and char.base[id]
-  if base then return value > base or base >= FRIENDLY_AT end
-  -- (a book from before the first figures were kept: a standing above Neutral's
-  -- start, or a chapter beyond the first, was earned)
-  return char and char.legacy and (value > 0 or (char.opened[id] and char.opened[id].friendly)) or false
+  local start = ns.startRep(id)
+  return value > start or start >= FRIENDLY_AT
 end
 
 -- The factions the book follows for this character: its side's that it can
@@ -265,13 +264,6 @@ function ns.readStanding(faction, quietly)
 end
 
 function ns.readAll(quietly)
-  -- (where each standing first stood, to tell what the character has earned)
-  if not char.legacy then
-    for _, id in ipairs(ns.sideFactions()) do
-      local _, value = ns.standingOf(id)
-      if value and char.base[id] == nil then char.base[id] = value end
-    end
-  end
   for _, id in ipairs(ns.factions()) do
     char.unlocked[id] = true
     ns.readStanding(id, quietly)
@@ -315,14 +307,13 @@ function ns.carried(item) return countOf(item, false) end
 function ns.banked(item) return char and char.bank and char.bank[item] or 0 end
 
 -- ── the login ────────────────────────────────────────────────────────────────
-local function newBook(guid) return { guid = guid, opened = {}, bank = {}, base = {}, unlocked = {} } end
+local function newBook(guid) return { guid = guid, opened = {}, bank = {}, unlocked = {} } end
 
 function ns.login()
   local guid = UnitGUID("player")
   if type(GoodwillChar) ~= "table" or GoodwillChar.guid ~= guid then GoodwillChar = newBook(guid) end
   char = GoodwillChar
-  char.legacy = char.base == nil and next(char.opened or {}) ~= nil -- (a book from before the figures were kept)
-  char.opened, char.bank, char.base = char.opened or {}, char.bank or {}, char.base or {}
+  char.opened, char.bank = char.opened or {}, char.bank or {}
   char.unlocked = char.unlocked or {}
   ns.loadProfile()
   if ns.createMinimapButton then ns.createMinimapButton() end

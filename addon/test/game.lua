@@ -12,6 +12,8 @@ local state, FOREVER, LOCALE, obj = G.state, G.FOREVER, G.LOCALE, G.obj
 -- Neutral here. Its standing and the standing's bounds follow.
 local THRESHOLDS = { -42000, -6000, -3000, 0, 3000, 9000, 21000, 42000, 43000 }
 state.rep = {}
+-- (a faction the test leaves out stands where the character's race starts it)
+function G.start(id) return G.ns and G.ns.startRep and G.ns.startRep(id) or 0 end
 local function standing(value)
   local s = 1
   for i = 1, 8 do
@@ -23,7 +25,7 @@ G.standing = standing
 if FOREVER then
   C_Reputation = {
     GetFactionDataByID = function(id)
-      local v = state.rep[id] or 0
+      local v = state.rep[id] or G.start(id)
       local s, low, high = standing(v)
       return {
         factionID = id,
@@ -37,7 +39,7 @@ if FOREVER then
   }
 else
   function GetFactionInfoByID(id)
-    local v = state.rep[id] or 0
+    local v = state.rep[id] or G.start(id)
     local s, low, high = standing(v)
     return "Faction " .. id, "", s, low, high, v
   end
