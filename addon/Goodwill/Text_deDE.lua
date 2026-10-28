@@ -24,7 +24,7 @@ ns.translate({
     ["+%d"] = "+%d",
     ["+%d a kill at most"] = "+%d höchstens pro Tötung",
     ["+%d each"] = "+%d jedes Mal",
-    ["A faction appears here once you earn your first bit of its reputation."] = "Eine Fraktion erscheint hier, sobald du den ersten Teil ihres Rufs verdienst.",
+    ["A faction appears here once you earn your first bit of its reputation."] = "Eine Fraktion erscheint hier, sobald du deine ersten Rufpunkte bei ihr verdienst.",
     ["A new chapter from %s: %s."] = "Ein neues Kapitel von %s: %s.",
     ["A new chapter of their story. Click to read it."] = "Ein neues Kapitel ihrer Geschichte. Klicke, um es zu lesen.",
     ["A quarter of what you earn with these comes here too: %s."] = "Ein Viertel dessen, was du bei diesen verdienst, kommt auch hierher: %s.",

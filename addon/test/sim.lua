@@ -52,13 +52,12 @@ for _, id in ipairs({ TIMBERMAW, DAWN, THORIUM }) do
   check(not ns.opened(id, "friendly"), "and nothing more yet: " .. id)
 end
 check(not said(NEW_CHAPTER), "quietly")
-s.rep[DAWN] = 0
-check(not listed(DAWN) or char.base[DAWN] == 0, "a standing back at its first figure")
-s.rep[DAWN] = -100
-check(listed(DAWN), "a faction once unlocked stays: its book has chapters")
-s.rep[DAWN], s.rep[TIMBERMAW], s.rep[THORIUM] = nil, -3500, nil
-char.unlocked, char.opened[DAWN] = {}, nil
-check(not listed(DAWN) and not listed(THORIUM), "a loss or no gain isn't unlocking")
+s.rep[DAWN], s.rep[TIMBERMAW], s.rep[THORIUM] = nil, -3600, nil
+char.unlocked, char.opened[DAWN], char.opened[TIMBERMAW] = {}, nil, nil
+check(not listed(DAWN) and not listed(THORIUM), "no gain isn't unlocking")
+check(not listed(TIMBERMAW), "nor is a loss")
+s.rep[TIMBERMAW] = -3500
+ns.readAll(true)
 -- the chapters counted are the listed factions'
 local opened = 0
 for _, id in ipairs(ns.factions()) do
@@ -67,14 +66,16 @@ for _, id in ipairs(ns.factions()) do
   end
 end
 check(ns.chaptersOpened() == opened, "the overview counts the chapters of the factions it lists")
--- a book from before the first figures were kept: a standing off the start counts
-GoodwillChar.base, GoodwillChar.legacy = nil, true
+-- a book from before the first figures were kept, at the next login: a standing
+-- above the start counts, an untouched Hostile one does not
+GoodwillChar.base, GoodwillChar.unlocked = nil, nil
 s.rep[DAWN] = 3100
-check(listed(DAWN), "an old book's earned standing keeps its faction")
+G.login()
+char = GoodwillChar
+check(char.legacy and listed(DAWN), "an old book's earned standing keeps its faction")
+check(not listed(TIMBERMAW), "and an untouched Hostile one stays out")
 s.rep[DAWN] = nil
-check(not listed(DAWN), "and one never gained stays out")
-GoodwillChar.legacy = nil
-GoodwillChar.base = {}
+char.legacy, char.base, char.unlocked, char.opened[DAWN] = nil, {}, {}, nil
 ns.readAll(true)
 check(D.factions[72] and D.factions[76], "both sides' capitals in the data")
 local mine = {}

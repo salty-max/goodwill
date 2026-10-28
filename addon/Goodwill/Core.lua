@@ -138,9 +138,9 @@ function ns.doable(id)
   if not value then return false end
   local base = char and char.base and char.base[id]
   if base then return value > base or base >= FRIENDLY_AT end
-  -- (a book from before the first figures were kept: a standing off Neutral's
+  -- (a book from before the first figures were kept: a standing above Neutral's
   -- start, or a chapter beyond the first, was earned)
-  return char and char.legacy and (value ~= 0 or (char.opened[id] and char.opened[id].friendly)) or false
+  return char and char.legacy and (value > 0 or (char.opened[id] and char.opened[id].friendly)) or false
 end
 
 -- The factions the book follows for this character: its side's that it can
