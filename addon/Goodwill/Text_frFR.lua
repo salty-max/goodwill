@@ -84,6 +84,7 @@ ns.translate({
     ["Minimap button"] = "Bouton de la minicarte",
     ["Minimap button hidden (%s minimap shows it again)."] = "Bouton de la minicarte masqué (%s minimap pour le réafficher).",
     ["Minimap button shown."] = "Bouton de la minicarte affiché.",
+    ["More factions appear here as you grow into them, or as you earn a first bit of their reputation."] = "D'autres factions apparaissent ici à mesure que vous grandissez, ou dès que vous gagnez un peu de leur réputation.",
     ["Next: %s, at %s."] = "Ensuite : %s, à %s.",
     ["No other character yet"] = "Aucun autre personnage pour l'instant",
     ["No sound"] = "Aucun son",

@@ -7,6 +7,8 @@
 --     opened[faction][piece] = { at, level }   each chapter opened (start,
 --                                              friendly, honored, revered,
 --                                              aside, exalted)
+--     base[faction] = reputation              where each standing first stood
+--                                              here, to tell what was earned
 --     bank[item] = n, bankAt                   the turn-ins' items in the bank,
 --                                              as last seen there
 --   GoodwillSettings (SavedVariables): each character's settings, the kit's
@@ -113,13 +115,70 @@ function ns.side() return UnitFactionGroup("player") == "Horde" and "H" or "A" e
 -- raceBits say otherwise, Forever's Skyborne)
 function ns.forMe(q) return ns.kit.forMe(q.races, q.classes, D.raceBits) end
 
--- The factions the book follows for this character: its side's and both
--- sides', in the data's order.
-function ns.factions()
+-- The factions of this character's side: its side's and both sides', in the
+-- data's order (doable or not yet).
+function ns.sideFactions()
   local out, side = {}, ns.side()
   for _, id in ipairs(D.order) do
     local f = D.factions[id]
     if not f.side or f.side == side then table.insert(out, id) end
+  end
+  return out
+end
+
+-- The level a faction's road begins at for this character: the tenth
+-- percentile of the levels its quests and turn-ins open to the race and
+-- class ask (a few early quests would keep a level 50 faction open at level
+-- 1). Nil: nothing in the data is open to it.
+local startLevels = {}
+function ns.startLevel(id)
+  local key = id .. ":" .. tostring(select(3, UnitRace("player"))) .. ":" .. tostring(select(3, UnitClass("player")))
+  if startLevels[key] ~= nil then return startLevels[key] or nil end
+  local f, levels = D.factions[id], {}
+  for _, list in ipairs({ f.quests or {}, f.turnins or {} }) do
+    for _, qid in ipairs(list) do
+      local q = D.quests[qid]
+      if q and ns.forMe(q) then table.insert(levels, q.min or q.level or 0) end
+    end
+  end
+  if #levels == 0 then
+    startLevels[key] = false
+    return nil
+  end
+  table.sort(levels)
+  startLevels[key] = levels[math.max(1, math.ceil(#levels / 10))]
+  return startLevels[key]
+end
+
+-- Is a faction doable by this character now: it has earned some of it (its
+-- standing moved off where this book first saw it), or its road has begun
+-- at the character's level.
+-- (the level the game announced at a level-up: UnitLevel may still say the old one then)
+local function myLevel() return math.max(UnitLevel("player") or 0, ns.levelUp or 0) end
+function ns.doable(id)
+  local standing, value = ns.standingOf(id)
+  local base = char and char.base and char.base[id]
+  if value and base and value > base then return true end
+  -- (a book from before the first figures were kept: a standing past Neutral's
+  -- first step, or a chapter beyond the first, was earned)
+  if
+    char
+    and char.legacy
+    and standing
+    and (standing >= ns.FRIENDLY or (char.opened[id] and char.opened[id].friendly))
+  then
+    return true
+  end
+  local from = ns.startLevel(id)
+  return from ~= nil and myLevel() >= from
+end
+
+-- The factions the book follows for this character: its side's that it can
+-- earn now (the others appear as it grows into them), in the data's order.
+function ns.factions()
+  local out = {}
+  for _, id in ipairs(ns.sideFactions()) do
+    if ns.doable(id) then table.insert(out, id) end
   end
   return out
 end
@@ -154,9 +213,15 @@ function ns.hasChapters(faction) return ns.chapters and ns.chapters[faction] ~= 
 -- How many chapters this character has opened, every faction's.
 function ns.chaptersOpened()
   local n = 0
-  for _, pieces in pairs(char and char.opened or {}) do
-    for _ in pairs(pieces) do
-      n = n + 1
+  local listed = {}
+  for _, id in ipairs(ns.factions()) do
+    listed[id] = true
+  end
+  for faction, pieces in pairs(char and char.opened or {}) do
+    if listed[faction] then
+      for _ in pairs(pieces) do
+        n = n + 1
+      end
     end
   end
   return n
@@ -219,6 +284,13 @@ function ns.readStanding(faction, quietly)
 end
 
 function ns.readAll(quietly)
+  -- (where each standing first stood, to tell what the character has earned)
+  if not char.legacy then
+    for _, id in ipairs(ns.sideFactions()) do
+      local _, value = ns.standingOf(id)
+      if value and char.base[id] == nil then char.base[id] = value end
+    end
+  end
   for _, id in ipairs(ns.factions()) do
     ns.readStanding(id, quietly)
   end
@@ -259,13 +331,14 @@ function ns.carried(item) return countOf(item, false) end
 function ns.banked(item) return char and char.bank and char.bank[item] or 0 end
 
 -- ── the login ────────────────────────────────────────────────────────────────
-local function newBook(guid) return { guid = guid, opened = {}, bank = {} } end
+local function newBook(guid) return { guid = guid, opened = {}, bank = {}, base = {} } end
 
 function ns.login()
   local guid = UnitGUID("player")
   if type(GoodwillChar) ~= "table" or GoodwillChar.guid ~= guid then GoodwillChar = newBook(guid) end
   char = GoodwillChar
-  char.opened, char.bank = char.opened or {}, char.bank or {}
+  char.legacy = char.base == nil and next(char.opened or {}) ~= nil -- (a book from before the figures were kept)
+  char.opened, char.bank, char.base = char.opened or {}, char.bank or {}, char.base or {}
   ns.loadProfile()
   if ns.createMinimapButton then ns.createMinimapButton() end
   if ns.createSettingsPanel then ns.createSettingsPanel() end
@@ -276,6 +349,12 @@ end
 -- A standing changed: the chapters it reached (the game tells it for any
 -- faction at once, so every one followed is read again).
 ns.on("UPDATE_FACTION", function()
+  if ns.loggedIn then ns.readAll(false) end
+end)
+-- A level gained: a faction whose road begins here joins the book (and its
+-- first chapter opens).
+ns.on("PLAYER_LEVEL_UP", function(level)
+  ns.levelUp = tonumber(level)
   if ns.loggedIn then ns.readAll(false) end
 end)
 -- A quest turned in: a paragraph after it may show now, the road shortens.
