@@ -260,14 +260,22 @@ local function showOverview()
     n = n + 1
     if (ns.standingOf(id) or 0) >= ns.EXALTED then exalted = exalted + 1 end
   end
+  -- (the counts are out of what this character's side can ever raise, the
+  -- chapters of the voiced factions of its side)
+  local total, pieces = #ns.sideFactions(), 0
+  for _, id in ipairs(ns.sideFactions()) do
+    for _ in pairs(ns.chapters and ns.chapters[id] or {}) do
+      pieces = pieces + 1
+    end
+  end
   page:start(
     L["Your standings"],
     ns.kit.plural(n, "%d faction", "%d factions"):format(n),
     function(p) p.tex:SetTexture(ns.ICON) end
   )
   page:stats({
-    { tostring(exalted), L["at Exalted"] },
-    { tostring(ns.chaptersOpened()), L["chapters opened"] },
+    { exalted .. " / " .. total, L["at Exalted"] },
+    { ns.chaptersOpened() .. " / " .. pieces, L["chapters opened"] },
   })
   page:paragraph(
     L["Pick a faction: its page tells you how to raise it from where you stand, and what the next standing unlocks."],
