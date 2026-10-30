@@ -10,13 +10,16 @@ story at each standing you reach.
   stop at.
 - **The unlocks.** What each standing opens, as the game's items: the
   quartermasters' goods, the recipes (with their trade), the quests.
-- **The stories.** Some factions have a voice of their own. Gorn One Eye of
-  the Timbermaw, Duke Nicholas Zverenhoff of the Argent Dawn and Lokhtos
-  Darkbargainer of the Thorium Brotherhood tell you a little more at every
-  standing you reach with them, from the stranger's warning to what they
-  keep for those they trust.
+- **The stories.** Thirty-five factions have a voice of their own: Gorn One
+  Eye of the Timbermaw, Duke Nicholas Zverenhoff of the Argent Dawn, Lokhtos
+  Darkbargainer of the Thorium Brotherhood and thirty-two more tell you a
+  little more at every standing you reach with them, from the stranger's
+  warning to what they keep for those they trust.
+- **The achievements.** The book keeps its own: your first gain with a
+  faction, the standings you reach, whole groups at Exalted and the stories
+  you open, each with the game's fanfare and alert.
 
-English and French. `/goodwill` opens the book.
+English, French, German and Spanish. `/goodwill` opens the book.
 
 The game's data comes from [wow-data](https://github.com/salty-max/wow-data):
 the game clients' tables, [Questie](https://github.com/Questie/Questie)'s

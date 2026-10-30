@@ -6,8 +6,7 @@ chapters' build: `docs/data.md`.
 ## The package
 
 - `addon/Goodwill`: one package for every game (`Goodwill_Vanilla.toc`:
-  Classic Era, 11509; `_Camelot.toc`: Forever, 16001; no TBC Anniversary: the
-  family dropped it), the same but for the interface and the game's factions
+  Classic Era, 11509; `_Camelot.toc`: Forever, 16001), the same but for the interface and the game's factions
   (`Factions_Classic.lua`, `Factions_Forever.lua`). Loads its factions,
   `Kit.lua` (the kit's copy, `bun run kit:sync`; never edit it),
   `Locale.lua`, `Text_[TextLocale].lua`, `Chapters_[TextLocale].lua`,
