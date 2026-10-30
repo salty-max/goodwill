@@ -30,6 +30,7 @@
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import type * as WowDb from "../../wow-data/src/db";
+import { LOCALES } from "./locales-lib";
 import { familyPath } from "./root";
 
 // through the family folder, from a worktree too (scripts/root.ts)
@@ -39,7 +40,6 @@ const ROOT = join(import.meta.dir, "..");
 const ADDON = join(ROOT, "addon", "Goodwill");
 type Game = "classic" | "forever";
 const GAMES: Game[] = ["classic", "forever"];
-const LOCALES = ["enUS", "enGB", "deDE", "frFR", "esES", "esMX", "ruRU", "ptBR", "itIT", "koKR", "zhCN", "zhTW"];
 // (the client's English is enUS: enGB reads the same names)
 const SOURCE_LOCALE: Record<string, string> = { enGB: "enUS" };
 

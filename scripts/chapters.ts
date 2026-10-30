@@ -39,13 +39,13 @@ import { createHash } from "node:crypto";
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import type * as WowDb from "../../wow-data/src/db";
+import { LOCALES } from "./locales-lib";
 import { familyPath } from "./root";
 
 const { openDb } = (await import(familyPath("wow-data", "src", "db.ts"))) as typeof WowDb;
 
 const ROOT = join(import.meta.dir, "..");
 const ADDON = join(ROOT, "addon", "Goodwill");
-const LOCALES = ["enUS", "enGB", "deDE", "frFR", "esES", "esMX", "ruRU", "ptBR", "itIT", "koKR", "zhCN", "zhTW"];
 const TRANSLATED = ["frFR", "deDE", "esES"];
 const BORROWS: Record<string, string> = { esMX: "esES" };
 export const PIECES = ["start", "friendly", "honored", "revered", "aside", "exalted"] as const;

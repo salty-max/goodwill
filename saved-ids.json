@@ -10,5 +10,13 @@
       "at": "chapters"
     }
   },
-  "removed": []
+  "removed": [
+    {
+      "table": "chapters",
+      "file": "addon/Goodwill/Chapters_itIT.lua",
+      "ids": "*",
+      "why": "Italian dropped from every addon (no Italian client in Classic Era or Forever); the file was an English copy, the same ids stay in the other languages' files",
+      "approved": "2026-10-30, the user's go (drop TBC Anniversary and Italian from every addon)"
+    }
+  ]
 }
