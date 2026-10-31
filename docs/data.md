@@ -77,7 +77,10 @@ the lender's client writes otherwise on the borrower's (an area, faction
 or npc of wow-data's), so a new esES name without its esMX one fails.
 
 The build refuses a semicolon (the gender tokens' own aside), non-ASCII in
-the English, a figure in the prose, a piece missing (all six, or the ones
+the English, a figure in the prose, an English title
+that is a placeholder (the piece's own name, "The aside", "TODO":
+`scripts/titles.ts`, tested) or that another English piece already has, a
+piece missing (all six, or the ones
 the faction's `pieces` in `data/factions.json` lists, and none beyond
 them), a translation whose marked paragraphs aren't its English's, a mark
 on a quest either game flags repeatable (wow-data's `special_flags`: the

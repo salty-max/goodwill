@@ -44,6 +44,7 @@ import { join } from "node:path";
 import type * as WowDb from "../../wow-data/src/db";
 import { LOCALES } from "./locales-lib";
 import { stampLocales } from "./stamp";
+import { PIECES, sharedTitles, titleProblem } from "./titles";
 import { familyPath } from "./root";
 
 const { openDb } = (await import(familyPath("wow-data", "src", "db.ts"))) as typeof WowDb;
@@ -52,7 +53,7 @@ const ROOT = join(import.meta.dir, "..");
 const ADDON = join(ROOT, "addon", "Goodwill");
 const TRANSLATED = ["frFR", "deDE", "esES"];
 const BORROWS: Record<string, string> = { esMX: "esES" };
-export const PIECES = ["start", "friendly", "honored", "revered", "aside", "exalted"] as const;
+export { PIECES };
 type PieceName = (typeof PIECES)[number];
 // (each piece's length in English: longer as the faction opens up)
 const LENGTH: Record<PieceName, [number, number]> = {
@@ -180,7 +181,8 @@ const verify = (pieces: Map<string, Piece>, translated: boolean, locale: string)
     if (tokensOut(text).includes(";")) problems.push(`${p.file}: a semicolon`);
     if (!translated && /[^\x20-\x7e]/.test(text + p.title)) problems.push(`${p.file}: not plain ASCII`);
     if (/\d/.test(tokensOut(text))) problems.push(`${p.file}: a figure in the prose (the road gives them)`);
-    if (!p.title) problems.push(`${p.file}: no title`);
+    const bad = translated ? (p.title ? undefined : "no title") : titleProblem(p.title);
+    if (bad) problems.push(`${p.file}: ${bad}`);
     const n = words(p);
     const [lo, hi] = LENGTH[p.piece];
     const slack = translated ? 1.2 : 1;
@@ -211,6 +213,7 @@ const verify = (pieces: Map<string, Piece>, translated: boolean, locale: string)
     }
 };
 verify(english, false, "enUS");
+problems.push(...sharedTitles([...english.values()]));
 // (a repeatable quest is never flagged done, so a paragraph marked with one
 // would never show, or never leave)
 {

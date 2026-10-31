@@ -2,7 +2,7 @@
 faction: 510
 voice: 15021
 piece: exalted
-title: The Door
+title: The Other Reason
 beside: [arathi-basin, the-forsaken]
 ---
 I said spite, when you were new to us. It's true, and it's the answer I like best to give, because it frightens the living and costs me nothing.
