@@ -5,7 +5,7 @@ piece: honored
 title: The Little Wooden Man
 beside: [khans-of-desolace]
 ---
-Once a gnome no taller than a child came out of the dust behind his horses, with a cart of toys. Fires in colors. Little engines that went on without breath. He was the funniest thing I ever met. I killed him. He made me laugh first. I remember.
+Once a gnome no taller than a child came out of the dust behind his horses, with a cart of toys. Fires in colours. Little engines that went on without breath. He was the funniest thing I ever met. I killed him. He made me laugh first. I remember.
 
 I kept the toy I liked best. A wooden man with a hand that went up and down. Hello, hello, hello. One day I struck it, and it came apart in my fist. I was sorry. Warug is never sorry. I was sorry about the little wooden man.
 

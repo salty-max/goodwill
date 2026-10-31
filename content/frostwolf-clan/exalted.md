@@ -5,7 +5,7 @@ piece: exalted
 title: The Cold Head
 beside: [frostwolf-clan, alterac-valley]
 ---
-Drek'Thar speaks of you. Out loud, to the elders, where everyone can hear. One of the elders asked me afterward whether you were really as cold in battle as the soldiers say. I told him colder.
+Drek'Thar speaks of you. Out loud, to the elders, where everyone can hear. One of the elders asked me afterwards whether you were really as cold in battle as the soldiers say. I told him colder.
 
 The Eye of Command will be yours soon, and the soldiers of the valley will follow your word.
 

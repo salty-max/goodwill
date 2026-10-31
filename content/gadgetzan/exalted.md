@@ -7,7 +7,7 @@ beside: [gadgetzan, steamwheedle-cartel]
 ---
 Hold out your hands.
 
-That is a cup of water. Cold and clean, from the deep well, the good one. It is free. I have practiced saying that. It still sounds strange.
+That is a cup of water. Cold and clean, from the deep well, the good one. It is free. I have practised saying that. It still sounds strange.
 
 Do not make that face. I know what I said the first day, and I meant it, and I still mean it for everybody else. In Gadgetzan everything costs something. But the Company owes you, and the Company pays what it owes, and today I am the Company, and I say this one is on the house.
 

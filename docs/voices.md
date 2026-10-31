@@ -274,7 +274,7 @@ practical, a trader's patter: every chapter is a trade. His defect is that
 everything is a transaction, until he admits it never was. French: vous
 throughout, courtly.
 
-**The arc.** No barter yet, then honor in coin, then the mango and home,
+**The arc.** No barter yet, then honour in coin, then the mango and home,
 then what the priests took, then from home: the sea he never had to
 bargain for.
 
@@ -290,7 +290,7 @@ of his flight and bound to remain. He warns that the hive
 stirs and the qiraji plan for war again, and that the time has come to keep
 a promise made a thousand years past. The road to the Scepter of the
 Shifting Sands starts with him. Everyone starts Hated with the Brood: the
-bronze flight has not favored a mortal in a thousand years.
+bronze flight has not favoured a mortal in a thousand years.
 
 **The voice.** Ancient, slow, gentle, sorrowful. Long, quiet sentences,
 images of sand and the hourglass. Dry wisdom, never cryptic for its own
@@ -301,7 +301,7 @@ anything to arrive. French: vous, and no agreement aimed at the speaker
 
 **The arc.** Beneath notice, then grains in the glass, then the breath that
 bound him, then the oath (its content his own: the game never says it) and
-what frightens a Watcher, then favor, and the watch ending.
+what frightens a Watcher, then favour, and the watch ending.
 
 **Never.** Riddles for their own sake, a hint of what is to come, the
 dragons' grandeur played straight.
@@ -381,7 +381,7 @@ thinking it was their idea).
 **Who.** The baron of Booty Bay, of the Blackwater Raiders, the Steamwheedle
 Cartel's man in the bay, on the top floor of the tavern. At war with the
 Bloodsail. A collector of ancient troll relics, who chased the Stone of the
-Tides. Krazek keeps an ear out for rumors for him. He sponsors Pozzik's
+Tides. Krazek keeps an ear out for rumours for him. He sponsors Pozzik's
 racers and wants the Venture Company's blueprints. Nobody crosses him and
 lives.
 
@@ -487,7 +487,7 @@ amused, practical about violence, never gleeful. His defect: everyone is a
 knife to him. His growth: crew. French: vous, a little clipped (the game's
 French Firallon drops letters), his own agreements masculine.
 
-**The arc.** The bay's smell on you, then the colors and the two throats,
+**The arc.** The bay's smell on you, then the colours and the two throats,
 then crew, and what it cost.
 
 **Never.** Gore, the pirates as cartoon, the Codex's "the great pirate fleet
@@ -553,7 +553,7 @@ the centaur, he says, and the Magram need no protecting: the Gelkis are
 stupid to believe Theradras keeps them, and he has their tears, her
 crystals, broken. It is better to laugh when you kill, so the enemy sees
 he is weak. Long ago a little gnome came to Desolace with horses and a
-cart of strange things, lights of many colors, things that moved and were
+cart of strange things, lights of many colours, things that moved and were
 not alive. Warug killed him, but first the gnome made him laugh, and he
 kept a wooden man that waved at him until he hit it and broke it. He wants
 another. Khan Shaka of the Gelkis, his head on a pike. The climb is Gelkis
@@ -837,7 +837,7 @@ praises. The Winterax trolls and their Korrak, raised again. Horde only,
 Neutral at the start.
 
 **The voice.** An old orc warrior, slow and heavy, formal, a little
-grandiose, honor in every line. His defect: he fears the rage as much as
+grandiose, honour in every line. His defect: he fears the rage as much as
 he loves it. His growth: he trusts you to lead without it. French: vous,
 his own agreements masculine.
 
@@ -861,7 +861,7 @@ the reader's. Alliance only, Neutral at the start.
 
 **The voice.** Spare, quiet, watchful, short sentences, a long memory of
 the forest. She speaks only when there is something to say. Her defect:
-silence as armor. Her growth: she gives you something she has kept.
+silence as armour. Her growth: she gives you something she has kept.
 French: vous, her own agreements feminine.
 
 **The arc.** Few words, then the trees, then the stumps and the owls,
@@ -939,7 +939,7 @@ news of their deeds has reached many ears, then all five, when spies
 report the League's resolve weakening. Horde only, Neutral at the start.
 
 **The voice.** A Forsaken officer, dry, unhurried, precise, a dead man's
-humor, honest about spite and a little proud of it. His defect: spite is
+humour, honest about spite and a little proud of it. His defect: spite is
 the only reason he will give. His growth: he gives the other one. French:
 vous, his own agreements masculine.
 
