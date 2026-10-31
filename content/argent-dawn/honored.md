@@ -5,7 +5,7 @@ piece: honored
 title: A Spine of Iron
 beside: [argent-dawn, lights-hope-chapel, baron-rivendare, balnazzar, scarlet-crusade, the-ashbringer, naxxramas]
 ---
-I promised to ask you about extremes. Here is my question. What do you call a man who fights the Scourge, prays to the Light, and kills the innocent because he will not trouble to tell them from the guilty? The Scarlet Crusade calls him a crusader. I call him a blasphemer!
+I promised to ask you about extremes, and I keep my promises. What do you call a man who fights the Scourge, prays to the Light, and kills the innocent because he will not trouble to tell them from the guilty? The Scarlet Crusade calls him a crusader. I call him a blasphemer!
 
 They hold part of Stratholme. Inside it, a man named Galford keeps their archive, years of what they are pleased to call intelligence.
 

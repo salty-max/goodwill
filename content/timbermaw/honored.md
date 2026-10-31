@@ -5,7 +5,7 @@ piece: honored
 title: What Few Have Asked
 beside: [timbermaw, furbolgs, the-winterfall-firewater, felwood]
 ---
-You have walked the hold so often now that the guards no longer reach for anything when you pass. So here is something, and you may do with it whatever your kind does with things it is told.
+You have walked the hold so often now that the guards no longer reach for anything when you pass. So take this, and do with it whatever your kind does with things it is told.
 
 The night elves took our help once, against the demons, and many of them took it holding their noses. Some of them have not stopped. Ask the Sentinels, on a day they feel honest.
 

@@ -11,4 +11,4 @@ Each talisman that comes to me from the gulch is a fight someone lived through. 
 
 The orcs are loud, and they like it that way. I have never needed to match them.
 
-My sisters say I talk to the trees. I do not. I listen to them, which is different, and they have more to say than most of the people who pass me on this road.
+My sisters say I talk to the trees. I do not. I listen to them, and they have more to say than most of the people who pass me on this road.
