@@ -15,4 +15,4 @@ Whatever you did for this town, you did it for a place that charged you for ever
 
 [after: 2781] And then there is the caliph. The Company paid the bounty for him, and I added nothing to it, because the Company's money is the Company's. This cup is mine.
 
-Drink it slowly. It tastes better when nobody is charging you for it. If word gets out that the Chief Engineer gave water away, there will be a line around the block by noon, and I will deny everything.
+Drink it slowly. It tastes better when nobody is charging you for it. Tell nobody. Word that the Chief Engineer gave water away would have a line round the block by noon, and I would deny everything.

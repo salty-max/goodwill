@@ -11,6 +11,6 @@ The apothecaries will tell you the dead feel nothing. They have studied it. They
 
 The apothecaries are wrong about a great many things. They are wrong about this.
 
-I felt something at this desk long before it had a name. Something like gratitude, which I had thought was among the things I lost on the way down here. It was not lost. It was waiting for a reason, and the reasons kept arriving, arms full, from strangers.
+I felt something at this desk long before it had a name. Something like gratitude, which I had thought was among the things I lost on the way down here. It had only been waiting for a reason, and the reasons kept arriving, arms full, from strangers.
 
 I have stopped telling the apothecaries it does not exist. They have entered me in their own ledger, I expect, under curiosities. I can live with that, in the manner of speaking that applies to me. Someone has to be the exception in their ledger. It may as well be someone who keeps good records.

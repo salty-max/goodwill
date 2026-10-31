@@ -5,7 +5,7 @@ piece: revered
 title: The Workshop
 beside: [gnomeregan-exiles, gnomes, gnomeregan]
 ---
-Mine was on a lower level, past the big gears. Nothing grand. A bench, a lamp, a shelf of parts I was sure I'd need one day and never did. They're probably still there, being unnecessary in the dark.
+My workshop was on a lower level, past the big gears. Nothing grand. A bench, a lamp, a shelf of parts I was sure I'd need one day and never did. They're probably still there, being unnecessary in the dark.
 
 There was something on the bench when we left. Half done. I'd been working on it for a year, and it was going to be the best thing I ever made, and I can't tell you what it was, because I've forgotten. I've tried and tried, and I remember the bench and the lamp, and the thing on it is just a shape.
 
