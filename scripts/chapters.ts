@@ -33,13 +33,17 @@
  *
  *   bun scripts/chapters.ts           write the Chapters files
  *   bun scripts/chapters.ts --check   fail if one isn't up to date or a rule breaks
- *   bun scripts/chapters.ts --stamp   record each translation's English as read
+ *   bun scripts/chapters.ts --stamp frFR   record that translation's English as read (a language, or all)
+ *
+ * --check also prints a line per translation, "frFR: 35 translations (2 stale)", which
+ * addon-kit's preflight reads beside the interface's.
  */
 import { createHash } from "node:crypto";
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import type * as WowDb from "../../wow-data/src/db";
 import { LOCALES } from "./locales-lib";
+import { stampLocales } from "./stamp";
 import { familyPath } from "./root";
 
 const { openDb } = (await import(familyPath("wow-data", "src", "db.ts"))) as typeof WowDb;
@@ -160,8 +164,14 @@ function swapOnce(text: string, pairs: [string, string][]): string {
 
 const args = process.argv.slice(2);
 const check = args.includes("--check");
+const stamping = stampLocales(args, TRANSLATED);
+if (typeof stamping === "string") {
+  console.error(`✗ ${stamping}`);
+  process.exit(2);
+}
 const problems: string[] = [];
 const notes: string[] = [];
+const summary: string[] = [];
 const english = read(join(ROOT, "content"));
 
 const verify = (pieces: Map<string, Piece>, translated: boolean, locale: string) => {
@@ -257,19 +267,28 @@ for (const locale of LOCALES) {
     const stampFile = join(ROOT, "i18n", locale, "content-stamp.json");
     const stamps: Record<string, string> = existsSync(stampFile) ? JSON.parse(readFileSync(stampFile, "utf8")) : {};
     const fresh: Record<string, string> = {};
+    let stale = 0;
     for (const k of mine.keys()) {
       const en = english.get(k);
       if (!en) continue;
       fresh[k] = hash(en);
-      if (stamps[k] !== hash(en)) notes.push(`${locale}: ${k}: its English changed since it was translated (--stamp once read)`);
+      if (stamps[k] !== hash(en)) {
+        stale++;
+        if (!stamping.includes(locale)) notes.push(`${locale}: ${k}: its English changed since it was translated (--stamp ${locale} once read)`);
+      }
     }
-    if (args.includes("--stamp")) writeFileSync(stampFile, `${JSON.stringify(fresh, null, 2)}\n`);
+    if (stamping.includes(locale)) {
+      stale = 0;
+      writeFileSync(stampFile, `${JSON.stringify(fresh, null, 2)}\n`);
+    }
+    summary.push(`${locale}: ${Object.keys(fresh).length} translations (${stale} stale)`);
     const swapFile = join(ROOT, "i18n", locale, "classic-names.json");
     swaps = existsSync(swapFile) ? JSON.parse(readFileSync(swapFile, "utf8")) : {};
   }
   files[`Chapters_${locale}.lua`] = luaFor(locale, pieces, swaps);
 }
 for (const n of notes) console.log(`  ${n}`);
+for (const l of summary) console.log(l);
 if (problems.length) {
   for (const p of problems) console.error(`✗ ${p}`);
   process.exit(1);

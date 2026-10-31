@@ -61,7 +61,7 @@ revered, aside, exalted), front matter `faction`, `voice`, `piece`,
 for the build); paragraphs, `[after: <quest>]` or `[before: <quest>]` at a
 paragraph's start. A translation (French, German, Spanish) in `i18n/<locale>/content/<faction>/`,
 front matter `piece` and `title`, the same marked paragraphs, stamped
-against its English (`i18n/<locale>/content-stamp.json`, `--stamp`).
+against its English (`i18n/<locale>/content-stamp.json`, `--stamp <language>`).
 Classic Era's place names where its client differs:
 `i18n/<locale>/classic-names.json`, swapped in by the book the longest
 first, so a name may hold another ("Goulet des Chanteguerres" goes to
