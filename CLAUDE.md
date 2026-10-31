@@ -5,8 +5,8 @@ character stands (the turn-ins the bags and the bank hold, the quests still
 open, the kills that still count, what each standing unlocks), and, for a
 faction with a voice of its own, a chapter of its story at each standing,
 told by someone who trusts you a little more each time. Planned in
-`../ideas/reputation-road.md`, its voices in
-`../ideas/reputation-road-voices.md` (the cards the chapters follow).
+`../ideas/reputation-road.md`, its voices in `docs/voices.md` (the rules and
+the cards the chapters follow).
 Started 23 October 2026. On GitHub (salty-max/goodwill, public, 23 October
 2026), released as v0.2.0 on GitHub, CurseForge and Wago. Classic Era (11509) and Forever (16001), one
 package. Read the family's CLAUDE.md
@@ -21,7 +21,8 @@ package. Read the family's CLAUDE.md
 | The factions the book follows, their groups, sides and voices, by hand | `data/factions.json` |
 | The chapters themselves | `content/<faction>/<piece>.md`, each translation in `i18n/<locale>/content/<faction>/` (French, German, Spanish: esMX borrows esES through `i18n/esMX/regional.json`, resolved into `regional.resolved.json` by addon-kit's regional.ts) |
 | The logo, its master, exports and exact generation prompt | `assets/README.md` |
-| The plan, the voices, the waves of chapters to come | `../ideas/reputation-road.md`, `../ideas/reputation-road-voices.md` |
+| The voices: how a chapter reads, what it may tell, the banned devices, the French, one card per voice | `docs/voices.md` |
+| The plan and the waves of chapters to come | `../ideas/reputation-road.md` |
 
 ## Commands
 
@@ -53,7 +54,9 @@ scripts/release.sh --version X.Y.Z [--hold] NOTES.md   # check, tag, push; Actio
   English name.
 - The chapters follow the Codex's lore rules (any source, nothing anachronic,
   original wording), the voices' feelings and manner ours, the factions'
-  facts sourced (`../ideas/reputation-road-voices.md` lists each piece's).
+  facts sourced (the first drafts listed each piece's in
+  `../ideas/reputation-road-voices.md`, outside git; the voices' cards are
+  `docs/voices.md`).
   A chapter tells only what every reader at its standing has seen: a deed
   of the reader's only in an `[after: <quest>]` paragraph. It may tell what
   the Codex tells, never the same way (the user's rule, 23 October 2026):

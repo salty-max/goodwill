@@ -13,7 +13,7 @@
  *   files). A paragraph "[after: <quest id>] ..." shows once that quest is
  *   turned in, "[before: <quest id>] ..." until then.
  *
- * The voices' rules (../ideas/reputation-road-voices.md) the build can check:
+ * The voices' rules (docs/voices.md) the build can check:
  *   - every faction data/factions.json gives chapters has all six pieces (or
  *     the ones its "pieces" lists, written so far)
  *   - no semicolons in any language (the gender tokens' own aside); plain
