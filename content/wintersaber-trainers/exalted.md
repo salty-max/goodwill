@@ -11,6 +11,6 @@ She is one I raised from a cub. Of all of them she took the longest to eat from 
 
 She will carry you wherever you ask, through any weather. She goes quiet if she is kept too long from the cold. Give her the snow now and then.
 
-On the first day I told you that you would have to win us both, and that the cats were the harder half. I had that the wrong way round. The young ones made their peace with you long before I did. I have lived among cats so long that a person takes me longer than a cub. You kept coming back anyway, day after day, the way I keep putting the meat down for them. It turns out I was the cub.
+On the first day I told you that you would have to win us both, and that the cats were the harder half. I had that the wrong way round. The young ones made their peace with you long before I did. I have lived among cats so long that a person takes me longer than a cub. You climbed up here anyway, day after day, the way I keep putting the meat down for them. It turns out I was the cub.
 
 Go gently the first time. She has never left the rock.

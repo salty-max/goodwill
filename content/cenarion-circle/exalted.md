@@ -11,8 +11,6 @@ You know what I'd give you, if I could give you anything? My post. Just for one 
 
 I'd walk out of the Hold with you, past the camps and the stones and out into the desert, and we'd find the biggest thing the cult can call and find out together how hard it hits!
 
-I can't. Someone has to stand here, and it's me. It's always been me. So instead I'll tell you the thing I've never told anybody. When Huum goes quiet in the evening, I watch him. Him, not whatever he's listening to. He's the one I'm guarding. The Hold, the wall, the papers, all of it, I'd trade for him without a second thought, and that's a terrible thing to say when you're standing guard.
+I can't. Someone has to stand here, and it's me. It's always been me. So I stay, the way I always have. When Huum goes quiet in the evening, I watch him. Him, not whatever he's listening to. His ears go still, his breathing slows, and he's somewhere I can't follow. He's the one I'm guarding. The Hold, the wall, the papers, all of it, I'd trade for him without a second thought, and that's a terrible thing to say when you're standing guard.
 
 Huum would tell me the land needs guarding more than he does. Huum would be right. He usually is. I'd still pick him.
-
-You're the only one I've ever said it to.
