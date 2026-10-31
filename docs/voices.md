@@ -34,7 +34,13 @@ French may run a fifth longer. `scripts/chapters.ts` notes a piece outside them 
   first login, own race at 4,000), the start and Friendly pieces open
   together for a reader who has done nothing yet, and a reader may reach
   Honored or Revered on that city's quests alone: no line there thanks the
-  reader for a deed outside an `[after]` paragraph.
+  reader for a deed outside an `[after]` paragraph. The same holds for the
+  capital's aside and its Exalted piece: neither thanks the reader for
+  cloth, wool or any other gift unless an `[after: <the city's wool
+  donation>]` paragraph ties the line to it (the quartermasters thank
+  "the strangers", "the givers", "this table", never "your cloth"). Adding
+  an `[after]` to a piece changes its marks, which every translation has to
+  follow, so a line that is not worth a mark is written without the deed.
 - The Steamwheedle towns (Booty Bay, Gadgetzan, Ratchet, Everlook) share
   their reputation: a town's own kills count in full to the end of Honored
   and give half to the other three towns all the way to Exalted. A reader
@@ -69,6 +75,15 @@ French may run a fifth longer. `scripts/chapters.ts` notes a piece outside them 
   the only one I've told", the reader "kept coming back", an Exalted that is
   only an exception made for the reader (a door, a drink, a name filed), "I'd
   like you near me on that day".
+- A voice's card wins where the card names it (U1, 31 October 2026): the
+  few moments the Form list bans that a card asks for stay, because each
+  is that voice's best moment: Lokhtos calling the reader "partner",
+  Hydraxis's "legend", Lydros filing the reader's name, Bilgewhizzle's
+  free cup of water, Zverenhoff's "Champion". They are the card's own, never
+  a pattern to copy into another voice.
+- Stage directions in angle brackets (`<Laggrond salutes you.>`) are
+  Laggrond's alone, the game's own emote register (31 October 2026). No
+  other voice uses one, and the tokens' brackets survive translation.
 - Spelling is British (honour, grey, traveller), game names as the game
   spells them (Valley of Honor, Armor Kit).
 - A new voice is read against the shipped ones in `content/*/` (and the

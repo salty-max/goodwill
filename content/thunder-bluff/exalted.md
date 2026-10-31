@@ -13,4 +13,4 @@ I think he was wrong.
 
 I have asked strangers for cloth every day for years now. At first it shamed me. I asked quietly, and badly, and mumbled my thanks into my chest. Then the givers kept giving, generously, without wanting anything back, and somewhere along the way the shame went out of it. Asking became a kind of trust. You trust the one you ask, and they trust you to use the gift well.
 
-I have a daughter. She is small yet, and proud already, like him. So I will ask you something that is not cloth, for the first time. One day, when she is grown and has to ask a stranger for help and does not know how, be one of the strangers she asks. Answer her the way you answered me.
+I have a daughter. She is small yet, and proud already, like him. So I will ask you something of my own. One day, when she is grown and has to ask a stranger for help and does not know how, be one of the strangers she asks. Answer her the way the strangers answered me.

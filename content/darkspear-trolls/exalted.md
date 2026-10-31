@@ -13,4 +13,4 @@ I been doing it so long I half believed it myself. Some nights I still do.
 
 But somewhere back there, with you, I stopped. I don't know when. I just noticed one day I was talking plain and the patter was gone, and I didn't miss it.
 
-So here's what I'll do from now on. I'll keep the trick for the village. They like it, and it does them good, and there's no harm in it. Anybody who asks me straight, I'll answer straight. And when the next stranger comes up with an armful of wool and that look on their face, I'll think of you, and I might just say thank you and leave the reading out of it.
+So here's what I'll do from now on. I'll keep the trick for the village. They like it, and it does them good, and there's no harm in it. Anybody who asks me straight, I'll answer straight. And when a stranger comes up with an armful of wool and that look on their face, I'll think of you, and I might just say thank you and leave the reading out of it.

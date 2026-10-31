@@ -11,4 +11,4 @@ For as long as the oldest songs remember, we followed the herds. We wore hides, 
 
 Now we live in one place, and the needs of one place are new to us. Blankets that can be washed. Bandages for the wounded who come back from the Barrens. Cloth for the lodges, so the wind does not find every crack.
 
-We are learning. Your cloth is helping us learn faster than pride would let us.
+We are learning. The cloth that comes to this desk helps us learn faster than pride would let us.

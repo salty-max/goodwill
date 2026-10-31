@@ -13,6 +13,6 @@ I didn't burn it. I thought about it, most of the night. Burning's what you do t
 
 Some young orc will wear the camps against the backs of her knees and never know it. That's the right place for them. Underneath. Behind. Carrying a free orc into her first fight.
 
-I couldn't have done it with an empty storeroom. You don't cut up your last scrap of anything. The storeroom's full because strangers kept it full, and a good part of that was you. When there's enough, you can let a thing go.
+I couldn't have done it with an empty storeroom. You don't cut up your last scrap of anything. The storeroom's full because strangers kept it full. When there's enough, you can let a thing go.
 
 She gets the cloak tomorrow. She'll take it without thinking, and run.

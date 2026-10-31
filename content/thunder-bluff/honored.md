@@ -11,4 +11,4 @@ She came to the bluffs with the rest of us, and she agreed to stay, and she mean
 
 We never asked her to unpack it. You do not ask that of someone who walked this land from end to end more times than she could tell. When she died, the pack was still by the door, still ready. My mother emptied it. It took her a whole day, because she kept stopping.
 
-Staying cost my grandmother something every morning. It costs all of us a little. When I hand your cloth to the lodges, I think of that pack, and I am glad of every warm thing that makes the staying easier.
+Staying cost my grandmother something every morning. It costs all of us a little. When I hand cloth to the lodges, I think of that pack, and I am glad of every warm thing that makes the staying easier.

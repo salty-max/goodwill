@@ -11,6 +11,6 @@ When I took this post, I meant to fill the stockpile. Every shelf, every crate, 
 
 The stockpile will never be full. I understand that now. As long as there is a city, there will be wounded, and as long as there are wounded, the cloth will go out the door as fast as it comes in. Once I would have called that a failure. Now I call it the effort, and I am proud of it.
 
-You understood that before I did. You kept bringing cloth for a pile that was never going to get any taller, and you never asked me when it would be done.
+You understood that before I did, and you never asked me when it would be done.
 
 So the ribbon is going on your arm instead of on the door, if you will have it, and the speech is going in the drawer. I have read it to nobody, and I think it is better that way.
