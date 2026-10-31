@@ -26,7 +26,9 @@ local W = K.welcome({
       K.minimapChoice(ns.option, ns.setOption),
     }
   end,
-  footnote = L["Change it any time: /goodwill settings, or a right-click on the minimap button. /goodwill opens the book."],
+  footnote = L["Change it any time: %s, or a right-click on the minimap button."]:format("/goodwill settings")
+    .. " "
+    .. L["/goodwill opens the book."],
   open = { text = L["Open the book"], click = function() ns.toggle() end },
   exportHint = L["Copy it (Ctrl+C), then on another character: Use a code, or /goodwill import CODE."],
   importHint = L["Paste the code (/goodwill export on the other character), then press Enter."],
