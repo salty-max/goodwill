@@ -11,4 +11,4 @@ The living heal. They cut themselves, and in a week there is a scar, and they fo
 
 A Forsaken soldier goes through bandages faster than any of the living, and he uses them to hold himself together.
 
-The clerks find the question of why the dead need so much linen tiresome. So do I. Ask it again, and I will have you entered in the ledger under nuisances.
+The clerks find the question of why the dead need so much linen tiresome. So do I. The ledger has a page for nuisances.
