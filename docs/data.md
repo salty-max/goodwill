@@ -76,6 +76,11 @@ matched whole (never inside another word), and the build refuses a name
 the lender's client writes otherwise on the borrower's (an area, faction
 or npc of wow-data's), so a new esES name without its esMX one fails.
 
+French typography (the family's Q1: a no-break space before `: ? !` and
+`%`, inside `« »`) is `scripts/typography.ts`, run over the French chapters
+(titles and paragraphs, never the `[after]` marks) and `words.json`'s values,
+idempotent; `--check` is in the check. The Codex's, the same rules.
+
 The build refuses a semicolon (the gender tokens' own aside), non-ASCII in
 the English, a figure in the prose, an English title
 that is a placeholder (the piece's own name, "The aside", "TODO":

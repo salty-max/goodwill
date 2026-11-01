@@ -2,7 +2,7 @@
 piece: revered
 title: Sayge
 ---
-Sayge vous a-t-elle déjà dit la bonne aventure ? Évidemment. Sayge la dit à tout le monde.
+Sayge vous a-t-elle déjà dit la bonne aventure ? Évidemment. Sayge la dit à tout le monde.
 
 Sayge dit que l'avenir, ce n'est jamais que ce qu'on allait faire de toute façon, dit à voix haute. Je crois qu'elle a raison. Je crois aussi que c'est la chose la plus effrayante que j'aie jamais entendue sous une tente, et j'en ai entendu beaucoup, sous des tentes. Sa tente est la plus silencieuse de la Foire. Les gens y entrent en riant et en sortent pensifs, et le lendemain soir, certains reviennent avec une meilleure question.
 

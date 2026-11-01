@@ -2,7 +2,7 @@
 piece: exalted
 title: La tête froide
 ---
-Drek'Thar parle de vous. À voix haute, devant les anciens, là où tout le monde l'entend. L'un des anciens m'a demandé ensuite si vous étiez vraiment aussi $gfroid:froide; au combat que le disent les soldats. Je lui ai répondu : plus encore.
+Drek'Thar parle de vous. À voix haute, devant les anciens, là où tout le monde l'entend. L'un des anciens m'a demandé ensuite si vous étiez vraiment aussi $gfroid:froide; au combat que le disent les soldats. Je lui ai répondu : plus encore.
 
 L'Œil du commandement sera bientôt à vous, et les soldats de la vallée suivront votre parole.
 

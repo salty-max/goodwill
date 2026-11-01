@@ -2,7 +2,7 @@
 piece: start
 title: Pour la Horde
 ---
-Vous. Vous avez de l'étoffe ? Alors vous avez une chose dont la Horde a besoin.
+Vous. Vous avez de l'étoffe ? Alors vous avez une chose dont la Horde a besoin.
 
 Orgrimmar se bat sur tous les fronts qui existent. Les Tarides, la forêt au nord, les collines au-delà de la mer. Chaque grunt qui part a besoin d'être bandé avant le combat et pansé après. L'acier vient des forgerons. L'étoffe vient de gens comme vous, ou elle ne vient pas.
 

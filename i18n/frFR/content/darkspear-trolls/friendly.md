@@ -2,7 +2,7 @@
 piece: friendly
 title: D'où vous venez
 ---
-Ah, voilà. Laissez-moi vous lire. Pas d'étoffe dans vos mains ? Alors je lirai les mains. Elles ont fait une longue route. Il y a dessus la poussière d'un pays chaud, et quelque chose de plus froid en dessous, d'avant. Vous vous êtes $gbattu:battue;, aussi. Les mains s'en souviennent.
+Ah, voilà. Laissez-moi vous lire. Pas d'étoffe dans vos mains ? Alors je lirai les mains. Elles ont fait une longue route. Il y a dessus la poussière d'un pays chaud, et quelque chose de plus froid en dessous, d'avant. Vous vous êtes $gbattu:battue;, aussi. Les mains s'en souviennent.
 
 Vehena sait des choses.
 

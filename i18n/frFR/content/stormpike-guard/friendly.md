@@ -2,7 +2,7 @@
 piece: friendly
 title: Premier grade
 ---
-Toujours debout, soldat ? Tout le monde ne peut pas en dire autant.
+Toujours debout, soldat ? Tout le monde ne peut pas en dire autant.
 
 Vous seriez $gsurpris:surprise; de voir combien n'arrivent jamais jusque-là. Ils montent la route pleins de chansons, entrent dans la vallée, et c'est la dernière fois que je les vois. Beaucoup ne deviennent jamais plus qu'un nom sur une liste. Vous, si.
 

@@ -10,4 +10,4 @@ Quand le seigneur du Feu s'est éveillé, la montagne était à lui, et nous aus
 
 C'est mon apprenti qui a trouvé la sortie. Oilfist. Le surveillant Oilfist, maintenant, à la Halte du Thorium, qui dirige l'endroit comme une garnison. Il a tout préparé sous le nez des contremaîtres, et nous avons fabriqué ce qu'il fallait pour sortir des Profondeurs. La plupart de ceux qui se sont libérés ont couru aussi loin que leurs jambes les portaient. Nous, nous nous sommes arrêtés de l'autre côté de la Gorge. Les matériaux sont ici. L'artisanat ne fuit pas.
 
-Et pourquoi suis-je ici, à une table, dans la cité même de l'empereur ? La bière. Question suivante.
+Et pourquoi suis-je ici, à une table, dans la cité même de l'empereur ? La bière. Question suivante.

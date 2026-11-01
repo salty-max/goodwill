@@ -8,6 +8,6 @@ La surprise, c'est que je vous la montre avant de la montrer à mes amis. Avant,
 
 On me demande pourquoi une gnome vit en haut du monde. La vérité, c'est que le froid garde tout le monde à l'intérieur, à bavarder, et que j'adore ces bavardages, même quand ils parlent de moi. Ces temps-ci, ils parlent de vous, et j'ai arrêté de me vexer que les gobelins vous aiment autant. Certains jours, je me dis qu'ils ont meilleur goût que je ne le croyais.
 
-[after: 8798] Et vous pouvez construire votre propre yéti, maintenant ! Allez faire peur à quelqu'un de ma part. Quelqu'un qui le mérite.
+[after: 8798] Et vous pouvez construire votre propre yéti, maintenant ! Allez faire peur à quelqu'un de ma part. Quelqu'un qui le mérite.
 
 Alors. Dites-moi ce que vous en pensez. Et si c'est une idée idiote, dites-le aussi. Je vous fais confiance pour ça.

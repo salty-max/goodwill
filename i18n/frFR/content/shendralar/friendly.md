@@ -8,4 +8,4 @@ Il y a quelques années, Maître Winthalus, un elfe de Quel'Thalas, est venu à 
 
 Ne vous méprenez pas sur mon ton. Les librams m'ennuient, et je veux les récupérer jusqu'au dernier. Rien de ce qui est écrit n'est sans valeur. C'est la seule conviction que j'aie gardée intacte en toutes ces années, et je vous saurais gré de ne pas la mettre à l'épreuve.
 
-Qui êtes-vous déjà ? Cela va me revenir.
+Qui êtes-vous déjà ? Cela va me revenir.

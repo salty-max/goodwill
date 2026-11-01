@@ -2,7 +2,7 @@
 piece: friendly
 title: Les rations
 ---
-Vous voilà ! Les Voltigeurs connaissent votre tête, maintenant. Ça veut dire des rations.
+Vous voilà ! Les Voltigeurs connaissent votre tête, maintenant. Ça veut dire des rations.
 
 Tenez. Du pain de route, de la viande séchée, un petit quelque chose pour les nerfs, tout est emballé pour le goulet. Hors du goulet, ça ne sert à rien, alors ne gardez pas ça pour un long voyage. C'est fait pour être mangé entre deux combats, debout, avec une flèche d'elfe plantée dans le poteau à côté de votre tête.
 

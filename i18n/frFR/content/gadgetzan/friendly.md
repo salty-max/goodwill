@@ -2,7 +2,7 @@
 piece: friendly
 title: Justice
 ---
-Ah, voilà enfin quelqu'un à qui la Compagnie peut parler !
+Ah, voilà enfin quelqu'un à qui la Compagnie peut parler !
 
 La situation est la suivante. Les nomades Bat-le-désert ont fait main basse sur presque tous les puits du désert. Nos puits. Nous les avons creusés, nous les avons alimentés, nous avons envoyé nos gens les entretenir, et les nomades ont tué ces gens et gardé l'eau. Certains parleraient d'un litige commercial. La Compagnie appelle ça du vol, avec des morts.
 

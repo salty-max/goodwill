@@ -2,7 +2,7 @@
 piece: start
 title: Indigne d'attention
 ---
-Inutile de baisser la voix. Peu de ce que disent les mortels porte loin chez les miens. Le vol de bronze n'a accordé sa faveur à aucun des vôtres depuis très longtemps, et vous commencez avec nous là où tout mortel commence : nulle part.
+Inutile de baisser la voix. Peu de ce que disent les mortels porte loin chez les miens. Le vol de bronze n'a accordé sa faveur à aucun des vôtres depuis très longtemps, et vous commencez avec nous là où tout mortel commence : nulle part.
 
 Ne le prenez pas mal. Nous sommes lents à prêter attention à ce qui ne durera pas, et ce n'est rien de plus.
 

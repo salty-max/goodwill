@@ -2,7 +2,7 @@
 piece: honored
 title: Ce qu'ils crient
 ---
-Les soldats de la Ligue nous crient des choses d'un bout à l'autre du bassin. Le plus souvent, c'est l'habituel : la pourriture, les malédictions, la Lumière. Parfois, l'un d'eux dit quelque chose qui mérite d'être entendu.
+Les soldats de la Ligue nous crient des choses d'un bout à l'autre du bassin. Le plus souvent, c'est l'habituel : la pourriture, les malédictions, la Lumière. Parfois, l'un d'eux dit quelque chose qui mérite d'être entendu.
 
 À la ferme, la semaine dernière, un jeune soldat de Stromgarde m'a crié que le champ que je tenais avait été celui de son grand-père. Il l'a crié deux fois, comme si je n'avais pas compris, et puis il s'est jeté sur moi.
 

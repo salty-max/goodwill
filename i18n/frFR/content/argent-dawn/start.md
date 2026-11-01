@@ -2,7 +2,7 @@
 piece: start
 title: Dans la lumière
 ---
-Entrez, entrez ! Non, restez là, dans la lumière, que je vous voie bien.
+Entrez, entrez ! Non, restez là, dans la lumière, que je vous voie bien.
 
 Vous avez l'air de quelqu'un qui sait manier une arme et à qui personne n'a encore dit pourquoi. C'est là que j'interviens. L'Aube n'a qu'un ennemi, les morts, et peu lui importe de quels vivants vous venez. Prenez notre brevet. Ce que le Fléau porte sur lui m'intéresse au plus haut point, et ensuite nous saurons ce que vous êtes.
 

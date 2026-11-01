@@ -2,7 +2,7 @@
 piece: revered
 title: Les bienfaiteurs
 ---
-C'est Hurlevent qui nous paie. Ce n'est pas un secret. L'argent, les armes, les chevaux, le pain, jusqu'aux clous de la palissade : la bourse de nos bienfaiteurs.
+C'est Hurlevent qui nous paie. Ce n'est pas un secret. L'argent, les armes, les chevaux, le pain, jusqu'aux clous de la palissade : la bourse de nos bienfaiteurs.
 
 Ce que les bienfaiteurs veulent en échange, je ne le demande pas. Certaines des familles qui cultivaient cette terre avant la guerre sont ici, au Refuge de l'Ornière, à raccommoder les bottes de mes soldats, et elles ne me le demandent pas non plus.
 

@@ -2,7 +2,7 @@
 piece: friendly
 title: La famille
 ---
-De retour ! Splendide. Permettez-moi de vous présenter la famille.
+De retour ! Splendide. Permettez-moi de vous présenter la famille.
 
 Voici Chronos, qui n'oublie jamais rien, et qui vous le dira que vous le demandiez ou non. Yebb tient la Ménagerie, où rien n'est tout à fait ce qu'annonce l'écriteau et où tout est mieux. Kerri Hicks vous tordra une barre de fer. Rinling a juré par le sang de faire sourire chaque visiteur, alors souriez à Rinling, je vous en prie, pour l'amour de Rinling.
 
