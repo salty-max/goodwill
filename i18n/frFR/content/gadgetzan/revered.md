@@ -2,7 +2,7 @@
 piece: revered
 title: La neige
 ---
-La Compagnie a un grand projet, et je suis le seul à l'avoir dessiné.
+La Compagnie a un projet de longue haleine, et je suis le seul à l'avoir dessiné.
 
 Dun Morogh ! Là-haut, les nains ont des sources si froides que l'eau vous fait mal aux dents. De l'eau à ne savoir qu'en faire. La glace leur tombe du ciel, gratuitement, tout l'hiver ! Un jour, on la fera venir par des tuyaux, ou par bateau, ou on la taillera en blocs pour la traîner de l'autre côté de la mer, et Gadgetzan n'aura plus jamais soif. Plus personne ne se battra pour un seau. Plus personne ne mourra près d'un puits. Et je pourrai arrêter de vendre des sources d'énergie à des gens qui les font tomber dans le sable.
 

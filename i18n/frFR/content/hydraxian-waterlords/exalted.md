@@ -8,4 +8,4 @@ Vous avez combattu pour nous avec une constance que je ne croyais pas possible c
 
 [after: 6824] Vous m'avez rapporté les mains des capitaines du seigneur du Feu. La nouvelle a couru jusqu'au fond de nos salles comme un courant. Je ne pensais pas qu'une créature si petite puisse devenir une légende ici. Vous en êtes déjà une.
 
-Vous êtes $gpetit:petite;, et vous ne durerez pas. Je le pense toujours, l'un comme l'autre. Les profondeurs oublient presque tout. Elles ont décidé de vous garder.
+Vous êtes $gpetit:petite;, et vous ne durerez pas. Je pense encore l'un et l'autre. Les profondeurs oublient presque tout. Elles ont décidé de vous garder.

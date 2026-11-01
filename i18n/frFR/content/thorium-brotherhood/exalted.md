@@ -4,7 +4,7 @@ title: Associés
 ---
 Plus de cérémonie. Toi et moi, nous n'en sommes plus à peser des offrandes. Écoute. Désormais, je te parle sans elle.
 
-La Confrérie détient le secret du marteau du seigneur du Feu. Sulfuras. La grande masse qu'il porte, là-dessous, dans le Cœur. Nous pouvons apprendre à un forgeron à forger le marteau en sulfuron, et une fois l'Oeil de Sulfuras serti dedans, un héros pourrait emporter la Main de Ragnaros à travers le monde. Pense à ce que cela veut dire. Nous avons passé un âge entier à forger des armes pour lui. Aujourd'hui, nous vendons de quoi fabriquer la sienne à quiconque est assez fort pour le tuer, à un prix honnête. Je n'ai jamais été aussi content d'une affaire de toute ma vie.
+La Confrérie détient le secret du marteau du seigneur du Feu. Sulfuras. La grande masse qu'il porte, là-dessous, dans le Cœur. Nous pouvons enseigner à un forgeron l'art de forger le marteau en sulfuron, et une fois l'Oeil de Sulfuras serti dedans, un héros pourrait emporter la Main de Ragnaros à travers le monde. Pense à ce que cela veut dire. Nous avons passé un âge entier à forger des armes pour lui. Aujourd'hui, nous vendons de quoi fabriquer la sienne à quiconque est assez fort pour le tuer, à un prix honnête. Je n'ai jamais été aussi content d'une affaire de toute ma vie.
 
 J'en perds la tête. Pose un lingot de sulfuron devant moi et je crierai. Je le sais. Je m'en moque.
 

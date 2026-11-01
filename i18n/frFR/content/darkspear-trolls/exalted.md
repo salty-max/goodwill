@@ -4,7 +4,7 @@ title: Le tour
 ---
 Je ne sais pas lire l'étoffe.
 
-Je n'ai jamais su. Pas un fil. Aucun loa ne m'a jamais donné ce don, et pourtant je l'ai demandé. C'est un tour. On tient l'étoffe, on sent son poids, on la renifle, on jauge l'inconnu qui la tend, et on parle d'une longue route, d'un pays froid et de combats. Tout le monde a fait une longue route. Tout le monde a eu froid. Tout le monde s'est battu. Ils hochent la tête, ils sont surpris, et puis ils parlent, et c'est ça que je voulais. Les gens qui parlent donnent plus.
+Je n'ai jamais su. Pas un fil. Aucun loa ne m'a jamais accordé ce don, et pourtant je l'ai demandé. C'est un tour. On tient l'étoffe, on sent son poids, on la renifle, on jauge l'inconnu qui la tend, et on parle d'une longue route, d'un pays froid et de combats. Tout le monde a fait une longue route. Tout le monde a eu froid. Tout le monde s'est battu. Ils hochent la tête, ils sont surpris, et puis ils parlent, et c'est ça que je voulais. Les gens qui parlent donnent plus.
 
 Je le fais depuis si longtemps que j'ai fini par y croire à moitié. Certaines nuits, j'y crois encore.
 

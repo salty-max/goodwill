@@ -6,7 +6,7 @@ Mon observatoire, là-haut sur la colline. Ne me demandez pas ce qu'il rapporte.
 
 Une caravane m'a apporté la première lentille depuis Durotar. Un navire devait m'apporter la seconde, et les pirates ont eu le navire. J'ai failli tout laisser tomber.
 
-[after: 888] Et puis vous êtes $gentré:entrée; dans leur camp, vous en êtes $gressorti:ressortie; avec, et maintenant, par nuit claire, le ciel descend jusqu'à Cabestan.
+[after: 888] Et puis vous êtes $gentré:entrée; dans leur camp, vous en êtes $gressorti:ressortie; avec la lentille, et maintenant, par nuit claire, le ciel descend jusqu'à Cabestan.
 
 On me demande ce qu'un gobelin peut bien vouloir aux étoiles. Il n'y a pas un sou à gagner. C'est tout leur charme.
 

@@ -6,7 +6,7 @@ Vous aurez remarqué que je suis toujours là quand vous revenez. J'envoie. C'es
 
 Alors je tiens deux comptes. Les pierres vont dans le registre, où les intendants peuvent les voir. L'autre compte, je ne le tiens nulle part, et je pourrais vous en réciter chaque ligne.
 
-Vous aurez aussi remarqué que je ne dis jamais de la piétaille du Fléau qu'elle est faible. Je l'ai appris de ceux qui ne sont pas revenus.
+Vous aurez aussi remarqué que je ne dis jamais de la piétaille du Fléau qu'elle est faible. Je l'ai appris auprès de ceux qui ne sont pas revenus.
 
 Naxxramas est là-haut, la citadelle de Kel'Thuzad, et l'Aube y enverra du monde. Certains seront des gens que j'aurai d'abord envoyés ailleurs.
 

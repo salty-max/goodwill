@@ -6,6 +6,6 @@ Thadius Grimshade. Devin. Il vit au Rempart-du-Néant, maintenant, dans les Terr
 
 Un nain peut quitter les perchoirs et les garder en lui. Thadius les a gardés. Je parierais ma barbe qu'il garde une plume de gryphon sur son bureau, au milieu de tous ses livres. Et je parierais que Rhapsody lève encore la tête quand un gryphon survole Quel'Danil. On ne cesse pas d'être des nôtres en s'envolant, pas plus qu'un gryphon ne cesse d'être un gryphon quand le pic est hors d'atteinte.
 
-[after: 2993] Et quand nous avons eu besoin de lui, Thadius nous a trouvé Bec-tranchant avec une seule plume et les arts sombres qu'il garde au Rempart-du-Néant. Il a demandé un prix, le médaillon d'un troll, et vous l'avez payé. C'est bien Thadius. Et il l'a trouvé quand même.
+[after: 2993] Et quand nous avons eu besoin de lui, Thadius nous a trouvé Bec-tranchant avec une seule plume et les arts sombres qu'il garde au Rempart-du-Néant. Il a demandé un prix, le médaillon d'un troll, et vous l'avez payé. C'est bien Thadius. Et il a retrouvé Bec-tranchant quand même.
 
 Je me demande depuis quelque temps comment vous vous en tireriez sur un gryphon. J'ai dans l'idée que vous seriez $gbon:bonne;. Plus que ça. Ce serait une belle chose à découvrir, un jour, avec tous les perchoirs qui feraient semblant de s'en moquer.
