@@ -2,7 +2,7 @@
 piece: friendly
 title: Les gages
 ---
-Hé ! Vous commencez à apparaître dans mes registres, et du bon côté.
+Hé, $ggamin:gamine; ! Vous commencez à apparaître dans mes registres, et du bon côté.
 
 Cabestan fonctionne comme ça. Tous ceux qui comptent sont à mes gages. Le maître des quais, les videurs, le type qui surveille les videurs. Dizzywig tient les registres du port, et je me fie à ses registres parce que je le paie.
 

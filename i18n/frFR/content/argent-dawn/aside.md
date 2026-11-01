@@ -2,4 +2,4 @@
 piece: aside
 title: L'aparté
 ---
-Vous revenez toujours. J'ai cessé d'en être surpris, ce qui, je vous préviens, est le premier pas pour finir par en dépendre.
+Vous voilà encore. J'ai cessé d'en être surpris, et je vous préviens que c'est le premier pas vers l'habitude de compter sur vous.

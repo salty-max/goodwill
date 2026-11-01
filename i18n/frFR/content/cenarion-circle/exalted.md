@@ -8,8 +8,6 @@ Tu sais ce que je te donnerais, si je pouvais te donner n'importe quoi ? Mon pos
 
 Je sortirais du Fort avec toi, au-delà des camps et des pierres, dans le désert, et on irait chercher la plus grosse chose que le culte sache appeler, pour voir ensemble à quel point elle frappe fort !
 
-Mais je ne peux pas. Il faut que quelqu'un tienne ici, et c'est moi. Ça a toujours été moi. Alors à la place, je vais te dire la chose que je n'ai jamais dite à personne. Quand Huum se tait, le soir, je le surveille. Lui, pas ce qu'il écoute. C'est lui que je garde. Le Fort, le mur, les papiers, tout ça, je l'échangerais contre lui sans réfléchir, et c'est une chose terrible à dire quand on monte la garde.
+Mais je ne peux pas. Il faut que quelqu'un tienne ici, et c'est moi. Ça a toujours été moi. Alors je reste, comme je l'ai toujours fait. Quand Huum se tait, le soir, je le surveille. Lui, pas ce qu'il écoute. Ses oreilles se figent, son souffle ralentit, et il est quelque part où je ne peux pas le suivre. C'est lui que je garde. Le Fort, le mur, les papiers, tout ça, je l'échangerais contre lui sans réfléchir, et c'est une chose terrible à dire quand on monte la garde.
 
 Huum me dirait que la terre a plus besoin d'être gardée que lui. Et Huum aurait raison. Il a presque toujours raison. Moi, je le choisirais quand même.
-
-Tu es $gle seul:la seule; à qui je l'aie jamais dit.

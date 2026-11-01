@@ -2,7 +2,7 @@
 piece: exalted
 title: Ce que j'ai bâti
 ---
-J'ai bâti beaucoup de choses dans ma vie.
+J'ai bâti beaucoup de choses dans ma vie, $ggamin:gamine;.
 
 Une ville, une fois, pour un chef de guerre orc qui payait à l'heure. Si vous saviez comme c'est rare. Ce port, planche par planche. Un observatoire que personne n'avait demandé. Des conduites de carburant pour des bolides qui ne gagneront peut-être jamais. Je pourrais vous dire ce qui est entré dans chacun, jusqu'au dernier clou.
 
