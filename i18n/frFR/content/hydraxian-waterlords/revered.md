@@ -1,6 +1,6 @@
 ---
 piece: revered
-title: La perte jugée acceptable
+title: La perte qui en valait la peine
 ---
 L'eau n'a ni pitié ni malveillance. Je parlerai comme elle.
 

@@ -28,3 +28,19 @@ test("two pieces sharing a title are named", () => {
   ]);
   expect(out).toEqual(["a/start.md and b/exalted.md: the same title"]);
 });
+
+test("a French placeholder or shared title is refused too", () => {
+  expect(titleProblem("L'aparté", "frFR")).toContain("placeholder");
+  expect(titleProblem("L’aparté", "frFR")).toContain("placeholder");
+  expect(titleProblem("  la Exalté", "frFR")).toContain("placeholder");
+  expect(titleProblem("Ce que dit Salfa", "frFR")).toBeUndefined();
+  const out = sharedTitles(
+    [
+      { title: "La porte", file: "a/start.md" },
+      { title: "Porte", file: "b/exalted.md" },
+      { title: "L'autre raison", file: "c/exalted.md" },
+    ],
+    "frFR",
+  );
+  expect(out).toEqual(["a/start.md and b/exalted.md: the same title"]);
+});

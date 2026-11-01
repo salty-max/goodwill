@@ -1,6 +1,6 @@
 ---
 piece: exalted
-title: Ce que les apothicaires ne comprennent pas
+title: Ce en quoi les apothicaires se trompent
 ---
 La première fois que vous vous êtes $gprésenté:présentée; à ce bureau, je vous ai dit que rien de ce qu'on donne ici ne passe inaperçu. C'était autant une menace qu'une promesse. Aujourd'hui, ce n'est plus qu'une promesse.
 

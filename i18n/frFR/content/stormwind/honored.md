@@ -1,6 +1,6 @@
 ---
 piece: honored
-title: L'atelier
+title: La salle de couture
 ---
 $gMon ami:Mon amie; ! Venez voir l'effort. Le vrai, je veux dire, pas les registres.
 

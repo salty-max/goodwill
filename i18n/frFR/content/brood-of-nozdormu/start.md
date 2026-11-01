@@ -1,6 +1,6 @@
 ---
 piece: start
-title: Hors de vue
+title: Indigne d'attention
 ---
 Inutile de baisser la voix. Peu de ce que disent les mortels porte loin chez les miens. Le vol de bronze n'a accordé sa faveur à aucun des vôtres depuis très longtemps, et vous commencez avec nous là où tout mortel commence, c'est-à-dire nulle part.
 

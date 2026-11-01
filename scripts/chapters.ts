@@ -44,7 +44,7 @@ import { join } from "node:path";
 import type * as WowDb from "../../wow-data/src/db";
 import { LOCALES } from "./locales-lib";
 import { stampLocales } from "./stamp";
-import { PIECES, sharedTitles, titleProblem } from "./titles";
+import { PIECES, sharedTitles, TITLED, titleProblem } from "./titles";
 import { familyPath } from "./root";
 
 const { openDb } = (await import(familyPath("wow-data", "src", "db.ts"))) as typeof WowDb;
@@ -181,7 +181,7 @@ const verify = (pieces: Map<string, Piece>, translated: boolean, locale: string)
     if (tokensOut(text).includes(";")) problems.push(`${p.file}: a semicolon`);
     if (!translated && /[^\x20-\x7e]/.test(text + p.title)) problems.push(`${p.file}: not plain ASCII`);
     if (/\d/.test(tokensOut(text))) problems.push(`${p.file}: a figure in the prose (the road gives them)`);
-    const bad = translated ? (p.title ? undefined : "no title") : titleProblem(p.title);
+    const bad = TITLED[locale] ? titleProblem(p.title, locale) : p.title ? undefined : "no title";
     if (bad) problems.push(`${p.file}: ${bad}`);
     const n = words(p);
     const [lo, hi] = LENGTH[p.piece];
@@ -265,6 +265,7 @@ for (const locale of LOCALES) {
   } else if (TRANSLATED.includes(locale)) {
     const mine = read(join(ROOT, "i18n", locale, "content"));
     verify(mine, true, locale);
+    if (TITLED[locale]) problems.push(...sharedTitles([...mine.values()], locale));
     pieces = new Map([...english].map(([k, p]) => [k, mine.get(k) ?? p]));
     for (const k of english.keys()) if (!mine.has(k)) notes.push(`${locale}: ${k} not translated yet`);
     const stampFile = join(ROOT, "i18n", locale, "content-stamp.json");

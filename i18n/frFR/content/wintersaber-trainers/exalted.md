@@ -1,8 +1,8 @@
 ---
 piece: exalted
-title: La monture
+title: Le sabre
 ---
-J'ai une monture pour vous.
+J'ai un sabre pour vous.
 
 Une femelle que j'ai élevée depuis qu'elle était toute petite. De tous, c'est elle qui a mis le plus longtemps à manger dans ma main, et elle a été la plus têtue pour tout le reste. Je me suis dit que vous vous entendriez bien. Elle m'a mordu plus d'une fois avant de me faire confiance. Vous, elle ne vous a jamais $gmordu:mordue;. Je le prends pour un signe.
 

@@ -1,6 +1,6 @@
 ---
 piece: exalted
-title: La porte
+title: L'autre raison
 ---
 J'ai parlé de rancune, à vos débuts parmi nous. C'est vrai, et c'est la réponse que je préfère donner, parce qu'elle effraie les vivants et qu'elle ne me coûte rien.
 

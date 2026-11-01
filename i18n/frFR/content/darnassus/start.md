@@ -1,6 +1,6 @@
 ---
 piece: start
-title: Une humble requête
+title: Une requête discrète
 ---
 Mes salutations. Si vous vouliez bien m'accorder un peu de votre temps.
 

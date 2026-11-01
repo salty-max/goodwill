@@ -1,6 +1,6 @@
 ---
 piece: friendly
-title: Tours de passe-passe
+title: Tours de salon
 ---
 Les librams, donc. C'est cela que je veux de vous.
 

@@ -79,7 +79,9 @@ or npc of wow-data's), so a new esES name without its esMX one fails.
 The build refuses a semicolon (the gender tokens' own aside), non-ASCII in
 the English, a figure in the prose, an English title
 that is a placeholder (the piece's own name, "The aside", "TODO":
-`scripts/titles.ts`, tested) or that another English piece already has, a
+`scripts/titles.ts`, tested) or that another English piece already has,
+the same for a French title ("L'aparté", one French title for two pieces:
+`TITLED` in `titles.ts`, German and Spanish joining with their pass), a
 piece missing (all six, or the ones
 the faction's `pieces` in `data/factions.json` lists, and none beyond
 them), a translation whose marked paragraphs aren't its English's, a mark
