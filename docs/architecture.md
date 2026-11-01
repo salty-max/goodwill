@@ -3,6 +3,8 @@
 The addon file by file (the map is CLAUDE.md). The factions' data and the
 chapters' build: `docs/data.md`.
 
+German and Spanish (deDE, esES, esMX) are held back from players since 1 November 2026 (`HIDDEN_LOCALES` in addon-kit's `locales-lib.ts`): their language files are stubs with the game's names or English, their tests skip (`addon/test/held.lua`), and their `i18n/` stays. Restoring them starts by emptying that list.
+
 ## The package
 
 - `addon/Goodwill`: one package for every game (`Goodwill_Vanilla.toc`:

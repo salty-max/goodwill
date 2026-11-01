@@ -19,7 +19,7 @@ story at each standing you reach.
   faction, the standings you reach, whole groups at Exalted and the stories
   you open, each with the game's fanfare and alert.
 
-English, French, German and Spanish. `/goodwill` opens the book.
+English and French. `/goodwill` opens the book.
 
 The game's data comes from [wow-data](https://github.com/salty-max/wow-data):
 the game clients' tables, [Questie](https://github.com/Questie/Questie)'s

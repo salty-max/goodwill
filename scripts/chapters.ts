@@ -42,7 +42,7 @@ import { createHash } from "node:crypto";
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import type * as WowDb from "../../wow-data/src/db";
-import { LOCALES } from "./locales-lib";
+import { HIDDEN_LOCALES, holdBack, LOCALES } from "./locales-lib";
 import { stampLocales } from "./stamp";
 import { PIECES, sharedTitles, TITLED, titleProblem } from "./titles";
 import { familyPath } from "./root";
@@ -289,7 +289,8 @@ for (const locale of LOCALES) {
     const swapFile = join(ROOT, "i18n", locale, "classic-names.json");
     swaps = existsSync(swapFile) ? JSON.parse(readFileSync(swapFile, "utf8")) : {};
   }
-  files[`Chapters_${locale}.lua`] = luaFor(locale, pieces, swaps);
+  // (a language held back, HIDDEN_LOCALES: checked above, shipped as the English)
+  files[`Chapters_${locale}.lua`] = HIDDEN_LOCALES.includes(locale) ? holdBack(luaFor(locale, english, {})) : luaFor(locale, pieces, swaps);
 }
 for (const n of notes) console.log(`  ${n}`);
 for (const l of summary) console.log(l);

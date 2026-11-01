@@ -50,7 +50,7 @@ The book keeps its own achievements: your first gain with a faction, the standin
 
 Goodwill covers forty-two factions, and each game shows only its own. On Forever, the Skyborne's Windshapers and High Order have stories up to Friendly, as far as the game goes at launch. Forever's other new factions have their road now and their stories later.
 
-Goodwill is in English, French, German and Spanish: on those clients every chapter and the whole interface are in your language, with the game's own names for factions, places, people and items. German and Spanish are first translations: corrections are welcome on GitHub. Both Spanish clients share the translation, each with its own game names. Other clients get the chapters and the interface in English, while factions, quests, people and items keep the names your client gives them.
+Goodwill is in English and French: on a French client every chapter and the whole interface are in French, with the game's own names for factions, places, people and items. Other clients get the chapters and the interface in English, while factions, quests, people and items keep the names your client gives them.
 
 ## Settings and commands
 
