@@ -10,6 +10,6 @@ Je ne l'ai pas brûlé. J'y ai pensé, presque toute la nuit. On brûle ce dont 
 
 Une jeune orque portera les camps contre l'arrière de ses genoux sans jamais le savoir. C'est leur juste place. En dessous. Derrière. Pour porter une orque libre jusqu'à son premier combat.
 
-Je n'aurais pas pu le faire avec une réserve vide. On ne découpe pas son dernier bout de quoi que ce soit. La réserve est pleine parce que des inconnus l'ont remplie, et une bonne part venait de vous. Quand il y en a assez, on peut lâcher prise.
+Je n'aurais pas pu le faire avec une réserve vide. On ne découpe pas son dernier bout de quoi que ce soit. La réserve est pleine parce que des inconnus l'ont toujours gardée pleine. Quand il y en a assez, on peut lâcher prise.
 
 Elle aura la cape demain. Elle la prendra sans y penser, et elle courra.

@@ -8,4 +8,4 @@ Aussi loin que remontent les plus vieux chants, nous avons suivi les troupeaux. 
 
 Maintenant, nous vivons à un seul endroit, et les besoins d'un seul endroit sont nouveaux pour nous. Des couvertures qu'on peut laver. Des bandages pour les blessés qui reviennent des Tarides. De l'étoffe pour les huttes, afin que le vent ne trouve pas chaque fissure.
 
-Nous apprenons. Votre étoffe nous aide à apprendre plus vite que notre fierté ne nous le permettrait.
+Nous apprenons. L'étoffe qui arrive à ce bureau nous aide à apprendre plus vite que notre fierté ne nous le permettrait.
