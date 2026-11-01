@@ -2,7 +2,7 @@
 piece: honored
 title: Le petit homme de bois
 ---
-Un jour, un gnome pas plus grand qu'un enfant est sorti de la poussière derrière ses chevaux, avec une charrette de jouets. Des feux de couleur. De petites machines qui allaient sans souffle. C'était la chose la plus drôle que j'aie jamais rencontrée. Je l'ai tué. Il m'a fait rire d'abord, et je ne l'ai pas oublié.
+Un jour, un gnome pas plus grand qu'un enfant est sorti de la poussière derrière ses chevaux, avec une charrette de jouets. Des feux de couleur. De petites machines qui allaient sans souffle. C'était la chose la plus drôle que j'aie jamais rencontrée. Je l'ai tué. Il m'a fait rire d'abord. Je m'en souviens.
 
 J'ai gardé le jouet que je préférais. Un homme de bois avec une main qui montait et descendait. Coucou, coucou, coucou. Un jour, je l'ai frappé, et il s'est défait dans mon poing. Je l'ai regretté. Warug ne regrette jamais. J'ai regretté le petit homme de bois.
 

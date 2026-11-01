@@ -2,7 +2,7 @@
 piece: friendly
 title: À quoi sert la baie
 ---
-Alors. On m'a dit que vous rendiez des services au cartel. Vous pouvez maintenant savoir à quoi sert cette baie.
+Alors. On m'a dit que vous faisiez des choses pour le cartel. Vous pouvez maintenant savoir à quoi sert cette baie.
 
 Baie-du-Butin a sa propre flotte, et cette flotte est à moi. Les Écumeurs des Flots noirs partent de ce port, et mon amiral garde les routes ouvertes à quiconque paie le cartel. Au-delà de la pointe, une flotte aux voiles rouges aimerait bien ces routes pour elle seule, et pour moi, c'est une affaire personnelle. Pour quiconque boit mon alcool aussi.
 

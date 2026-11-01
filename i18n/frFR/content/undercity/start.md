@@ -2,7 +2,7 @@
 piece: start
 title: Dans votre intérêt
 ---
-Vous, là. Écoutez bien. Je n'aime pas dire les choses deux fois.
+Écoutez bien.
 
 Les Réprouvés ont besoin d'étoffe. De la laine, de la soie, ce que vous avez sur vous. Laissez-la aux commis. Ils la pèseront et l'inscriront dans un registre que personne ne lit à part moi, et je le lis chaque soir, ligne par ligne.
 

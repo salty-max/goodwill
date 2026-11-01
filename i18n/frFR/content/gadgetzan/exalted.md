@@ -12,4 +12,4 @@ Tout ce que vous avez fait pour cette ville, vous l'avez fait pour un endroit qu
 
 [after: 2781] Et puis il y a le calife. La Compagnie a payé la prime pour lui, et je n'y ai rien ajouté, parce que l'argent de la Compagnie est à la Compagnie. Cette tasse, elle, est à moi.
 
-Buvez lentement. Elle a meilleur goût quand personne ne vous la fait payer. Si l'on apprend que l'Ingénieur en chef a donné de l'eau, il y aura une file d'attente jusqu'au bout de la rue avant midi, et je nierai tout.
+Buvez lentement. Elle a meilleur goût quand personne ne vous la fait payer. N'en dites rien à personne. Le bruit que l'ingénieur en chef donne de l'eau ferait une file jusqu'au bout de la rue avant midi, et je nierais tout.

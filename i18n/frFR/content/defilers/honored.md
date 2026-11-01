@@ -8,6 +8,6 @@ Les soldats de la Ligue nous crient des choses d'un bout à l'autre du bassin. L
 
 J'ai tenu le champ. C'est à ça que je sers. Mais la pensée du vieil homme est restée avec moi après, toute la nuit, et ce n'est pas du tout à ça que je sers.
 
-Alors j'ai réfléchi à la question, comme le fait un Réprouvé quand les nuits sont longues. Les humains de Stromgarde veulent leurs champs. Ils voudraient qu'Arathi soit de nouveau à eux, et le passé avec, et que nous nous recouchions pour ne plus nous relever. Ils n'auront rien de tout ça. C'est de la rancune, et je la garde, grand-père ou pas.
+Alors j'ai réfléchi à la question, comme le fait un Réprouvé quand les nuits sont longues. Les humains de Stromgarde veulent récupérer leurs champs. Ils voudraient qu'Arathi soit de nouveau à eux, et le passé avec, et que nous nous recouchions pour ne plus nous relever. Ils n'auront rien de tout ça. C'est de la rancune, et je la garde, grand-père ou pas.
 
 Les Profanateurs tiennent bien leurs champs. Continuez de les tenir.

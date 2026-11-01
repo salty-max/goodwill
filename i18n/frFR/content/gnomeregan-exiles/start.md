@@ -2,7 +2,7 @@
 piece: start
 title: Une situation désespérée
 ---
-Ah ! $gUn client:Une cliente; ! Enfin, $gun donateur:une donatrice;. Enfin, $gun donateur potentiel:une donatrice potentielle;, ce qui est la meilleure espèce, parce que le potentiel, les gnomes connaissent !
+Ah ! $gUn client:Une cliente; ! Enfin, $gun donateur:une donatrice;. Enfin, $gun donateur potentiel:une donatrice potentielle;. La meilleure espèce, parce que le potentiel, ça, les gnomes connaissent !
 
 Nous autres exilés, on est dans une mauvaise passe, inutile de broder. À court d'étoffe, à court de place, à court de tout sauf d'idées, et on ne peut pas enrouler un bandage autour d'une idée. Croyez-moi, j'ai essayé. Ça a donné un schéma.
 

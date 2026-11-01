@@ -2,7 +2,7 @@
 piece: start
 title: L'effort
 ---
-$gMon ami:Mon amie; ! Oui, vous. Hurlevent a besoin de vous, ou plutôt de votre étoffe, ce qui revient presque au même !
+$gMon ami:Mon amie; ! Oui, vous. Hurlevent a besoin de vous, ou plutôt de votre étoffe. C'est presque la même chose !
 
 Nos réserves de textile sont tombées à un niveau franchement alarmant. Bandages, tuniques, couvertures, tout commence par de l'étoffe, et la ville en consomme plus vite que personne ne l'admettra jamais en conseil. Alors nous menons un effort. Un grand effort, sur tous les fronts, parfaitement organisé, et j'ai l'honneur de le diriger.
 

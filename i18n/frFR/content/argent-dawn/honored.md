@@ -2,7 +2,7 @@
 piece: honored
 title: Une échine de fer
 ---
-J'avais promis de vous interroger sur les excès. Voici ma question. Comment appelez-vous un homme qui combat le Fléau, prie la Lumière, et tue les innocents parce qu'il ne prend pas la peine de les distinguer des coupables ? La Croisade écarlate l'appelle un croisé. Moi, je l'appelle un blasphémateur !
+J'avais promis de vous interroger sur les excès, et je tiens mes promesses. Comment appelez-vous un homme qui combat le Fléau, prie la Lumière, et tue les innocents parce qu'il ne prend pas la peine de les distinguer des coupables ? La Croisade écarlate l'appelle un croisé. Moi, je l'appelle un blasphémateur !
 
 Ils tiennent une partie de Stratholme. Là, un homme du nom de Galford garde leurs archives, des années de ce qu'il leur plaît d'appeler du renseignement.
 

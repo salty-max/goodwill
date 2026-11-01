@@ -8,6 +8,6 @@ Alors je tiens deux comptes. Les pierres vont dans le registre, où les intendan
 
 Vous aurez aussi remarqué que je ne dis jamais de la piétaille du Fléau qu'elle est faible. Je l'ai appris de ceux qui ne sont pas revenus.
 
-Naxxramas est là-haut, la citadelle de Kel'Thuzad, et l'Aube y enverra du monde. Certains seront ceux que j'aurai d'abord envoyés ailleurs.
+Naxxramas est là-haut, la citadelle de Kel'Thuzad, et l'Aube y enverra du monde. Certains seront des gens que j'aurai d'abord envoyés ailleurs.
 
-[after: 5262] Et vous m'avez rapporté de Stratholme la tête d'un démon, et je n'ai pas encore décidé de ce qu'elle signifie. Ces gens en rouge croyaient servir la Lumière. Ils servaient un seigneur de l'effroi. Je les ai appelés blasphémateurs. J'aimerais savoir comment les appeler maintenant.
+[after: 5262] Et vous m'avez rapporté de Stratholme la tête d'un démon, et je n'ai pas encore décidé ce qu'elle signifie. Ces gens en rouge croyaient servir la Lumière. Ils servaient un seigneur de l'effroi. Je les ai appelés blasphémateurs. J'aimerais savoir comment les appeler maintenant.

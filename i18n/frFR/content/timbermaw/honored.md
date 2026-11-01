@@ -2,7 +2,7 @@
 piece: honored
 title: Ce que peu ont demandé
 ---
-Vous traversez le repaire si souvent que les gardes ne portent plus la main à leur arme quand vous passez. Alors voici quelque chose, et vous en ferez ce que les vôtres font de ce qu'on leur confie.
+Vous traversez le repaire si souvent que les gardes ne portent plus la main à leur arme quand vous passez. Alors prenez ceci, et faites-en ce que les vôtres font de ce qu'on leur dit.
 
 Les elfes de la nuit ont accepté notre aide, une fois, contre les démons, et beaucoup l'ont acceptée en se pinçant le nez. Certains se le pincent toujours. Demandez aux Sentinelles, un jour où elles se sentent honnêtes.
 

@@ -2,7 +2,7 @@
 piece: start
 title: La volière
 ---
-Attention aux perchoirs, et attention à votre tête. Un gryphon qui ne vous connaît pas vous l'arrachera sans y penser à deux fois.
+Attention aux perchoirs, et attention à votre tête. Un gryphon qui ne vous connaît pas vous l'arrachera sans y regarder à deux fois.
 
 Ici, c'est le Nid-de-l'Aigle. Nous ne faisons partie d'aucune Alliance, qu'on se le dise. Nos portes sont ouvertes à l'Alliance et fermées à la Horde, et voilà toute l'affaire.
 
