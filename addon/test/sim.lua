@@ -197,7 +197,37 @@ if G.LOCALE == "frFR" then
   for i, swap in ipairs(ns.classicNames) do
     at[swap[1]] = i
   end
-  check(at["Goulet des Chanteguerres"] < at["Chanteguerre"], "a name holding another swapped first")
+  local ordered = true
+  for a, i in pairs(at) do
+    for b, j in pairs(at) do
+      if a ~= b and a:find(b, 1, true) and i > j then ordered = false end
+    end
+  end
+  check(ordered, "a name holding another swapped first")
+  -- (whole phrases, never a stem: "les Loup-de-Givre", "Garde Foudrepique")
+  local _, wolves = ns.chapter(729, "start")
+  local _, guard = ns.chapter(730, "start")
+  local named = table.concat(wolves, " ") .. table.concat(guard, " ")
+  check(
+    named:find(G.FOREVER and "les Loup-de-Givre" or "les Frostwolf", 1, true)
+      and named:find(G.FOREVER and "Garde Foudrepique" or "Garde Stormpike", 1, true),
+    "the Frostwolves and the Stormpike Guard as this client names them"
+  )
+  -- (on Classic Era no chapter keeps a Forever name the swap list knows: a new
+  -- wording a phrase entry misses would leave one)
+  if not G.FOREVER then
+    local left
+    for id, pieces in pairs(ns.chapters) do
+      for piece in pairs(pieces) do
+        local title, paragraphs = ns.chapter(id, piece)
+        local text = title .. " " .. table.concat(paragraphs, " ")
+        for _, swap in ipairs(ns.classicNames) do
+          if text:find(swap[1], 1, true) then left = swap[1] .. " in " .. id .. "/" .. piece end
+        end
+      end
+    end
+    check(not left, "no Forever name left on Classic Era: " .. tostring(left))
+  end
 end
 
 -- ── a German reader, a woman ────────────────────────────────────────────────

@@ -254,4 +254,4 @@ ns.chapters = {
   },
 }
 -- (the places Classic Era's client names otherwise, swapped in there, the longest first)
-ns.classicNames = { { "Goulet des Chanteguerres", "Goulet des Warsong" }, { "Voltigeurs chanteguerres", "Voltigeurs Warsong" }, { "goulet des Chanteguerres", "goulet des Warsong" }, { "Loup-de-Givre", "Frostwolf" }, { "Chanteguerre", "Warsong" }, { "Foudrepique", "Stormpike" }, { "Fossoyeuse", "Undercity" }, { "Rochenoire", "Blackrock" }, { "Hurlevent", "Stormwind" }, { "Long-Guet", "Long-guet" }, { "Cabestan", "Ratchet" }, { "Forgefer", "Ironforge" }, { "Orneval", "Ashenvale" } }
+ns.classicNames = { { "Goulet des Chanteguerres", "Goulet des Warsong" }, { "Voltigeurs chanteguerres", "Voltigeurs Warsong" }, { "goulet des Chanteguerres", "goulet des Warsong" }, { "Garde Foudrepique", "Garde Stormpike" }, { "Les Loup-de-Givre", "Les Frostwolf" }, { "clan Chanteguerre", "clan Warsong" }, { "les Loup-de-Givre", "les Frostwolf" }, { "un Loup-de-Givre", "un Frostwolf" }, { "Fossoyeuse", "Undercity" }, { "Hurlevent", "Stormwind" }, { "Long-Guet", "Long-guet" }, { "Cabestan", "Ratchet" }, { "Forgefer", "Ironforge" }, { "Orneval", "Ashenvale" } }
