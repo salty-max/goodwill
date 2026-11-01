@@ -75,8 +75,7 @@ local function story(id)
   end
   if nextPiece then
     local title = ns.chapter(id, nextPiece[1])
-    local at = nextPiece[3] and L["halfway to %s"]:format(ns.standingName(ns.EXALTED)) or ns.standingName(nextPiece[2])
-    page:paragraph(L["Next: %s, at %s."]:format(title, at), T.soft)
+    page:paragraph(ns.nextLine(title, nextPiece), T.soft)
   end
   page:card(
     L["Every chapter so far"],

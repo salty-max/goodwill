@@ -149,6 +149,36 @@ s.done[5251] = true
 local _, after = ns.chapter(DAWN, "honored")
 check(#after == n and after[3] ~= honored[3], "the archive's paragraph: the one before it, then the one after")
 
+-- ── when a chapter opens, as the book says it ────────────────────────────────
+-- (each its own whole sentence: "halfway to Exalted" takes no "at" before it,
+-- in any language. French printed "à à mi-chemin d'Exalté" until 1 November
+-- 2026, German "bei auf halbem Weg", Spanish "en a medio camino".)
+local ASIDE, HONORED_PIECE = ns.PIECES[5], ns.PIECES[3]
+local lines = {
+  ns.nextLine("<Title>", ASIDE),
+  ns.opensLine(ASIDE),
+  ns.nextLine("<Title>", HONORED_PIECE),
+  ns.opensLine(HONORED_PIECE),
+}
+local glued = ({ frFR = "à à", deDE = "bei auf", esES = "en a medio", esMX = "en a medio" })[G.LOCALE] or "at halfway"
+for _, line in ipairs(lines) do
+  check(not line:find(glued, 1, true) and not line:find("%", 1, true), "the opening said in one sentence: " .. line)
+end
+check(
+  lines[1]:find(ns.standingName(ns.EXALTED), 1, true) and lines[1]:find("<Title>", 1, true),
+  "the aside's next line names its title and Exalted"
+)
+check(lines[3]:find(ns.standingName(ns.HONORED), 1, true), "Honored's next line names Honored")
+if G.LOCALE == "enUS" then
+  check(
+    lines[1] == "Next: <Title>, halfway to Exalted."
+      and lines[2] == "Opens halfway to Exalted."
+      and lines[3] == "Next: <Title>, at Honored."
+      and lines[4] == "Opens at Honored.",
+    "the English lines"
+  )
+end
+
 -- ── a French reader, a woman ─────────────────────────────────────────────────
 if G.LOCALE == "frFR" then
   s.sex = 3

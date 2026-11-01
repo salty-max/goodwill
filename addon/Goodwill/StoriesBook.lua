@@ -79,7 +79,7 @@ local function showStory(id)
         page:text({ { table.concat(paragraphs, "\n\n"), voice = true, sign = voice } })
         page:row(L["Opened"], ("%s, %s"):format(ui.day(when), piece[2] > 1 and at or L["from the start"]))
       else
-        page:paragraph(L["Opens at %s."]:format(at), T.soft)
+        page:paragraph(ns.opensLine(piece), T.soft)
       end
     end
   end

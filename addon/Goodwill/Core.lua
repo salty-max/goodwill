@@ -93,6 +93,20 @@ function ns.standingName(standing, plain)
   return (female and hers[standing]) or his[standing] or ""
 end
 
+-- When a piece opens, as the book says it: the next one ("Next: The Door, at
+-- Honored.") and one not yet open ("Opens at Honored."). The aside's is a
+-- sentence of its own, "halfway to Exalted" taking no "at" (French printed
+-- "à à mi-chemin d'Exalté" until 1 November 2026). Only Exalted is ever
+-- halfway: French elides "d'" before it.
+function ns.nextLine(title, piece)
+  if piece[3] then return ns.fmt(L["Next: %1$s, halfway to %2$s."], title, ns.standingName(ns.EXALTED)) end
+  return ns.fmt(L["Next: %1$s, at %2$s."], title, ns.standingName(piece[2]))
+end
+function ns.opensLine(piece)
+  if piece[3] then return L["Opens halfway to %s."]:format(ns.standingName(ns.EXALTED)) end
+  return L["Opens at %s."]:format(ns.standingName(piece[2]))
+end
+
 -- A faction's standing as the game tells it: the standing, the reputation
 -- (the game's own figure: 0 is Neutral's start), where the standing begins
 -- and where the next does. Forever's client its C_Reputation, Classic Era's

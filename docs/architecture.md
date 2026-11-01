@@ -19,8 +19,10 @@ chapters' build: `docs/data.md`.
 
 - `Locale.lua`: the client's words (`ns.translate`, the plural rule; which
   game this is, `ns.forever`, the kit says), the game's names by id from the Text file
-  (`ns.names`: factions, npcs, quests, trades, this game's), and `ns.agree`:
-  the game's own `$gmasc:fem;` tokens, a line agreed to the reader.
+  (`ns.names`: factions, npcs, quests, trades, this game's), `ns.agree`:
+  the game's own `$gmasc:fem;` tokens, a line agreed to the reader, and
+  `ns.fmt`: a sentence's numbered blanks (`%2$s`) filled in its language's
+  order, Second Wind's.
 - `Core.lua`: the book (`GoodwillChar`: opened, bank, bankAt; ids only), the
   events (`ns.on`), the standings (`ns.standingOf`: Forever's
   C_Reputation.GetFactionDataByID, Classic Era's GetFactionInfoByID; the
@@ -33,6 +35,7 @@ chapters' build: `docs/data.md`.
   its quest is done, `[before]` until then, agreed and Classic Era's names
   swapped in; `ns.PIECES`: start from the start, friendly, honored, revered
   at their standing, the aside halfway from Revered to Exalted, exalted;
+  `ns.nextLine`/`ns.opensLine`: when one opens, each case a whole sentence;
   opened quietly at the login, else a line in chat and the kit's banner,
   UPDATE_FACTION), the bank (read while it's open, BANKFRAME_OPENED and
   PLAYERBANKSLOTS_CHANGED, the turn-ins' items only), `/goodwill`, the

@@ -22,6 +22,19 @@ function ns.names(t)
   ns.skillNames = mine.skills or {}
 end
 
+-- A sentence's blanks filled in, in the order its language puts them: a
+-- translation may number them ("%2$s de %1$s"), which LuaJIT's format can't
+-- read (the game's can). Second Wind's, the same.
+function ns.fmt(s, ...)
+  if not s:find("%%%d%$") then return s:format(...) end
+  local args, order = { ... }, {}
+  local plain = s:gsub("%%(%d)%$", function(i)
+    table.insert(order, args[tonumber(i)])
+    return "%"
+  end)
+  return plain:format(unpack(order))
+end
+
 -- A line written to the reader, agreed to them: "$gvu:vue;" (the game's own
 -- tokens, French above all) as the character is a man or a woman.
 ns.agree = K.agree
