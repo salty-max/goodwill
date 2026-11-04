@@ -306,7 +306,7 @@ end
 ns.addTab(ns.TAB.factions, {
   build = function(b)
     book = b
-    list = ui.newList(book.left, style, rows, true)
+    list = ui.newList(book.left, style, rows, false)
     page = ui.newPage(book.sheet, "GoodwillFactionPage")
   end,
   show = function(n)
