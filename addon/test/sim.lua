@@ -537,4 +537,15 @@ banner.set(false)
 check(ns.option("chapterBanner") == false, "… its box turns it off")
 banner.set(true)
 
+-- the key binding (Bindings.xml calls this global): it opens and closes the window as ns.toggle does
+do
+  check(type(GoodwillBinding) == "function", "the key binding's function is there")
+  local was = GoodwillFrame and GoodwillFrame:IsShown() or false
+  GoodwillBinding()
+  check(GoodwillFrame and GoodwillFrame:IsShown() == not was, "the key binding opens the window")
+  GoodwillBinding()
+  check(GoodwillFrame:IsShown() == was, "… and a second press closes it")
+  check(BINDING_HEADER_GOODWILL ~= nil, "… under the addon's own heading")
+end
+
 io.write(("Goodwill: %d checks passed (%s, %s).\n"):format(count, G.LOCALE, G.FOREVER and "Forever" or "Classic Era"))
