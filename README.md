@@ -21,6 +21,10 @@ story at each standing you reach.
 
 English and French. `/goodwill` opens the book.
 
+The settings also offer the book's size (four steps) and paper colours (dark ink on tan paper, applied by a
+reload: the page ends with a Reload button). **Options > Key Bindings** lists **Open Goodwill**: one key,
+or on Forever a controller button, opens and closes the book. Nothing is bound until you choose.
+
 The game's data comes from [wow-data](https://github.com/salty-max/wow-data):
 the game clients' tables, [Questie](https://github.com/Questie/Questie)'s
 database and the [cmangos](https://github.com/cmangos/classic-db) Classic

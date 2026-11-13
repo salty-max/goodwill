@@ -58,6 +58,10 @@ Open the book with `/goodwill` or the minimap button. The welcome page appears o
 
 Settings are under **Options > AddOns > Goodwill**, through `/goodwill settings` or a right-click on the minimap button: the banner for a new chapter, the achievements' alert and sound, how long banners stay and the minimap button. Each character has its own. Copy another character's settings within the same game, or use `/goodwill export` and `/goodwill import CODE`.
 
+Two choices change how the book looks. **Book size** makes the whole window larger, in four steps from Normal to Largest. **Paper colours** replace the dark look with dark ink on tan paper, which some players find easier on the eyes. Paper colours take effect after a reload, and the settings page ends with a **Reload** button for it.
+
+**Options > Key Bindings** lists **Open Goodwill** under a heading of its own. Put a key on it, or on Forever a controller button, and one press opens or closes the book. Nothing is bound until you choose.
+
 - `/goodwill stories` opens the book at its stories.
 - `/goodwill achievements` opens the book at its achievements.
 - `/goodwill minimap` shows or hides the minimap button.
