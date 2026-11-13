@@ -28,6 +28,10 @@ local NEW_CHAPTER = L["A new chapter from %s: %s."]:match("^(.-)%%s")
 local TIMBERMAW, DAWN, THORIUM = 576, 529, 59
 
 -- ── a first login ────────────────────────────────────────────────────────────
+-- (PAPER=1: a character who chose the paper look and the largest book)
+if os.getenv("PAPER") == "1" then
+  GoodwillSettings = { profiles = { [UnitName("player") .. " - " .. GetRealmName()] = { paper = true, bookSize = 4 } } }
+end
 G.login()
 local char = GoodwillChar
 check(char.guid == s.guid, "the book is this character's")
@@ -546,6 +550,74 @@ do
   GoodwillBinding()
   check(GoodwillFrame:IsShown() == was, "… and a second press closes it")
   check(BINDING_HEADER_GOODWILL ~= nil, "… under the addon's own heading")
+end
+
+-- ── the book's size and the paper look ───────────────────────────────────────
+do
+  local K = ns.kit
+  local PAPER = os.getenv("PAPER") == "1"
+  check(
+    K.paper == PAPER and ns.option("paper") == PAPER,
+    "the look: the character's choice is the kit's (" .. (PAPER and "paper" or "dark") .. ")"
+  )
+  check(ns.option("bookSize") == (PAPER and 4 or 1), "the book size is the character's choice, Normal by default")
+  check(K.lookGet and K.lookGet("bookSize") == ns.option("bookSize"), "the kit reads the look from the options")
+  UIParent.w, UIParent.h = 1920, 1080 -- (a screen that holds the largest book)
+  if not GoodwillFrame then ns.toggle() end
+  local sizes = { 1, 1.15, 1.3, 1.5 }
+  for step = 1, 4 do
+    ns.setOption("bookSize", step)
+    K.resize(step) -- (what the Book size choice calls)
+    check(
+      math.abs(GoodwillFrame:GetScale() - sizes[step]) < 1e-9
+        and math.abs(GoodwillFrame:GetScale() - K.scaleFor(step, K.BOOK_W, K.BOOK_H)) < 1e-9,
+      "size " .. step .. " scales the open window at once to " .. sizes[step]
+    )
+  end
+  ns.setOption("bookSize", PAPER and 4 or 1)
+  K.resize(PAPER and 4 or 1)
+  ns.setOption("paper", PAPER)
+  local code = ns.profiles:export()
+  check(code:find(":z%d") and code:find(":p%d"), "the profile's code carries the size and the paper")
+end
+
+-- RENDER=dir [PAPER=1] luajit addon/test/sim.lua: the book as HTML (addon-kit/render.lua), for a look
+-- at size 1 and 4 and on paper before a build (Chrome's fonts: the game has the last word)
+if os.getenv("RENDER") then
+  local render = dofile("../addon-kit/render.lua")
+  local K = ns.kit
+  local rows = { { "Azeroth's factions", "section" } }
+  local f1
+  for i, id in ipairs(ns.factions()) do
+    if i <= 8 then
+      table.insert(rows, { ns.factionName(id), "row", picked = i == 1, count = ns.ui.standingWord(4 + i % 5) })
+      f1 = f1 or id
+    end
+  end
+  local title, paras = nil, {}
+  for id in pairs(ns.chapters or {}) do
+    title, paras = ns.chapter(id, 1)
+    if title then
+      f1 = id
+      break
+    end
+  end
+  local blocks = {}
+  for _, p in ipairs(paras or {}) do
+    table.insert(blocks, { "para", p })
+  end
+  table.insert(blocks, { "rule" })
+  for st = 4, 8 do
+    table.insert(blocks, { "para", ns.ui.standingWord(st) .. "  a standing, in the game's colour" })
+  end
+  render(K, os.getenv("RENDER"), {
+    scene = "book",
+    title = "Goodwill",
+    tabs = { "Factions", "Stories", "Achievements" },
+    count = "8 factions",
+    rows = rows,
+    page = { heading = ns.factionName(f1), sub = title or "", blocks = blocks },
+  })
 end
 
 io.write(("Goodwill: %d checks passed (%s, %s).\n"):format(count, G.LOCALE, G.FOREVER and "Forever" or "Classic Era"))

@@ -134,3 +134,14 @@ the ring. Export details are in `assets/README.md`.
 ## The key binding
 
 For a controller player (no keyboard for the slash command, a cursor to steer to the minimap button). `addon/Goodwill/Bindings.xml` and `ns.kit.binding(...)` at the end of `Minimap.lua`: one key or pad button, chosen in the game's Key Bindings under the addon's own heading ("Open <the addon>"), opens and closes the book through `ns.toggle`, as the minimap button's click does. The binding does nothing until the player puts a key on it. The kit's `K.binding`, the file, what the game does in each game and what is not verified: `addon-kit/docs/controller.md`, "Opening by a pad button". `bun run bindings` (part of `check`) checks the file, the function and the package.
+
+## The book's size and the paper look
+
+(13 November 2026, the kit's `O:look()` in `Settings.lua`: the settings `bookSize`, 1 to 4, and `paper`, kept per
+character and carried by a settings code as `z` and `p`.) Book size scales the whole window (`K.movable`, the
+kit's `K.resize` at once, never past the screen); the paper look is dark ink on the game's quest paper and
+takes effect after a reload. Every colour is read from `K.T` when a piece is built, never kept at load; the
+chat keeps the game's link yellow and the dark look's name (chat is dark whatever the look). A standing's colour (the game's `FACTION_BAR_COLORS`) is darkened in its hue on paper to 3 to 1 or a little more (`K.ink`, the exception the kit's README names: the colour is the meaning, and the standing's word is beside it).
+`PAPER=1 luajit addon/test/sim.lua` plays a character on the paper at the largest size (in the check);
+`RENDER=dir [PAPER=1] luajit addon/test/sim.lua` writes the book as HTML with the real colours
+(`addon-kit/render.lua`, Chrome's fonts: the game has the last word).

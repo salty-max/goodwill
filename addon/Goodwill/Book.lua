@@ -106,8 +106,10 @@ end
 -- A standing's colour, the game's (FACTION_BAR_COLORS).
 local function standingColour(standing)
   local c = FACTION_BAR_COLORS and FACTION_BAR_COLORS[standing]
-  if not c then return "|cffffffff" end
-  return K.hex({ c.r, c.g, c.b })
+  if not c then return K.hex(K.T.text) end
+  local rgb = { c.r, c.g, c.b }
+  if K.paper then rgb = K.ink(rgb, { K.T.ground, K.T.back }, 3.2) end -- (the game's greens and yellows, darkened to read on the paper)
+  return K.hex(rgb)
 end
 local function standingWord(standing) return standingColour(standing) .. ns.standingName(standing) .. "|r" end
 

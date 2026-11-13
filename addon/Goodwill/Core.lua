@@ -244,7 +244,7 @@ local banners
 local link = ns.kit.links("goodwill", function(target)
   local faction = tonumber(target:match("^story:(%d+)$") or "")
   if faction and ns.openStory then ns.openStory(faction) end
-end)
+end, "ffd100") -- (chat is dark whatever the look: the game's link yellow)
 local function announce(faction, piece)
   local title = ns.chapter(faction, piece)
   local name = ns.factionName(faction)
