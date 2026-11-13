@@ -72,7 +72,7 @@ ns.translate({
     ["Copy it (Ctrl+C), then on another character: Use a code, or /goodwill import CODE."] = "Copiez-le (Ctrl+C), puis sur un autre personnage : Utiliser un code, ou /goodwill import CODE.",
     ["Copy settings from"] = "Copier les réglages de",
     ["Copy their choices"] = "Copier ses choix",
-    ["Dark ink on tan paper, easier on the eyes than light text on a dark ground. Takes effect when you reload the interface. Use the Reload button below."] = "Encre sombre sur papier beige, plus reposant pour les yeux qu'un texte clair sur fond sombre. S'applique au rechargement de l'interface. Utilisez le bouton « Recharger » ci-dessous.",
+    ["Dark ink on tan paper, easier on the eyes than light text on a dark ground. Takes effect when you reload the interface. Use the Reload button below."] = "Encre sombre sur papier beige, plus reposant pour les yeux qu'un texte clair sur fond sombre. S'applique au rechargement de l'interface. Utilisez le bouton « Recharger » ci-dessous.",
     ["Dec"] = "déc.",
     ["Each faction's page tells you how to raise it from where you stand: the turn-ins your bags and bank already hold, the quests still open to you, the kills that still count, and what the next standing unlocks."] = "La page de chaque faction vous dit comment la faire monter depuis là où vous en êtes : les remises que vos sacs et votre banque contiennent déjà, les quêtes qui vous restent, les victimes qui comptent encore, et ce que le rang suivant débloque.",
     ["Earn your first reputation with a faction."] = "Gagnez vos premiers points de réputation auprès d'une faction.",
